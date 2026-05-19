@@ -14,7 +14,7 @@ namespace Software_Farmacia
         {
             InitializeComponent();
 
-            this.BackColor = Color.FromArgb(255, 0, 0);
+            this.BackColor = Color.FromArgb(0, 0, 255);
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
