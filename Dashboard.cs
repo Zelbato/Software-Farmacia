@@ -13,6 +13,8 @@ namespace Software_Farmacia
         public Dashboard()
         {
             InitializeComponent();
+
+            this.BackColor = Color.FromArgb(255, 0, 0);
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
