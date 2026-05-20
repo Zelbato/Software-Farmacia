@@ -24,5 +24,41 @@ namespace Software_Farmacia
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string nomeFornecedor = textBox1.Text;
+            string cpfFornecedor = textBox2.Text;
+            string senha = textBox3.Text;
+            string email = textBox4.Text;
+
+            MessageBox.Show(
+                "Dados do fornecedor foram alterados!\n\n" +
+                "Nome: " + nomeFornecedor + "\n" +
+                "CPF: " + cpfFornecedor + "\n" +
+                "Email: " + email + "\n" +
+                "Senha: " + senha
+            );
+        }
     }
 }

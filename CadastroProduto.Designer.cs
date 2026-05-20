@@ -202,6 +202,7 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(146, 27);
             textBox3.TabIndex = 8;
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // textBox2
             // 
@@ -209,6 +210,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(146, 27);
             textBox2.TabIndex = 7;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // button2
             // 
@@ -227,6 +229,7 @@
             button1.TabIndex = 5;
             button1.Text = "Cadastrar";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label5
             // 
