@@ -1,6 +1,6 @@
 ﻿namespace Software_Farmacia
 {
-    partial class Dashboard
+    partial class EditarFornecedor
     {
         /// <summary>
         /// Required designer variable.
@@ -19,11 +19,6 @@
             }
             base.Dispose(disposing);
         }
-
-        //private void InitializeComponent()
-        //{
-
-        //}
 
         #region Windows Form Designer generated code
 
@@ -49,7 +44,20 @@
             cadastrarColaboradorToolStripMenuItem = new ToolStripMenuItem();
             editarColaboradorToolStripMenuItem = new ToolStripMenuItem();
             visualizarColaboradorToolStripMenuItem = new ToolStripMenuItem();
+            panel2 = new Panel();
+            label1 = new Label();
+            textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            button2 = new Button();
+            button1 = new Button();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            textBox1 = new TextBox();
             menuStrip1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -61,7 +69,7 @@
             menuStrip1.Name = "menuStrip1";
             menuStrip1.RenderMode = ToolStripRenderMode.Professional;
             menuStrip1.Size = new Size(800, 28);
-            menuStrip1.TabIndex = 1;
+            menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
             // dashboardToolStripMenuItem
@@ -80,21 +88,19 @@
             // cadastroToolStripMenuItem
             // 
             cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            cadastroToolStripMenuItem.Size = new Size(224, 26);
+            cadastroToolStripMenuItem.Size = new Size(212, 26);
             cadastroToolStripMenuItem.Text = "Cadastrar Produto";
-            cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click;
             // 
             // editarProdutoToolStripMenuItem
             // 
             editarProdutoToolStripMenuItem.Name = "editarProdutoToolStripMenuItem";
-            editarProdutoToolStripMenuItem.Size = new Size(224, 26);
+            editarProdutoToolStripMenuItem.Size = new Size(212, 26);
             editarProdutoToolStripMenuItem.Text = "Editar Produto";
-            editarProdutoToolStripMenuItem.Click += editarProdutoToolStripMenuItem_Click;
             // 
             // visualizarProdutoToolStripMenuItem
             // 
             visualizarProdutoToolStripMenuItem.Name = "visualizarProdutoToolStripMenuItem";
-            visualizarProdutoToolStripMenuItem.Size = new Size(224, 26);
+            visualizarProdutoToolStripMenuItem.Size = new Size(212, 26);
             visualizarProdutoToolStripMenuItem.Text = "Visualizar Produto";
             // 
             // fornecedorToolStripMenuItem
@@ -109,14 +115,12 @@
             cadastrarFornecedorToolStripMenuItem.Name = "cadastrarFornecedorToolStripMenuItem";
             cadastrarFornecedorToolStripMenuItem.Size = new Size(234, 26);
             cadastrarFornecedorToolStripMenuItem.Text = "Cadastrar Fornecedor";
-            cadastrarFornecedorToolStripMenuItem.Click += cadastrarFornecedorToolStripMenuItem_Click;
             // 
             // editarFornecedorToolStripMenuItem
             // 
             editarFornecedorToolStripMenuItem.Name = "editarFornecedorToolStripMenuItem";
             editarFornecedorToolStripMenuItem.Size = new Size(234, 26);
             editarFornecedorToolStripMenuItem.Text = "Editar Fornecedor";
-            editarFornecedorToolStripMenuItem.Click += editarFornecedorToolStripMenuItem_Click;
             // 
             // visualizarFornecedorToolStripMenuItem
             // 
@@ -162,17 +166,134 @@
             visualizarColaboradorToolStripMenuItem.Size = new Size(243, 26);
             visualizarColaboradorToolStripMenuItem.Text = "Visualizar Colaborador";
             // 
-            // Dashboard
+            // panel2
+            // 
+            panel2.Controls.Add(label1);
+            panel2.Location = new Point(0, 31);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(800, 62);
+            panel2.TabIndex = 4;
+            panel2.Paint += panel2_Paint;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 18F);
+            label1.Location = new Point(33, 10);
+            label1.Name = "label1";
+            label1.Size = new Size(261, 41);
+            label1.TabIndex = 0;
+            label1.Text = "Editar Fornecedor ";
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(81, 262);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(146, 27);
+            textBox4.TabIndex = 29;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(489, 262);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(146, 27);
+            textBox3.TabIndex = 28;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(489, 155);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(146, 27);
+            textBox2.TabIndex = 27;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(541, 363);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 26;
+            button2.Text = "Cancelar";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(650, 363);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 25;
+            button1.Text = "Cadastrar";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 7F);
+            label5.Location = new Point(81, 244);
+            label5.Name = "label5";
+            label5.Size = new Size(99, 15);
+            label5.TabIndex = 24;
+            label5.Text = "Email Fornecedor";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 7F);
+            label4.Location = new Point(489, 137);
+            label4.Name = "label4";
+            label4.Size = new Size(91, 15);
+            label4.TabIndex = 23;
+            label4.Text = "CPF Fornecedor";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 7F);
+            label3.Location = new Point(489, 244);
+            label3.Name = "label3";
+            label3.Size = new Size(39, 15);
+            label3.TabIndex = 22;
+            label3.Text = "Senha";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 7F);
+            label2.Location = new Point(81, 137);
+            label2.Name = "label2";
+            label2.Size = new Size(103, 15);
+            label2.TabIndex = 21;
+            label2.Text = "Nome Fornecedor";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(81, 155);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(146, 27);
+            textBox1.TabIndex = 20;
+            // 
+            // EditarFornecedor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(textBox4);
+            Controls.Add(textBox3);
+            Controls.Add(textBox2);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(textBox1);
+            Controls.Add(panel2);
             Controls.Add(menuStrip1);
-            Name = "Dashboard";
-            Text = "Dashboard";
-            Load += Dashboard_Load;
+            Name = "EditarFornecedor";
+            Text = "EditarFornecedor";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -195,5 +316,17 @@
         private ToolStripMenuItem cadastrarColaboradorToolStripMenuItem;
         private ToolStripMenuItem editarColaboradorToolStripMenuItem;
         private ToolStripMenuItem visualizarColaboradorToolStripMenuItem;
+        private Panel panel2;
+        private Label label1;
+        private TextBox textBox4;
+        private TextBox textBox3;
+        private TextBox textBox2;
+        private Button button2;
+        private Button button1;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private TextBox textBox1;
     }
 }
