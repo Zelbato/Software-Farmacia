@@ -60,5 +60,10 @@ namespace Software_Farmacia
                 "Senha: " + senha
             );
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

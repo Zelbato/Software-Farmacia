@@ -71,6 +71,7 @@
             menuStrip1.Size = new Size(800, 28);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
+            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
             // dashboardToolStripMenuItem
             // 

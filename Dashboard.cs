@@ -45,5 +45,17 @@ namespace Software_Farmacia
             EditarFornecedor EditarF = new EditarFornecedor();
             EditarF.Show();
         }
+
+        private void cadastrarColaboradorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastrarColaborador CadastrarC = new CadastrarColaborador();
+            CadastrarC.Show();
+        }
+
+        private void editarColaboradorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditarColaborador EditarC = new EditarColaborador();
+            EditarC.Show();
+        }
     }
 }
