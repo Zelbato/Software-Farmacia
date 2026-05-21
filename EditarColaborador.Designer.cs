@@ -194,6 +194,7 @@
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(146, 27);
             textBox5.TabIndex = 57;
+            textBox5.TextChanged += textBox5_TextChanged;
             // 
             // textBox6
             // 
@@ -201,6 +202,7 @@
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(146, 27);
             textBox6.TabIndex = 56;
+            textBox6.TextChanged += textBox6_TextChanged;
             // 
             // label6
             // 
@@ -228,6 +230,7 @@
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(146, 27);
             textBox4.TabIndex = 53;
+            textBox4.TextChanged += textBox4_TextChanged;
             // 
             // textBox3
             // 
@@ -235,6 +238,7 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(146, 27);
             textBox3.TabIndex = 52;
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // textBox2
             // 
@@ -242,6 +246,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(146, 27);
             textBox2.TabIndex = 51;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // button2
             // 
@@ -260,6 +265,7 @@
             button1.TabIndex = 49;
             button1.Text = "Cadastrar";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label5
             // 
@@ -307,6 +313,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(146, 27);
             textBox1.TabIndex = 44;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // EditarColaborador
             // 
