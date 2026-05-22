@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
 
 namespace Software_Farmacia
 {
@@ -67,13 +68,29 @@ namespace Software_Farmacia
             string preco = textBox3.Text;
             string descricao = textBox4.Text;
 
-            MessageBox.Show(
-                "Produto foi cadastrado com sucesso!\n\n" +
-                "Nome: " + nome + "\n" +
-                "Quantidade: " + quantidade + "\n" +
-                "Preço: " + preco + "\n" +
-                "Descrição: " + descricao
-            );
+            SqlConnection conn =
+            new SqlConnection(Conexao.conexao);
+
+            conn.Open();
+
+            string sql =
+            "INSERT INTO Produto " +
+            "(Nome_produto, Quantidade_produto, Preco_produto, Descricao_produto) " +
+            "VALUES " +
+            "(@nome, @quantidade, @preco, @descricao)";
+
+            SqlCommand cmd = new SqlCommand(sql, conn);
+
+            cmd.Parameters.AddWithValue("@nome", nome);
+            cmd.Parameters.AddWithValue("@quantidade", quantidade);
+            cmd.Parameters.AddWithValue("@preco", preco);
+            cmd.Parameters.AddWithValue("@descricao", descricao);
+
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+
+            MessageBox.Show("Produto cadastrado!");
         }
     }
 }
