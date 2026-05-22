@@ -13,10 +13,6 @@ namespace Software_Farmacia
         public CadastroProduto()
         {
             InitializeComponent();
-
-            panel2.BackColor = Color.Red;
-            label1.BackColor = Color.White;
-            label1.Font = new Font("Arial", 18, FontStyle.Bold);
         }
 
         private void label1_Click(object sender, EventArgs e)
