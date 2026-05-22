@@ -13,8 +13,6 @@ namespace Software_Farmacia
         public Dashboard()
         {
             InitializeComponent();
-
-            this.BackColor = Color.FromArgb(0, 0, 255);
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -56,6 +54,11 @@ namespace Software_Farmacia
         {
             EditarColaborador EditarC = new EditarColaborador();
             EditarC.Show();
+        }
+
+        private void gridProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

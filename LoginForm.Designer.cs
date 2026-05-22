@@ -248,5 +248,6 @@ namespace Software_Farmacia
         private System.Windows.Forms.Button btnFechar;
         private Label label1;
         private TextBox textBox1;
+        private EventHandler label1_Click;
     }
 }
