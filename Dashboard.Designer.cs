@@ -49,7 +49,9 @@
             cadastrarColaboradorToolStripMenuItem = new ToolStripMenuItem();
             editarColaboradorToolStripMenuItem = new ToolStripMenuItem();
             visualizarColaboradorToolStripMenuItem = new ToolStripMenuItem();
+            dataGridView1 = new DataGridView();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -80,21 +82,21 @@
             // cadastroToolStripMenuItem
             // 
             cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            cadastroToolStripMenuItem.Size = new Size(212, 26);
+            cadastroToolStripMenuItem.Size = new Size(224, 26);
             cadastroToolStripMenuItem.Text = "Cadastrar Produto";
             cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click;
             // 
             // editarProdutoToolStripMenuItem
             // 
             editarProdutoToolStripMenuItem.Name = "editarProdutoToolStripMenuItem";
-            editarProdutoToolStripMenuItem.Size = new Size(212, 26);
+            editarProdutoToolStripMenuItem.Size = new Size(224, 26);
             editarProdutoToolStripMenuItem.Text = "Editar Produto";
             editarProdutoToolStripMenuItem.Click += editarProdutoToolStripMenuItem_Click;
             // 
             // visualizarProdutoToolStripMenuItem
             // 
             visualizarProdutoToolStripMenuItem.Name = "visualizarProdutoToolStripMenuItem";
-            visualizarProdutoToolStripMenuItem.Size = new Size(212, 26);
+            visualizarProdutoToolStripMenuItem.Size = new Size(224, 26);
             visualizarProdutoToolStripMenuItem.Text = "Visualizar Produto";
             // 
             // fornecedorToolStripMenuItem
@@ -134,7 +136,7 @@
             // visualizarEstoqueToolStripMenuItem
             // 
             visualizarEstoqueToolStripMenuItem.Name = "visualizarEstoqueToolStripMenuItem";
-            visualizarEstoqueToolStripMenuItem.Size = new Size(216, 26);
+            visualizarEstoqueToolStripMenuItem.Size = new Size(224, 26);
             visualizarEstoqueToolStripMenuItem.Text = "Visualizar Estoque ";
             // 
             // colaboradorToolStripMenuItem
@@ -164,17 +166,28 @@
             visualizarColaboradorToolStripMenuItem.Size = new Size(243, 26);
             visualizarColaboradorToolStripMenuItem.Text = "Visualizar Colaborador";
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(150, 137);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(300, 188);
+            dataGridView1.TabIndex = 2;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(dataGridView1);
             Controls.Add(menuStrip1);
             Name = "Dashboard";
             Text = "Dashboard";
             Load += Dashboard_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -197,5 +210,6 @@
         private ToolStripMenuItem cadastrarColaboradorToolStripMenuItem;
         private ToolStripMenuItem editarColaboradorToolStripMenuItem;
         private ToolStripMenuItem visualizarColaboradorToolStripMenuItem;
+        private DataGridView dataGridView1;
     }
 }
