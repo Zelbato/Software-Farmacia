@@ -124,6 +124,7 @@
             visualizarProdutoToolStripMenuItem.Name = "visualizarProdutoToolStripMenuItem";
             visualizarProdutoToolStripMenuItem.Size = new Size(227, 26);
             visualizarProdutoToolStripMenuItem.Text = "Visualizar Produto";
+            visualizarProdutoToolStripMenuItem.Click += visualizarProdutoToolStripMenuItem_Click;
             // 
             // fornecedorToolStripMenuItem
             // 

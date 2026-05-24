@@ -15,11 +15,6 @@ namespace Software_Farmacia
         public EditarFornecedor()
         {
             InitializeComponent();
-
-
-            panel2.BackColor = Color.Red;
-            label1.BackColor = Color.White;
-            label1.Font = new Font("Arial", 18, FontStyle.Bold);
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -89,6 +84,52 @@ namespace Software_Farmacia
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+        }
+
+        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastroProduto CadastroP = new CadastroProduto();
+            CadastroP.Show();
+        }
+
+        private void editarProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditarProduto EditarP = new EditarProduto();
+            EditarP.Show();
+        }
+
+        private void cadastrarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastroFornecedor CadastroF = new CadastroFornecedor();
+            CadastroF.Show();
+        }
+
+        private void editarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditarFornecedor EditarF = new EditarFornecedor();
+            EditarF.Show();
+        }
+
+        private void cadastrarColaboradorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastrarColaborador CadastrarC = new CadastrarColaborador();
+            CadastrarC.Show();
+        }
+
+        private void editarColaboradorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditarColaborador EditarC = new EditarColaborador(); EditarC.Show();
+        }
+
+        private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

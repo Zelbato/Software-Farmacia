@@ -92,5 +92,47 @@ namespace Software_Farmacia
 
             MessageBox.Show("Produto cadastrado!");
         }
+
+        private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+        }
+
+        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastroProduto CadastroP = new CadastroProduto();
+            CadastroP.Show();
+        }
+
+        private void editarProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditarProduto EditarP = new EditarProduto();
+            EditarP.Show();
+        }
+
+        private void cadastrarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastroFornecedor CadastroF = new CadastroFornecedor();
+            CadastroF.Show();
+        }
+
+        private void editarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditarFornecedor EditarF = new EditarFornecedor();
+            EditarF.Show();
+        }
+
+        private void cadastrarColaboradorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastrarColaborador CadastroC = new CadastrarColaborador();
+            CadastroC.Show();
+        }
+
+        private void editarColaboradorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditarColaborador EditarC = new EditarColaborador();
+            EditarC.Show();
+        }
     }
 }
