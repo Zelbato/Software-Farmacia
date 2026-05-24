@@ -99,7 +99,7 @@ namespace Software_Farmacia
                     cmd.Parameters.AddWithValue("@descricao", descricao);
                     cmd.Parameters.AddWithValue("@idFornecedor", idFornecedor);
 
-                  
+
                     cmd.Parameters.AddWithValue("@id", this.produtoId);
 
                     cmd.ExecuteNonQuery();
@@ -166,6 +166,11 @@ namespace Software_Farmacia
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelCardForm_Paint_1(object sender, PaintEventArgs e)
         {
 
         }

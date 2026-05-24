@@ -225,6 +225,7 @@
             panelTopHeader.Name = "panelTopHeader";
             panelTopHeader.Size = new Size(1080, 90);
             panelTopHeader.TabIndex = 1;
+            panelTopHeader.Paint += panelTopHeader_Paint;
             // 
             // labelHeaderSub
             // 

@@ -145,9 +145,27 @@ namespace Software_Farmacia
             }
             else if (nomeColuna == "btnVisualizar")
             {
-                // Passa as variáveis capturadas diretamente para a nova instância da tela de exibição
-                VisualizarProduto telaVisualizar = new VisualizarProduto();
-                telaVisualizar.ShowDialog();
+                // Captura o Id do produto a partir da primeira célula
+                int idVis = 0;
+                int.TryParse(dataGridView1.Rows[e.RowIndex].Cells[0]?.Value?.ToString(), out idVis);
+
+                string nomeVis = dataGridView1.Rows[e.RowIndex].Cells[2]?.Value?.ToString() ?? string.Empty;
+
+                decimal precoVis = 0m;
+                decimal.TryParse(dataGridView1.Rows[e.RowIndex].Cells[3]?.Value?.ToString(), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.GetCultureInfo("pt-BR"), out precoVis);
+
+                int quantidadeVis = 0;
+                int.TryParse(dataGridView1.Rows[e.RowIndex].Cells[4]?.Value?.ToString(), out quantidadeVis);
+
+                // Busca descrição pelo Id caso não esteja no grid
+                string descricaoVis = GetDescricaoProduto(idVis);
+
+                // Abre a tela de visualização e preenche os campos via método público
+                using (var telaVisualizar = new VisualizarProduto())
+                {
+                    telaVisualizar.SetProdutoData(idVis, nomeVis, descricaoVis, precoVis, quantidadeVis);
+                    telaVisualizar.ShowDialog();
+                }
             }
             else if (nomeColuna == "btnDeletar")
             {
@@ -233,6 +251,11 @@ namespace Software_Farmacia
                 // opcional: log
                 return string.Empty;
             }
+        }
+
+        private void panelTopHeader_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 

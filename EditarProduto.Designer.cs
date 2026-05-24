@@ -281,6 +281,7 @@
             panelCardForm.Name = "panelCardForm";
             panelCardForm.Size = new Size(1010, 490);
             panelCardForm.TabIndex = 0;
+            panelCardForm.Paint += panelCardForm_Paint_1;
             // 
             // comboBox1
             // 
