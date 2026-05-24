@@ -89,6 +89,7 @@
             dashboardToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
             dashboardToolStripMenuItem.Size = new Size(156, 37);
             dashboardToolStripMenuItem.Text = "🏠 Dashboard";
+            dashboardToolStripMenuItem.Click += dashboardToolStripMenuItem_Click;
             // 
             // produtoToolStripMenuItem
             // 
@@ -107,6 +108,7 @@
             cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             cadastroToolStripMenuItem.Size = new Size(254, 30);
             cadastroToolStripMenuItem.Text = "Cadastrar Produto";
+            cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click;
             // 
             // editarProdutoToolStripMenuItem
             // 
@@ -115,6 +117,7 @@
             editarProdutoToolStripMenuItem.Name = "editarProdutoToolStripMenuItem";
             editarProdutoToolStripMenuItem.Size = new Size(254, 30);
             editarProdutoToolStripMenuItem.Text = "Editar Produto";
+            editarProdutoToolStripMenuItem.Click += editarProdutoToolStripMenuItem_Click;
             // 
             // visualizarProdutoToolStripMenuItem
             // 
@@ -141,6 +144,7 @@
             cadastrarFornecedorToolStripMenuItem.Name = "cadastrarFornecedorToolStripMenuItem";
             cadastrarFornecedorToolStripMenuItem.Size = new Size(282, 30);
             cadastrarFornecedorToolStripMenuItem.Text = "Cadastrar Fornecedor";
+            cadastrarFornecedorToolStripMenuItem.Click += cadastrarFornecedorToolStripMenuItem_Click;
             // 
             // editarFornecedorToolStripMenuItem
             // 
@@ -149,6 +153,7 @@
             editarFornecedorToolStripMenuItem.Name = "editarFornecedorToolStripMenuItem";
             editarFornecedorToolStripMenuItem.Size = new Size(282, 30);
             editarFornecedorToolStripMenuItem.Text = "Editar Fornecedor";
+            editarFornecedorToolStripMenuItem.Click += editarFornecedorToolStripMenuItem_Click;
             // 
             // visualizarFornecedorToolStripMenuItem
             // 
@@ -192,6 +197,7 @@
             cadastrarColaboradorToolStripMenuItem.Name = "cadastrarColaboradorToolStripMenuItem";
             cadastrarColaboradorToolStripMenuItem.Size = new Size(291, 30);
             cadastrarColaboradorToolStripMenuItem.Text = "Cadastrar Colaborador";
+            cadastrarColaboradorToolStripMenuItem.Click += cadastrarColaboradorToolStripMenuItem_Click;
             // 
             // editarColaboradorToolStripMenuItem
             // 
@@ -200,6 +206,7 @@
             editarColaboradorToolStripMenuItem.Name = "editarColaboradorToolStripMenuItem";
             editarColaboradorToolStripMenuItem.Size = new Size(291, 30);
             editarColaboradorToolStripMenuItem.Text = "Editar Colaborador";
+            editarColaboradorToolStripMenuItem.Click += editarColaboradorToolStripMenuItem_Click;
             // 
             // visualizarColaboradorToolStripMenuItem
             // 

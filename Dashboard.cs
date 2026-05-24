@@ -17,7 +17,8 @@ namespace Software_Farmacia
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
         }
 
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
@@ -59,6 +60,11 @@ namespace Software_Farmacia
         private void gridProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void visualizarProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VisualizarProduto VisualizarP = new VisualizarProduto(); VisualizarP.Show();
         }
     }
 }

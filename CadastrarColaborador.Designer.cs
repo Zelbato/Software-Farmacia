@@ -2,15 +2,8 @@
 {
     partial class CadastrarColaborador
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,10 +15,6 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             menuStrip1 = new MenuStrip();
@@ -44,305 +33,441 @@
             cadastrarColaboradorToolStripMenuItem = new ToolStripMenuItem();
             editarColaboradorToolStripMenuItem = new ToolStripMenuItem();
             visualizarColaboradorToolStripMenuItem = new ToolStripMenuItem();
-            panel2 = new Panel();
+            panelTopHeader = new Panel();
+            labelHeaderSub = new Label();
+            labelHeaderTitle = new Label();
+            panelHeaderDivider = new Panel();
+            panelMainContainer = new Panel();
+            panelCardForm = new Panel();
             label1 = new Label();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            button2 = new Button();
-            button1 = new Button();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
             label2 = new Label();
             textBox1 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
+            label4 = new Label();
+            textBox2 = new TextBox();
             label6 = new Label();
+            textBox5 = new TextBox();
             label7 = new Label();
+            textBox6 = new TextBox();
+            label5 = new Label();
+            textBox4 = new TextBox();
+            label3 = new Label();
+            textBox3 = new TextBox();
+            button2 = new Button();
+            button1 = new Button();
             menuStrip1.SuspendLayout();
-            panel2.SuspendLayout();
+            panelTopHeader.SuspendLayout();
+            panelMainContainer.SuspendLayout();
+            panelCardForm.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.GripStyle = ToolStripGripStyle.Visible;
+            menuStrip1.BackColor = Color.FromArgb(199, 29, 44);
+            menuStrip1.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Items.AddRange(new ToolStripItem[] { dashboardToolStripMenuItem, produtoToolStripMenuItem, fornecedorToolStripMenuItem, estoqueToolStripMenuItem, colaboradorToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new Padding(15, 8, 15, 8);
             menuStrip1.RenderMode = ToolStripRenderMode.Professional;
-            menuStrip1.Size = new Size(800, 28);
-            menuStrip1.TabIndex = 3;
+            menuStrip1.Size = new Size(1080, 53);
+            menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // dashboardToolStripMenuItem
             // 
+            dashboardToolStripMenuItem.ForeColor = Color.White;
+            dashboardToolStripMenuItem.Margin = new Padding(0, 0, 12, 0);
             dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            dashboardToolStripMenuItem.Size = new Size(96, 24);
-            dashboardToolStripMenuItem.Text = "Dashboard";
+            dashboardToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
+            dashboardToolStripMenuItem.Size = new Size(156, 37);
+            dashboardToolStripMenuItem.Text = "🏠 Dashboard";
+            dashboardToolStripMenuItem.Click += dashboardToolStripMenuItem_Click;
             // 
             // produtoToolStripMenuItem
             // 
             produtoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, editarProdutoToolStripMenuItem, visualizarProdutoToolStripMenuItem });
+            produtoToolStripMenuItem.ForeColor = Color.White;
+            produtoToolStripMenuItem.Margin = new Padding(0, 0, 12, 0);
             produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
-            produtoToolStripMenuItem.Size = new Size(76, 24);
-            produtoToolStripMenuItem.Text = "Produto";
+            produtoToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
+            produtoToolStripMenuItem.Size = new Size(132, 37);
+            produtoToolStripMenuItem.Text = "📦 Produto";
             // 
             // cadastroToolStripMenuItem
             // 
+            cadastroToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
+            cadastroToolStripMenuItem.ForeColor = Color.White;
             cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            cadastroToolStripMenuItem.Size = new Size(212, 26);
+            cadastroToolStripMenuItem.Size = new Size(254, 30);
             cadastroToolStripMenuItem.Text = "Cadastrar Produto";
+            cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click;
             // 
             // editarProdutoToolStripMenuItem
             // 
+            editarProdutoToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
+            editarProdutoToolStripMenuItem.ForeColor = Color.White;
             editarProdutoToolStripMenuItem.Name = "editarProdutoToolStripMenuItem";
-            editarProdutoToolStripMenuItem.Size = new Size(212, 26);
+            editarProdutoToolStripMenuItem.Size = new Size(254, 30);
             editarProdutoToolStripMenuItem.Text = "Editar Produto";
+            editarProdutoToolStripMenuItem.Click += editarProdutoToolStripMenuItem_Click;
             // 
             // visualizarProdutoToolStripMenuItem
             // 
+            visualizarProdutoToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
+            visualizarProdutoToolStripMenuItem.ForeColor = Color.White;
             visualizarProdutoToolStripMenuItem.Name = "visualizarProdutoToolStripMenuItem";
-            visualizarProdutoToolStripMenuItem.Size = new Size(212, 26);
+            visualizarProdutoToolStripMenuItem.Size = new Size(254, 30);
             visualizarProdutoToolStripMenuItem.Text = "Visualizar Produto";
             // 
             // fornecedorToolStripMenuItem
             // 
             fornecedorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastrarFornecedorToolStripMenuItem, editarFornecedorToolStripMenuItem, visualizarFornecedorToolStripMenuItem });
+            fornecedorToolStripMenuItem.ForeColor = Color.White;
+            fornecedorToolStripMenuItem.Margin = new Padding(0, 0, 12, 0);
             fornecedorToolStripMenuItem.Name = "fornecedorToolStripMenuItem";
-            fornecedorToolStripMenuItem.Size = new Size(98, 24);
-            fornecedorToolStripMenuItem.Text = "Fornecedor";
+            fornecedorToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
+            fornecedorToolStripMenuItem.Size = new Size(160, 37);
+            fornecedorToolStripMenuItem.Text = "\U0001f91d Fornecedor";
             // 
             // cadastrarFornecedorToolStripMenuItem
             // 
+            cadastrarFornecedorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
+            cadastrarFornecedorToolStripMenuItem.ForeColor = Color.White;
             cadastrarFornecedorToolStripMenuItem.Name = "cadastrarFornecedorToolStripMenuItem";
-            cadastrarFornecedorToolStripMenuItem.Size = new Size(234, 26);
+            cadastrarFornecedorToolStripMenuItem.Size = new Size(282, 30);
             cadastrarFornecedorToolStripMenuItem.Text = "Cadastrar Fornecedor";
+            cadastrarFornecedorToolStripMenuItem.Click += cadastrarFornecedorToolStripMenuItem_Click;
             // 
             // editarFornecedorToolStripMenuItem
             // 
+            editarFornecedorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
+            editarFornecedorToolStripMenuItem.ForeColor = Color.White;
             editarFornecedorToolStripMenuItem.Name = "editarFornecedorToolStripMenuItem";
-            editarFornecedorToolStripMenuItem.Size = new Size(234, 26);
+            editarFornecedorToolStripMenuItem.Size = new Size(282, 30);
             editarFornecedorToolStripMenuItem.Text = "Editar Fornecedor";
+            editarFornecedorToolStripMenuItem.Click += editarFornecedorToolStripMenuItem_Click;
             // 
             // visualizarFornecedorToolStripMenuItem
             // 
+            visualizarFornecedorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
+            visualizarFornecedorToolStripMenuItem.ForeColor = Color.White;
             visualizarFornecedorToolStripMenuItem.Name = "visualizarFornecedorToolStripMenuItem";
-            visualizarFornecedorToolStripMenuItem.Size = new Size(234, 26);
+            visualizarFornecedorToolStripMenuItem.Size = new Size(282, 30);
             visualizarFornecedorToolStripMenuItem.Text = "Visualizar Fornecedor";
             // 
             // estoqueToolStripMenuItem
             // 
             estoqueToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { visualizarEstoqueToolStripMenuItem });
+            estoqueToolStripMenuItem.ForeColor = Color.White;
+            estoqueToolStripMenuItem.Margin = new Padding(0, 0, 12, 0);
             estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
-            estoqueToolStripMenuItem.Size = new Size(76, 24);
-            estoqueToolStripMenuItem.Text = "Estoque";
+            estoqueToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
+            estoqueToolStripMenuItem.Size = new Size(131, 37);
+            estoqueToolStripMenuItem.Text = "📊 Estoque";
             // 
             // visualizarEstoqueToolStripMenuItem
             // 
+            visualizarEstoqueToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
+            visualizarEstoqueToolStripMenuItem.ForeColor = Color.White;
             visualizarEstoqueToolStripMenuItem.Name = "visualizarEstoqueToolStripMenuItem";
-            visualizarEstoqueToolStripMenuItem.Size = new Size(216, 26);
-            visualizarEstoqueToolStripMenuItem.Text = "Visualizar Estoque ";
+            visualizarEstoqueToolStripMenuItem.Size = new Size(253, 30);
+            visualizarEstoqueToolStripMenuItem.Text = "Visualizar Estoque";
             // 
             // colaboradorToolStripMenuItem
             // 
             colaboradorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastrarColaboradorToolStripMenuItem, editarColaboradorToolStripMenuItem, visualizarColaboradorToolStripMenuItem });
+            colaboradorToolStripMenuItem.ForeColor = Color.White;
             colaboradorToolStripMenuItem.Name = "colaboradorToolStripMenuItem";
-            colaboradorToolStripMenuItem.Size = new Size(107, 24);
-            colaboradorToolStripMenuItem.Text = "Colaborador";
+            colaboradorToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
+            colaboradorToolStripMenuItem.Size = new Size(169, 37);
+            colaboradorToolStripMenuItem.Text = "👥 Colaborador";
             // 
             // cadastrarColaboradorToolStripMenuItem
             // 
+            cadastrarColaboradorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
+            cadastrarColaboradorToolStripMenuItem.ForeColor = Color.White;
             cadastrarColaboradorToolStripMenuItem.Name = "cadastrarColaboradorToolStripMenuItem";
-            cadastrarColaboradorToolStripMenuItem.Size = new Size(243, 26);
+            cadastrarColaboradorToolStripMenuItem.Size = new Size(291, 30);
             cadastrarColaboradorToolStripMenuItem.Text = "Cadastrar Colaborador";
+            cadastrarColaboradorToolStripMenuItem.Click += cadastrarColaboradorToolStripMenuItem_Click;
             // 
             // editarColaboradorToolStripMenuItem
             // 
+            editarColaboradorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
+            editarColaboradorToolStripMenuItem.ForeColor = Color.White;
             editarColaboradorToolStripMenuItem.Name = "editarColaboradorToolStripMenuItem";
-            editarColaboradorToolStripMenuItem.Size = new Size(243, 26);
+            editarColaboradorToolStripMenuItem.Size = new Size(291, 30);
             editarColaboradorToolStripMenuItem.Text = "Editar Colaborador";
+            editarColaboradorToolStripMenuItem.Click += editarColaboradorToolStripMenuItem_Click;
             // 
             // visualizarColaboradorToolStripMenuItem
             // 
+            visualizarColaboradorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
+            visualizarColaboradorToolStripMenuItem.ForeColor = Color.White;
             visualizarColaboradorToolStripMenuItem.Name = "visualizarColaboradorToolStripMenuItem";
-            visualizarColaboradorToolStripMenuItem.Size = new Size(243, 26);
+            visualizarColaboradorToolStripMenuItem.Size = new Size(291, 30);
             visualizarColaboradorToolStripMenuItem.Text = "Visualizar Colaborador";
             // 
-            // panel2
+            // panelTopHeader
             // 
-            panel2.Controls.Add(label1);
-            panel2.Location = new Point(0, 31);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(800, 62);
-            panel2.TabIndex = 5;
+            panelTopHeader.BackColor = Color.FromArgb(199, 29, 44);
+            panelTopHeader.Controls.Add(labelHeaderSub);
+            panelTopHeader.Controls.Add(labelHeaderTitle);
+            panelTopHeader.Dock = DockStyle.Top;
+            panelTopHeader.Location = new Point(0, 53);
+            panelTopHeader.Name = "panelTopHeader";
+            panelTopHeader.Size = new Size(1080, 90);
+            panelTopHeader.TabIndex = 1;
+            // 
+            // labelHeaderSub
+            // 
+            labelHeaderSub.AutoSize = true;
+            labelHeaderSub.Font = new Font("Segoe UI", 9.5F);
+            labelHeaderSub.ForeColor = Color.FromArgb(240, 240, 240);
+            labelHeaderSub.Location = new Point(35, 52);
+            labelHeaderSub.Name = "labelHeaderSub";
+            labelHeaderSub.Size = new Size(250, 21);
+            labelHeaderSub.TabIndex = 1;
+            labelHeaderSub.Text = "Preencha os dados do colaborador";
+            // 
+            // labelHeaderTitle
+            // 
+            labelHeaderTitle.AutoSize = true;
+            labelHeaderTitle.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            labelHeaderTitle.ForeColor = Color.White;
+            labelHeaderTitle.Location = new Point(30, 15);
+            labelHeaderTitle.Name = "labelHeaderTitle";
+            labelHeaderTitle.Size = new Size(340, 37);
+            labelHeaderTitle.TabIndex = 0;
+            labelHeaderTitle.Text = "Cadastro de Colaborador";
+            // 
+            // panelHeaderDivider
+            // 
+            panelHeaderDivider.BackColor = Color.FromArgb(170, 20, 32);
+            panelHeaderDivider.Dock = DockStyle.Top;
+            panelHeaderDivider.Location = new Point(0, 143);
+            panelHeaderDivider.Name = "panelHeaderDivider";
+            panelHeaderDivider.Size = new Size(1080, 2);
+            panelHeaderDivider.TabIndex = 3;
+            // 
+            // panelMainContainer
+            // 
+            panelMainContainer.BackColor = Color.FromArgb(245, 246, 248);
+            panelMainContainer.Controls.Add(panelCardForm);
+            panelMainContainer.Dock = DockStyle.Fill;
+            panelMainContainer.Location = new Point(0, 145);
+            panelMainContainer.Name = "panelMainContainer";
+            panelMainContainer.Size = new Size(1080, 535);
+            panelMainContainer.TabIndex = 2;
+            // 
+            // panelCardForm
+            // 
+            panelCardForm.BackColor = Color.White;
+            panelCardForm.Controls.Add(label1);
+            panelCardForm.Controls.Add(label2);
+            panelCardForm.Controls.Add(textBox1);
+            panelCardForm.Controls.Add(label4);
+            panelCardForm.Controls.Add(textBox2);
+            panelCardForm.Controls.Add(label6);
+            panelCardForm.Controls.Add(textBox5);
+            panelCardForm.Controls.Add(label7);
+            panelCardForm.Controls.Add(textBox6);
+            panelCardForm.Controls.Add(label5);
+            panelCardForm.Controls.Add(textBox4);
+            panelCardForm.Controls.Add(label3);
+            panelCardForm.Controls.Add(textBox3);
+            panelCardForm.Controls.Add(button2);
+            panelCardForm.Controls.Add(button1);
+            panelCardForm.Location = new Point(35, 25);
+            panelCardForm.Name = "panelCardForm";
+            panelCardForm.Size = new Size(1010, 490);
+            panelCardForm.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 18F);
-            label1.Location = new Point(33, 10);
+            label1.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
+            label1.ForeColor = Color.FromArgb(199, 29, 44);
+            label1.Location = new Point(35, 20);
             label1.Name = "label1";
-            label1.Size = new Size(360, 41);
+            label1.Size = new Size(231, 35);
             label1.TabIndex = 0;
-            label1.Text = "Cadastro de Colaborador ";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(91, 281);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(146, 27);
-            textBox4.TabIndex = 39;
-            textBox4.TextChanged += textBox4_TextChanged;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(499, 281);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(146, 27);
-            textBox3.TabIndex = 38;
-            textBox3.TextChanged += textBox3_TextChanged;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(499, 164);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(146, 27);
-            textBox2.TabIndex = 37;
-            textBox2.TextChanged += textBox2_TextChanged;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(551, 372);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 36;
-            button2.Text = "Cancelar";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(660, 372);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 35;
-            button1.Text = "Cadastrar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 7F);
-            label5.Location = new Point(91, 263);
-            label5.Name = "label5";
-            label5.Size = new Size(36, 15);
-            label5.TabIndex = 34;
-            label5.Text = "Email";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 7F);
-            label4.Location = new Point(499, 146);
-            label4.Name = "label4";
-            label4.Size = new Size(28, 15);
-            label4.TabIndex = 33;
-            label4.Text = "CPF";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 7F);
-            label3.Location = new Point(499, 263);
-            label3.Name = "label3";
-            label3.Size = new Size(39, 15);
-            label3.TabIndex = 32;
-            label3.Text = "Senha";
+            label1.Text = "Novo Colaborador";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 7F);
-            label2.Location = new Point(91, 146);
+            label2.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            label2.ForeColor = Color.FromArgb(60, 60, 60);
+            label2.Location = new Point(35, 75);
             label2.Name = "label2";
-            label2.Size = new Size(109, 15);
-            label2.TabIndex = 31;
-            label2.Text = "Nome Colaborador";
+            label2.Size = new Size(167, 21);
+            label2.TabIndex = 1;
+            label2.Text = "Nome Colaborador *";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(91, 164);
+            textBox1.Font = new Font("Segoe UI", 11F);
+            textBox1.Location = new Point(35, 102);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(146, 27);
-            textBox1.TabIndex = 30;
+            textBox1.Size = new Size(445, 32);
+            textBox1.TabIndex = 2;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
-            // textBox5
+            // label4
             // 
-            textBox5.Location = new Point(91, 223);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(146, 27);
-            textBox5.TabIndex = 43;
-            textBox5.TextChanged += textBox5_TextChanged;
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            label4.ForeColor = Color.FromArgb(60, 60, 60);
+            label4.Location = new Point(525, 75);
+            label4.Name = "label4";
+            label4.Size = new Size(49, 21);
+            label4.TabIndex = 3;
+            label4.Text = "CPF *";
             // 
-            // textBox6
+            // textBox2
             // 
-            textBox6.Location = new Point(499, 223);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(146, 27);
-            textBox6.TabIndex = 42;
-            textBox6.TextChanged += textBox6_TextChanged;
+            textBox2.Font = new Font("Segoe UI", 11F);
+            textBox2.Location = new Point(525, 102);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(445, 32);
+            textBox2.TabIndex = 4;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 7F);
-            label6.Location = new Point(91, 205);
+            label6.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            label6.ForeColor = Color.FromArgb(60, 60, 60);
+            label6.Location = new Point(35, 155);
             label6.Name = "label6";
-            label6.Size = new Size(39, 15);
-            label6.TabIndex = 41;
-            label6.Text = "Cargo";
+            label6.Size = new Size(66, 21);
+            label6.TabIndex = 5;
+            label6.Text = "Cargo *";
+            // 
+            // textBox5
+            // 
+            textBox5.Font = new Font("Segoe UI", 11F);
+            textBox5.Location = new Point(35, 182);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(445, 32);
+            textBox5.TabIndex = 6;
+            textBox5.TextChanged += textBox5_TextChanged;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 7F);
-            label7.Location = new Point(499, 205);
+            label7.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            label7.ForeColor = Color.FromArgb(60, 60, 60);
+            label7.Location = new Point(525, 155);
             label7.Name = "label7";
-            label7.Size = new Size(42, 15);
-            label7.TabIndex = 40;
-            label7.Text = "Salário";
+            label7.Size = new Size(74, 21);
+            label7.TabIndex = 7;
+            label7.Text = "Salário *";
+            // 
+            // textBox6
+            // 
+            textBox6.Font = new Font("Segoe UI", 11F);
+            textBox6.Location = new Point(525, 182);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(445, 32);
+            textBox6.TabIndex = 8;
+            textBox6.TextChanged += textBox6_TextChanged;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            label5.ForeColor = Color.FromArgb(60, 60, 60);
+            label5.Location = new Point(35, 235);
+            label5.Name = "label5";
+            label5.Size = new Size(64, 21);
+            label5.TabIndex = 9;
+            label5.Text = "Email *";
+            // 
+            // textBox4
+            // 
+            textBox4.Font = new Font("Segoe UI", 11F);
+            textBox4.Location = new Point(35, 262);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(445, 32);
+            textBox4.TabIndex = 10;
+            textBox4.TextChanged += textBox4_TextChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            label3.ForeColor = Color.FromArgb(60, 60, 60);
+            label3.Location = new Point(525, 235);
+            label3.Name = "label3";
+            label3.Size = new Size(68, 21);
+            label3.TabIndex = 11;
+            label3.Text = "Senha *";
+            // 
+            // textBox3
+            // 
+            textBox3.Font = new Font("Segoe UI", 11F);
+            textBox3.Location = new Point(525, 262);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(445, 32);
+            textBox3.TabIndex = 12;
+            textBox3.UseSystemPasswordChar = true;
+            textBox3.TextChanged += textBox3_TextChanged;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.White;
+            button2.FlatAppearance.BorderColor = Color.FromArgb(199, 29, 44);
+            button2.FlatAppearance.BorderSize = 2;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            button2.ForeColor = Color.FromArgb(199, 29, 44);
+            button2.Location = new Point(665, 425);
+            button2.Name = "button2";
+            button2.Size = new Size(135, 42);
+            button2.TabIndex = 13;
+            button2.Text = "Cancelar";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(199, 29, 44);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(820, 425);
+            button1.Name = "button1";
+            button1.Size = new Size(150, 42);
+            button1.TabIndex = 14;
+            button1.Text = "Salvar";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // CadastrarColaborador
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(textBox5);
-            Controls.Add(textBox6);
-            Controls.Add(label6);
-            Controls.Add(label7);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(textBox1);
-            Controls.Add(panel2);
+            BackColor = Color.FromArgb(245, 246, 248);
+            ClientSize = new Size(1080, 680);
+            Controls.Add(panelMainContainer);
+            Controls.Add(panelHeaderDivider);
+            Controls.Add(panelTopHeader);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "CadastrarColaborador";
-            Text = "CadastrarColaborador";
-            Load += CadastrarColaborador_Load;
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Software Farmácia - Cadastrar Colaborador";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            panelTopHeader.ResumeLayout(false);
+            panelTopHeader.PerformLayout();
+            panelMainContainer.ResumeLayout(false);
+            panelCardForm.ResumeLayout(false);
+            panelCardForm.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -365,18 +490,23 @@
         private ToolStripMenuItem cadastrarColaboradorToolStripMenuItem;
         private ToolStripMenuItem editarColaboradorToolStripMenuItem;
         private ToolStripMenuItem visualizarColaboradorToolStripMenuItem;
-        private Panel panel2;
+        private Panel panelTopHeader;
+        private Label labelHeaderTitle;
+        private Label labelHeaderSub;
+        private Panel panelHeaderDivider;
+        private Panel panelMainContainer;
+        private Panel panelCardForm;
         private Label label1;
+        private Label label2;
+        private TextBox textBox1;
+        private Label label5;
         private TextBox textBox4;
+        private Label label3;
         private TextBox textBox3;
+        private Label label4;
         private TextBox textBox2;
         private Button button2;
         private Button button1;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private TextBox textBox1;
         private TextBox textBox5;
         private TextBox textBox6;
         private Label label6;
