@@ -48,11 +48,10 @@ namespace Software_Farmacia
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Nota: Lembre-se de descomentar ou ajustar a origem do ID do produto quando vincular a busca/listagem
-            // string id = textBoxIdProduto.Text; 
+
             string nome = textBox1.Text;
-            string quantidade = textBox2.Text;
-            string preco = textBox3.Text;
+            int quantidade = int.Parse(textBox2.Text);
+            float preco = float.Parse(textBox3.Text);
             string descricao = textBox4.Text;
 
             if (comboBox1.SelectedValue == null)
@@ -72,7 +71,7 @@ namespace Software_Farmacia
                              "Preco_produto = @preco, " +
                              "Descricao_produto = @descricao, " +
                              "ID_Fornecedor = @idFornecedor " +
-                             "WHERE Id_produto = @id";
+                             "WHERE Id_produto = 4";
 
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
@@ -138,6 +137,11 @@ namespace Software_Farmacia
         }
 
         private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelCardForm_Paint(object sender, PaintEventArgs e)
         {
 
         }
