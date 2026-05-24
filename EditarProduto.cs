@@ -24,7 +24,11 @@ namespace Software_Farmacia
                 using (SqlConnection conn = new SqlConnection(Conexao.conexao))
                 {
                     conn.Open();
-                    string sql = "SELECT ID_Fornecedor, Nome_fornecedor FROM Fornecedor ORDER BY Nome_fornecedor";
+
+                    string sql =
+                    "SELECT Id_fornecedor, Nome_fornecedor " +
+                    "FROM Fornecedor " +
+                    "ORDER BY Nome_fornecedor";
 
                     using (SqlCommand cmd = new SqlCommand(sql, conn))
                     {
@@ -35,7 +39,7 @@ namespace Software_Farmacia
 
                             comboBox1.DataSource = dt;
                             comboBox1.DisplayMember = "Nome_fornecedor";
-                            comboBox1.ValueMember = "ID_Fornecedor";
+                            comboBox1.ValueMember = "Id_fornecedor";
                         }
                     }
                 }
@@ -46,9 +50,8 @@ namespace Software_Farmacia
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-
             string nome = textBox1.Text;
             int quantidade = int.Parse(textBox2.Text);
             float preco = float.Parse(textBox3.Text);
@@ -59,23 +62,24 @@ namespace Software_Farmacia
                 MessageBox.Show("Por favor, selecione um fornecedor.");
                 return;
             }
+
             string idFornecedor = comboBox1.SelectedValue.ToString();
 
             using (SqlConnection conn = new SqlConnection(Conexao.conexao))
             {
                 conn.Open();
 
-                string sql = "UPDATE Produto SET " +
-                             "Nome_produto = @nome, " +
-                             "Quantidade_produto = @quantidade, " +
-                             "Preco_produto = @preco, " +
-                             "Descricao_produto = @descricao, " +
-                             "ID_Fornecedor = @idFornecedor " +
-                             "WHERE Id_produto = 4";
+                string sql =
+                "UPDATE Produto SET " +
+                "Nome_produto = @nome, " +
+                "Quantidade_produto = @quantidade, " +
+                "Preco_produto = @preco, " +
+                "Descricao_produto = @descricao, " +
+                "Id_fornecedorFK = @idFornecedor " +
+                "WHERE Id_produto = @id";
 
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
-                    // cmd.Parameters.AddWithValue("@id", id);
                     cmd.Parameters.AddWithValue("@nome", nome);
                     cmd.Parameters.AddWithValue("@quantidade", quantidade);
                     cmd.Parameters.AddWithValue("@preco", preco);
@@ -88,7 +92,6 @@ namespace Software_Farmacia
 
             MessageBox.Show("Produto alterado com sucesso!\n\nNome: " + nome);
         }
-
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Dashboard dashboard = new Dashboard();
