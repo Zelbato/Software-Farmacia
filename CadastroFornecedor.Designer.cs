@@ -50,6 +50,7 @@
             textBox2 = new TextBox();
             button2 = new Button();
             button1 = new Button();
+            label6 = new Label();
             menuStrip1.SuspendLayout();
             panelTopHeader.SuspendLayout();
             panelMainContainer.SuspendLayout();
@@ -124,7 +125,7 @@
             fornecedorToolStripMenuItem.Name = "fornecedorToolStripMenuItem";
             fornecedorToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
             fornecedorToolStripMenuItem.Size = new Size(160, 37);
-            fornecedorToolStripMenuItem.Text = "\U0001f91d Fornecedor";
+            fornecedorToolStripMenuItem.Text = "🤝 Fornecedor";
             // 
             // cadastrarFornecedorToolStripMenuItem
             // 
@@ -260,6 +261,7 @@
             // panelCardForm
             // 
             panelCardForm.BackColor = Color.White;
+            panelCardForm.Controls.Add(label6);
             panelCardForm.Controls.Add(label1);
             panelCardForm.Controls.Add(label2);
             panelCardForm.Controls.Add(textBox1);
@@ -305,7 +307,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(935, 32);
             textBox1.TabIndex = 2;
-            textBox1.TextChanged += textBox1_TextChanged_1;
             // 
             // label5
             // 
@@ -314,9 +315,9 @@
             label5.ForeColor = Color.FromArgb(60, 60, 60);
             label5.Location = new Point(35, 155);
             label5.Name = "label5";
-            label5.Size = new Size(60, 21);
+            label5.Size = new Size(49, 21);
             label5.TabIndex = 3;
-            label5.Text = "CNPJ *";
+            label5.Text = "CPF *";
             // 
             // textBox4
             // 
@@ -393,6 +394,19 @@
             button1.Text = "Salvar Fornecedor";
             button1.UseVisualStyleBackColor = false;
             // 
+            // label6
+            // 
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold);
+            label6.ForeColor = Color.FromArgb(64, 64, 64);
+            label6.Location = new Point(860, 25);
+            label6.Name = "label6";
+            label6.Size = new Size(72, 28);
+            label6.TabIndex = 11;
+            label6.Text = "ID: 00";
+            label6.TextAlign = ContentAlignment.TopRight;
+            // 
             // CadastroFornecedor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -454,5 +468,6 @@
         private TextBox textBox2;
         private Button button2;
         private Button button1;
+        private Label label6;
     }
 }

@@ -1,12 +1,8 @@
-﻿using Microsoft.Data.SqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
+
 namespace Software_Farmacia
 {
     public partial class CadastrarColaborador : Form
@@ -14,41 +10,32 @@ namespace Software_Farmacia
         public CadastrarColaborador()
         {
             InitializeComponent();
+            ExibirProximoID();
         }
 
-        private void CadastrarColaborador_Load(object sender, EventArgs e)
+        private void ExibirProximoID()
         {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Conexao.conexao))
+                {
+                    conn.Open();
+                    string sql = "SELECT IDENT_CURRENT('Colaborador') + IDENT_INCR('Colaborador')";
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
+                    {
+                        object resultado = cmd.ExecuteScalar();
+                        if (resultado != DBNull.Value && resultado != null)
+                        {
+                            int proximoId = Convert.ToInt32(resultado);
+                            label8.Text = $"ID: {proximoId:D2}";
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                label8.Text = "ID: --";
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -58,39 +45,46 @@ namespace Software_Farmacia
             string senha = textBox3.Text;
             string email = textBox4.Text;
             string cargo = textBox5.Text;
-            float salario = float.Parse(textBox6.Text);
 
-            SqlConnection conn =
-            new SqlConnection(Conexao.conexao);
+            if (!float.TryParse(textBox6.Text, out float salario))
+            {
+                salario = 0;
+            }
 
-            conn.Open();
+            using (SqlConnection conn = new SqlConnection(Conexao.conexao))
+            {
+                conn.Open();
 
-            string sql =
-       "INSERT INTO Colaborador " +
-"(Nome_colaborador, CPF_colaborador, Senha_colaborador, " +
-"Email_colaborador, Cargo_colaborador, Salario_colaborador) " +
-"VALUES " +
-"(@nome, @cpf, @senha, @email, @cargo, @salario)";
+                string sql = "INSERT INTO Colaborador (Nome_colaborador, CPF_colaborador, Senha_colaborador, " +
+                             "Email_colaborador, Cargo_colaborador, Salario_colaborador) " +
+                             "VALUES (@nome, @cpf, @senha, @email, @cargo, @salario)";
 
-            SqlCommand cmd = new SqlCommand(sql, conn);
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@nome", nomeColaborador);
+                    cmd.Parameters.AddWithValue("@cpf", cpf);
+                    cmd.Parameters.AddWithValue("@senha", senha);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@cargo", cargo);
+                    cmd.Parameters.AddWithValue("@salario", salario);
 
-            cmd.Parameters.AddWithValue("@nome", nomeColaborador);
-            cmd.Parameters.AddWithValue("@cpf", cpf);
-            cmd.Parameters.AddWithValue("@senha", senha);
-            cmd.Parameters.AddWithValue("@email", email);
-            cmd.Parameters.AddWithValue("@cargo", cargo);
-            cmd.Parameters.AddWithValue("@salario", salario);
+                    cmd.ExecuteNonQuery();
+                }
+            }
 
-            cmd.ExecuteNonQuery();
+            MessageBox.Show("COLABORADOR CADASTRADO COM SUCESSO!\n\n" +
+                            "Nome: " + nomeColaborador + "\n" +
+                            "CPF: " + cpf + "\n" +
+                            "Cargo: " + cargo);
 
-            conn.Close();
+            ExibirProximoID();
 
-            MessageBox.Show(
-                "COLABORADOR CADASTRADO COM SUCESSO!\n\n" +
-                "Nome: " + nomeColaborador + "\n" +
-                "CPF: " + cpf + "\n" +
-                "Cargo: " + cargo
-            );
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
+            textBox6.Clear();
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)

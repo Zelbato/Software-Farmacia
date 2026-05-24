@@ -1,12 +1,8 @@
-﻿using Microsoft.Data.SqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
+
 namespace Software_Farmacia
 {
     public partial class CadastroFornecedor : Form
@@ -14,31 +10,32 @@ namespace Software_Farmacia
         public CadastroFornecedor()
         {
             InitializeComponent();
+            ExibirProximoID();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void ExibirProximoID()
         {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Conexao.conexao))
+                {
+                    conn.Open();
+                    string sql = "SELECT IDENT_CURRENT('Fornecedor') + IDENT_INCR('Fornecedor')";
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
+                    {
+                        object resultado = cmd.ExecuteScalar();
+                        if (resultado != DBNull.Value && resultado != null)
+                        {
+                            int proximoId = Convert.ToInt32(resultado);
+                            label6.Text = $"ID: {proximoId:D2}";
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                label6.Text = "ID: --";
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,39 +45,35 @@ namespace Software_Farmacia
             string senha = textBox3.Text;
             string email = textBox4.Text;
 
-            SqlConnection conn =
-            new SqlConnection(Conexao.conexao);
+            using (SqlConnection conn = new SqlConnection(Conexao.conexao))
+            {
+                conn.Open();
 
-            conn.Open();
+                string sql = "INSERT INTO Fornecedor (Nome_fornecedor, CPF_fornecedor, Senha_fornecedor, Email_fornecedor) " +
+                             "VALUES (@nome, @cpf, @senha, @email)";
 
-            string sql =
-            "INSERT INTO Fornecedor " +
-            "(Nome_fornecedor, CPF_fornecedor, Senha_fornecedor, Email_fornecedor) " +
-            "VALUES " +
-            "(@nome, @cpf, @senha, @email)";
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@nome", nomeFornecedor);
+                    cmd.Parameters.AddWithValue("@cpf", cpfFornecedor);
+                    cmd.Parameters.AddWithValue("@senha", senha);
+                    cmd.Parameters.AddWithValue("@email", email);
 
-            SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.ExecuteNonQuery();
+                }
+            }
 
-            cmd.Parameters.AddWithValue("@nome", nomeFornecedor);
-            cmd.Parameters.AddWithValue("@cpf", cpfFornecedor);
-            cmd.Parameters.AddWithValue("@senha", senha);
-            cmd.Parameters.AddWithValue("@email", email);
+            MessageBox.Show("FORNECEDOR CADASTRADO COM SUCESSO!\n\n" +
+                            "Nome: " + nomeFornecedor + "\n" +
+                            "CPF: " + cpfFornecedor + "\n" +
+                            "Email: " + email);
 
-            cmd.ExecuteNonQuery();
+            ExibirProximoID();
 
-            conn.Close();
-
-            MessageBox.Show(
-                "FORNECEDOR CADASTRADO COM SUCESSO!\n\n" +
-                "Nome: " + nomeFornecedor + "\n" +
-                "CPF: " + cpfFornecedor + "\n" +
-                "Email: " + email
-                    );
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)

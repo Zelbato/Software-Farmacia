@@ -1,13 +1,8 @@
-﻿using Microsoft.Data.SqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Microsoft.Data.SqlClient;
+
 namespace Software_Farmacia
 {
     public partial class EditarFornecedor : Form
@@ -17,75 +12,42 @@ namespace Software_Farmacia
             InitializeComponent();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            //string id = textBox5.Text;
+            // Nota: Lembre-se de mapear de onde virá o ID do fornecedor ao carregar a busca
+            // string id = textBox5.Text; 
             string nomeFornecedor = textBox1.Text;
             string cpfFornecedor = textBox2.Text;
             string senha = textBox3.Text;
             string email = textBox4.Text;
 
-            SqlConnection conn =
-            new SqlConnection(Conexao.conexao);
+            using (SqlConnection conn = new SqlConnection(Conexao.conexao))
+            {
+                conn.Open();
 
-            conn.Open();
+                string sql = "UPDATE Fornecedor SET " +
+                             "Nome_fornecedor = @nome, " +
+                             "CPF_fornecedor = @cpf, " +
+                             "Senha_fornecedor = @senha, " +
+                             "Email_fornecedor = @email " +
+                             "WHERE Id_fornecedor = @id";
 
-            string sql =
-            "UPDATE Fornecedor SET " +
-            "Nome_fornecedor = @nome, " +
-            "CPF_fornecedor = @cpf, " +
-            "Senha_fornecedor = @senha, " +
-            "Email_fornecedor = @email " +
-            "WHERE Id_fornecedor = @id";
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    // cmd.Parameters.AddWithValue("@id", id);
+                    cmd.Parameters.AddWithValue("@nome", nomeFornecedor);
+                    cmd.Parameters.AddWithValue("@cpf", cpfFornecedor);
+                    cmd.Parameters.AddWithValue("@senha", senha);
+                    cmd.Parameters.AddWithValue("@email", email);
 
-            SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.ExecuteNonQuery();
+                }
+            }
 
-            //cmd.Parameters.AddWithValue("@id", id);
-            cmd.Parameters.AddWithValue("@nome", nomeFornecedor);
-            cmd.Parameters.AddWithValue("@cpf", cpfFornecedor);
-            cmd.Parameters.AddWithValue("@senha", senha);
-            cmd.Parameters.AddWithValue("@email", email);
-
-            cmd.ExecuteNonQuery();
-
-            conn.Close();
-
-            MessageBox.Show(
-                "DADOS DO FORNECEDOR ALTERADOS!\n\n" +
-                //"ID: " + id + "\n" +
-                "Nome: " + nomeFornecedor + "\n" +
-                "CPF: " + cpfFornecedor
-                    );
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
+            MessageBox.Show("DADOS DO FORNECEDOR ALTERADOS!\n\n" +
+                            //"ID: " + id + "\n" +
+                            "Nome: " + nomeFornecedor + "\n" +
+                            "CPF: " + cpfFornecedor);
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
@@ -126,12 +88,8 @@ namespace Software_Farmacia
 
         private void editarColaboradorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EditarColaborador EditarC = new EditarColaborador(); EditarC.Show();
-        }
-
-        private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
+            EditarColaborador EditarC = new EditarColaborador();
+            EditarC.Show();
         }
     }
 }

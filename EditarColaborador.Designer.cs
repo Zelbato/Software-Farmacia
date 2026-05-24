@@ -39,6 +39,8 @@
             panelHeaderDivider = new Panel();
             panelMainContainer = new Panel();
             panelCardForm = new Panel();
+            label9 = new Label();
+            label8 = new Label();
             label1 = new Label();
             label2 = new Label();
             textBox1 = new TextBox();
@@ -264,6 +266,8 @@
             // panelCardForm
             // 
             panelCardForm.BackColor = Color.White;
+            panelCardForm.Controls.Add(label9);
+            panelCardForm.Controls.Add(label8);
             panelCardForm.Controls.Add(label1);
             panelCardForm.Controls.Add(label2);
             panelCardForm.Controls.Add(textBox1);
@@ -283,6 +287,25 @@
             panelCardForm.Name = "panelCardForm";
             panelCardForm.Size = new Size(1010, 490);
             panelCardForm.TabIndex = 0;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(898, 48);
+            label9.Name = "label9";
+            label9.Size = new Size(36, 20);
+            label9.TabIndex = 16;
+            label9.Text = "--:--";
+            label9.Visible = false;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(877, 48);
+            label8.Name = "label8";
+            label8.Size = new Size(27, 20);
+            label8.TabIndex = 15;
+            label8.Text = "ID:";
             // 
             // label1
             // 
@@ -313,7 +336,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(445, 32);
             textBox1.TabIndex = 2;
-            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label4
             // 
@@ -333,7 +355,6 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(445, 32);
             textBox2.TabIndex = 4;
-            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label6
             // 
@@ -353,7 +374,6 @@
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(445, 32);
             textBox5.TabIndex = 6;
-            textBox5.TextChanged += textBox5_TextChanged;
             // 
             // label7
             // 
@@ -373,7 +393,6 @@
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(445, 32);
             textBox6.TabIndex = 8;
-            textBox6.TextChanged += textBox6_TextChanged;
             // 
             // label5
             // 
@@ -393,7 +412,6 @@
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(445, 32);
             textBox4.TabIndex = 10;
-            textBox4.TextChanged += textBox4_TextChanged;
             // 
             // label3
             // 
@@ -414,7 +432,6 @@
             textBox3.Size = new Size(445, 32);
             textBox3.TabIndex = 12;
             textBox3.UseSystemPasswordChar = true;
-            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // button2
             // 
@@ -511,5 +528,7 @@
         private TextBox textBox6;
         private Label label6;
         private Label label7;
+        private Label label9;
+        private Label label8;
     }
 }

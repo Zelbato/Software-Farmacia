@@ -17,9 +17,9 @@
 
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             menuStrip1 = new MenuStrip();
             dashboardToolStripMenuItem = new ToolStripMenuItem();
             produtoToolStripMenuItem = new ToolStripMenuItem();
@@ -172,6 +172,7 @@
             estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
             estoqueToolStripMenuItem.Size = new Size(116, 27);
             estoqueToolStripMenuItem.Text = "📊 Estoque";
+            estoqueToolStripMenuItem.Click += estoqueToolStripMenuItem_Click;
             // 
             // visualizarEstoqueToolStripMenuItem
             // 
@@ -181,6 +182,7 @@
             visualizarEstoqueToolStripMenuItem.Name = "visualizarEstoqueToolStripMenuItem";
             visualizarEstoqueToolStripMenuItem.Size = new Size(224, 26);
             visualizarEstoqueToolStripMenuItem.Text = "Visualizar Estoque";
+            visualizarEstoqueToolStripMenuItem.Click += visualizarEstoqueToolStripMenuItem_Click;
             // 
             // colaboradorToolStripMenuItem
             // 
@@ -222,7 +224,7 @@
             // 
             // panelMainContainer
             // 
-            panelMainContainer.BackColor = Color.FromArgb(255, 255, 255);
+            panelMainContainer.BackColor = Color.White;
             panelMainContainer.Controls.Add(cardProdutos);
             panelMainContainer.Controls.Add(cardColaboradores);
             panelMainContainer.Controls.Add(cardEstoque);
@@ -253,7 +255,8 @@
             lblCardProdutosValor.Name = "lblCardProdutosValor";
             lblCardProdutosValor.Size = new Size(200, 50);
             lblCardProdutosValor.TabIndex = 0;
-            lblCardProdutosValor.Text = "1.240";
+            lblCardProdutosValor.Text = "0";
+            lblCardProdutosValor.Click += lblCardProdutosValor_Click;
             // 
             // lblCardProdutosTitulo
             // 
@@ -293,7 +296,8 @@
             lblCardColaboradoresValor.Name = "lblCardColaboradoresValor";
             lblCardColaboradoresValor.Size = new Size(200, 50);
             lblCardColaboradoresValor.TabIndex = 0;
-            lblCardColaboradoresValor.Text = "18";
+            lblCardColaboradoresValor.Text = "0";
+            lblCardColaboradoresValor.Click += lblCardColaboradoresValor_Click;
             // 
             // lblCardColaboradoresTitulo
             // 
@@ -333,7 +337,7 @@
             lblCardEstoqueValor.Name = "lblCardEstoqueValor";
             lblCardEstoqueValor.Size = new Size(200, 50);
             lblCardEstoqueValor.TabIndex = 0;
-            lblCardEstoqueValor.Text = "5 Baixos";
+            lblCardEstoqueValor.Text = "0 Baixos";
             // 
             // lblCardEstoqueTitulo
             // 
@@ -363,6 +367,7 @@
             panelGrafico.Name = "panelGrafico";
             panelGrafico.Size = new Size(510, 430);
             panelGrafico.TabIndex = 3;
+            panelGrafico.Paint += panelGrafico_Paint;
             // 
             // lblGraficoTitulo
             // 
@@ -377,31 +382,33 @@
             // gridProdutos
             // 
             gridProdutos.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = Color.White;
-            gridProdutos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            gridProdutos.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            gridProdutos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             gridProdutos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             gridProdutos.BackgroundColor = Color.White;
             gridProdutos.BorderStyle = BorderStyle.None;
             gridProdutos.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             gridProdutos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(254, 242, 242);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(199, 29, 44);
-            gridProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(254, 242, 242);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(199, 29, 44);
+            gridProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             gridProdutos.ColumnHeadersHeight = 45;
             gridProdutos.Columns.AddRange(new DataGridViewColumn[] { colId, colNome, colQtd, colStatus });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Window;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(40, 40, 40);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(199, 29, 44);
-            dataGridViewCellStyle3.SelectionForeColor = Color.White;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            gridProdutos.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Window;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(40, 40, 40);
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(199, 29, 44);
+            dataGridViewCellStyle6.SelectionForeColor = Color.White;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            gridProdutos.DefaultCellStyle = dataGridViewCellStyle6;
             gridProdutos.EnableHeadersVisualStyles = false;
             gridProdutos.GridColor = Color.FromArgb(254, 242, 242);
             gridProdutos.Location = new Point(590, 180);
             gridProdutos.Name = "gridProdutos";
+            gridProdutos.ReadOnly = true;
             gridProdutos.RowHeadersVisible = false;
             gridProdutos.RowHeadersWidth = 51;
             gridProdutos.RowTemplate.Height = 40;
@@ -412,28 +419,36 @@
             // 
             // colId
             // 
+            colId.DataPropertyName = "ID";
             colId.FillWeight = 35F;
             colId.HeaderText = "ID";
             colId.MinimumWidth = 6;
             colId.Name = "colId";
+            colId.ReadOnly = true;
             // 
             // colNome
             // 
+            colNome.DataPropertyName = "Produto";
             colNome.HeaderText = "Produto";
             colNome.MinimumWidth = 6;
             colNome.Name = "colNome";
+            colNome.ReadOnly = true;
             // 
             // colQtd
             // 
+            colQtd.DataPropertyName = "Estoque";
             colQtd.HeaderText = "Estoque";
             colQtd.MinimumWidth = 6;
             colQtd.Name = "colQtd";
+            colQtd.ReadOnly = true;
             // 
             // colStatus
             // 
+            colStatus.DataPropertyName = "Status";
             colStatus.HeaderText = "Status";
             colStatus.MinimumWidth = 6;
             colStatus.Name = "colStatus";
+            colStatus.ReadOnly = true;
             // 
             // Dashboard
             // 

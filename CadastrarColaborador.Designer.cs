@@ -54,6 +54,7 @@
             textBox3 = new TextBox();
             button2 = new Button();
             button1 = new Button();
+            label8 = new Label();
             menuStrip1.SuspendLayout();
             panelTopHeader.SuspendLayout();
             panelMainContainer.SuspendLayout();
@@ -128,7 +129,7 @@
             fornecedorToolStripMenuItem.Name = "fornecedorToolStripMenuItem";
             fornecedorToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
             fornecedorToolStripMenuItem.Size = new Size(160, 37);
-            fornecedorToolStripMenuItem.Text = "\U0001f91d Fornecedor";
+            fornecedorToolStripMenuItem.Text = "🤝 Fornecedor";
             // 
             // cadastrarFornecedorToolStripMenuItem
             // 
@@ -279,6 +280,7 @@
             panelCardForm.Controls.Add(textBox3);
             panelCardForm.Controls.Add(button2);
             panelCardForm.Controls.Add(button1);
+            panelCardForm.Controls.Add(label8);
             panelCardForm.Location = new Point(35, 25);
             panelCardForm.Name = "panelCardForm";
             panelCardForm.Size = new Size(1010, 490);
@@ -313,7 +315,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(445, 32);
             textBox1.TabIndex = 2;
-            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label4
             // 
@@ -333,7 +334,6 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(445, 32);
             textBox2.TabIndex = 4;
-            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label6
             // 
@@ -353,7 +353,6 @@
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(445, 32);
             textBox5.TabIndex = 6;
-            textBox5.TextChanged += textBox5_TextChanged;
             // 
             // label7
             // 
@@ -373,7 +372,6 @@
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(445, 32);
             textBox6.TabIndex = 8;
-            textBox6.TextChanged += textBox6_TextChanged;
             // 
             // label5
             // 
@@ -393,7 +391,6 @@
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(445, 32);
             textBox4.TabIndex = 10;
-            textBox4.TextChanged += textBox4_TextChanged;
             // 
             // label3
             // 
@@ -414,7 +411,6 @@
             textBox3.Size = new Size(445, 32);
             textBox3.TabIndex = 12;
             textBox3.UseSystemPasswordChar = true;
-            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // button2
             // 
@@ -445,6 +441,17 @@
             button1.Text = "Salvar";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            label8.ForeColor = Color.Gray;
+            label8.Location = new Point(850, 30);
+            label8.Name = "label8";
+            label8.Size = new Size(58, 23);
+            label8.TabIndex = 4;
+            label8.Text = "ID: --";
             // 
             // CadastrarColaborador
             // 
@@ -511,5 +518,6 @@
         private TextBox textBox6;
         private Label label6;
         private Label label7;
+        private Label label8;
     }
 }
