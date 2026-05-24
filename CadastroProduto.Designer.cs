@@ -443,6 +443,7 @@
             button1.TabIndex = 10;
             button1.Text = "Salvar Produto";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
             // 
             // CadastroProduto
             // 

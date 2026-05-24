@@ -53,12 +53,12 @@ namespace Software_Farmacia
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string nomeFuncionario = textBox1.Text;
+            string nomeColaborador = textBox1.Text;
             string cpf = textBox2.Text;
             string senha = textBox3.Text;
             string email = textBox4.Text;
             string cargo = textBox5.Text;
-            string salario = textBox6.Text;
+            float salario = float.Parse(textBox6.Text);
 
             SqlConnection conn =
             new SqlConnection(Conexao.conexao);
@@ -66,15 +66,15 @@ namespace Software_Farmacia
             conn.Open();
 
             string sql =
-            "INSERT INTO Funcionario " +
-            "(Nome_funcionario, CPF_funcionario, Senha_funcionario, " +
-            "Email_funcionario, Cargo_funcionario, Salario_funcionario) " +
-            "VALUES " +
-            "(@nome, @cpf, @senha, @email, @cargo, @salario)";
+       "INSERT INTO Colaborador " +
+"(Nome_colaborador, CPF_colaborador, Senha_colaborador, " +
+"Email_colaborador, Cargo_colaborador, Salario_colaborador) " +
+"VALUES " +
+"(@nome, @cpf, @senha, @email, @cargo, @salario)";
 
             SqlCommand cmd = new SqlCommand(sql, conn);
 
-            cmd.Parameters.AddWithValue("@nome", nomeFuncionario);
+            cmd.Parameters.AddWithValue("@nome", nomeColaborador);
             cmd.Parameters.AddWithValue("@cpf", cpf);
             cmd.Parameters.AddWithValue("@senha", senha);
             cmd.Parameters.AddWithValue("@email", email);
@@ -86,11 +86,11 @@ namespace Software_Farmacia
             conn.Close();
 
             MessageBox.Show(
-                "FUNCIONÁRIO CADASTRADO COM SUCESSO!\n\n" +
-                "Nome: " + nomeFuncionario + "\n" +
+                "COLABORADOR CADASTRADO COM SUCESSO!\n\n" +
+                "Nome: " + nomeColaborador + "\n" +
                 "CPF: " + cpf + "\n" +
                 "Cargo: " + cargo
-                    );
+            );
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)

@@ -12,4 +12,4 @@ namespace Software_Farmacia
         Initial Catalog=FarmaciaBD;
         Integrated Security=True";
     }
-}
+} 
