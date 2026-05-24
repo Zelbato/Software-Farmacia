@@ -44,7 +44,7 @@ namespace Software_Farmacia
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //string id = textBox5.Text;
+            //string id = textBox5.Texts;
             string nomeFornecedor = textBox1.Text;
             string cpfFornecedor = textBox2.Text;
             string senha = textBox3.Text;
