@@ -63,9 +63,14 @@ namespace Software_Farmacia
 
         private void button1_Click(object sender, EventArgs e)
         {
+          
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
             string nome = textBox1.Text;
-            string quantidade = textBox2.Text;
-            string preco = textBox3.Text;
+            int quantidade = int.Parse(textBox2.Text);
+            float preco = float.Parse(textBox3.Text);
             string descricao = textBox4.Text;
 
             SqlConnection conn =
