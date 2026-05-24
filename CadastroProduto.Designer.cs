@@ -70,7 +70,6 @@
             // menuStrip1
             // 
             menuStrip1.BackColor = Color.FromArgb(199, 29, 44);
-            menuStrip1.Dock = DockStyle.Top;
             menuStrip1.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Items.AddRange(new ToolStripItem[] { dashboardToolStripMenuItem, produtoToolStripMenuItem, fornecedorToolStripMenuItem, estoqueToolStripMenuItem, colaboradorToolStripMenuItem });
@@ -78,7 +77,7 @@
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(15, 8, 15, 8);
             menuStrip1.RenderMode = ToolStripRenderMode.Professional;
-            menuStrip1.Size = new Size(1080, 46);
+            menuStrip1.Size = new Size(1080, 53);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -88,7 +87,7 @@
             dashboardToolStripMenuItem.Margin = new Padding(0, 0, 12, 0);
             dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
             dashboardToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
-            dashboardToolStripMenuItem.Size = new Size(141, 30);
+            dashboardToolStripMenuItem.Size = new Size(156, 37);
             dashboardToolStripMenuItem.Text = "🏠 Dashboard";
             // 
             // produtoToolStripMenuItem
@@ -98,7 +97,7 @@
             produtoToolStripMenuItem.Margin = new Padding(0, 0, 12, 0);
             produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
             produtoToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
-            produtoToolStripMenuItem.Size = new Size(119, 30);
+            produtoToolStripMenuItem.Size = new Size(132, 37);
             produtoToolStripMenuItem.Text = "📦 Produto";
             // 
             // cadastroToolStripMenuItem
@@ -106,7 +105,7 @@
             cadastroToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             cadastroToolStripMenuItem.ForeColor = Color.White;
             cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            cadastroToolStripMenuItem.Size = new Size(243, 30);
+            cadastroToolStripMenuItem.Size = new Size(254, 30);
             cadastroToolStripMenuItem.Text = "Cadastrar Produto";
             // 
             // editarProdutoToolStripMenuItem
@@ -114,7 +113,7 @@
             editarProdutoToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             editarProdutoToolStripMenuItem.ForeColor = Color.White;
             editarProdutoToolStripMenuItem.Name = "editarProdutoToolStripMenuItem";
-            editarProdutoToolStripMenuItem.Size = new Size(243, 30);
+            editarProdutoToolStripMenuItem.Size = new Size(254, 30);
             editarProdutoToolStripMenuItem.Text = "Editar Produto";
             // 
             // visualizarProdutoToolStripMenuItem
@@ -122,7 +121,7 @@
             visualizarProdutoToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             visualizarProdutoToolStripMenuItem.ForeColor = Color.White;
             visualizarProdutoToolStripMenuItem.Name = "visualizarProdutoToolStripMenuItem";
-            visualizarProdutoToolStripMenuItem.Size = new Size(243, 30);
+            visualizarProdutoToolStripMenuItem.Size = new Size(254, 30);
             visualizarProdutoToolStripMenuItem.Text = "Visualizar Produto";
             // 
             // fornecedorToolStripMenuItem
@@ -132,15 +131,15 @@
             fornecedorToolStripMenuItem.Margin = new Padding(0, 0, 12, 0);
             fornecedorToolStripMenuItem.Name = "fornecedorToolStripMenuItem";
             fornecedorToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
-            fornecedorToolStripMenuItem.Size = new Size(142, 30);
-            fornecedorToolStripMenuItem.Text = "🤝 Fornecedor";
+            fornecedorToolStripMenuItem.Size = new Size(160, 37);
+            fornecedorToolStripMenuItem.Text = "\U0001f91d Fornecedor";
             // 
             // cadastrarFornecedorToolStripMenuItem
             // 
             cadastrarFornecedorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             cadastrarFornecedorToolStripMenuItem.ForeColor = Color.White;
             cadastrarFornecedorToolStripMenuItem.Name = "cadastrarFornecedorToolStripMenuItem";
-            cadastrarFornecedorToolStripMenuItem.Size = new Size(269, 30);
+            cadastrarFornecedorToolStripMenuItem.Size = new Size(282, 30);
             cadastrarFornecedorToolStripMenuItem.Text = "Cadastrar Fornecedor";
             // 
             // editarFornecedorToolStripMenuItem
@@ -148,7 +147,7 @@
             editarFornecedorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             editarFornecedorToolStripMenuItem.ForeColor = Color.White;
             editarFornecedorToolStripMenuItem.Name = "editarFornecedorToolStripMenuItem";
-            editarFornecedorToolStripMenuItem.Size = new Size(269, 30);
+            editarFornecedorToolStripMenuItem.Size = new Size(282, 30);
             editarFornecedorToolStripMenuItem.Text = "Editar Fornecedor";
             // 
             // visualizarFornecedorToolStripMenuItem
@@ -156,7 +155,7 @@
             visualizarFornecedorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             visualizarFornecedorToolStripMenuItem.ForeColor = Color.White;
             visualizarFornecedorToolStripMenuItem.Name = "visualizarFornecedorToolStripMenuItem";
-            visualizarFornecedorToolStripMenuItem.Size = new Size(269, 30);
+            visualizarFornecedorToolStripMenuItem.Size = new Size(282, 30);
             visualizarFornecedorToolStripMenuItem.Text = "Visualizar Fornecedor";
             // 
             // estoqueToolStripMenuItem
@@ -166,7 +165,7 @@
             estoqueToolStripMenuItem.Margin = new Padding(0, 0, 12, 0);
             estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
             estoqueToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
-            estoqueToolStripMenuItem.Size = new Size(116, 30);
+            estoqueToolStripMenuItem.Size = new Size(131, 37);
             estoqueToolStripMenuItem.Text = "📊 Estoque";
             // 
             // visualizarEstoqueToolStripMenuItem
@@ -174,7 +173,7 @@
             visualizarEstoqueToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             visualizarEstoqueToolStripMenuItem.ForeColor = Color.White;
             visualizarEstoqueToolStripMenuItem.Name = "visualizarEstoqueToolStripMenuItem";
-            visualizarEstoqueToolStripMenuItem.Size = new Size(239, 30);
+            visualizarEstoqueToolStripMenuItem.Size = new Size(253, 30);
             visualizarEstoqueToolStripMenuItem.Text = "Visualizar Estoque";
             // 
             // colaboradorToolStripMenuItem
@@ -183,7 +182,7 @@
             colaboradorToolStripMenuItem.ForeColor = Color.White;
             colaboradorToolStripMenuItem.Name = "colaboradorToolStripMenuItem";
             colaboradorToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
-            colaboradorToolStripMenuItem.Size = new Size(157, 30);
+            colaboradorToolStripMenuItem.Size = new Size(169, 37);
             colaboradorToolStripMenuItem.Text = "👥 Colaborador";
             // 
             // cadastrarColaboradorToolStripMenuItem
@@ -191,7 +190,7 @@
             cadastrarColaboradorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             cadastrarColaboradorToolStripMenuItem.ForeColor = Color.White;
             cadastrarColaboradorToolStripMenuItem.Name = "cadastrarColaboradorToolStripMenuItem";
-            cadastrarColaboradorToolStripMenuItem.Size = new Size(279, 30);
+            cadastrarColaboradorToolStripMenuItem.Size = new Size(291, 30);
             cadastrarColaboradorToolStripMenuItem.Text = "Cadastrar Colaborador";
             // 
             // editarColaboradorToolStripMenuItem
@@ -199,7 +198,7 @@
             editarColaboradorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             editarColaboradorToolStripMenuItem.ForeColor = Color.White;
             editarColaboradorToolStripMenuItem.Name = "editarColaboradorToolStripMenuItem";
-            editarColaboradorToolStripMenuItem.Size = new Size(279, 30);
+            editarColaboradorToolStripMenuItem.Size = new Size(291, 30);
             editarColaboradorToolStripMenuItem.Text = "Editar Colaborador";
             // 
             // visualizarColaboradorToolStripMenuItem
@@ -207,7 +206,7 @@
             visualizarColaboradorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             visualizarColaboradorToolStripMenuItem.ForeColor = Color.White;
             visualizarColaboradorToolStripMenuItem.Name = "visualizarColaboradorToolStripMenuItem";
-            visualizarColaboradorToolStripMenuItem.Size = new Size(279, 30);
+            visualizarColaboradorToolStripMenuItem.Size = new Size(291, 30);
             visualizarColaboradorToolStripMenuItem.Text = "Visualizar Colaborador";
             // 
             // panelTopHeader
@@ -216,7 +215,7 @@
             panelTopHeader.Controls.Add(labelHeaderSub);
             panelTopHeader.Controls.Add(labelHeaderTitle);
             panelTopHeader.Dock = DockStyle.Top;
-            panelTopHeader.Location = new Point(0, 46);
+            panelTopHeader.Location = new Point(0, 53);
             panelTopHeader.Name = "panelTopHeader";
             panelTopHeader.Size = new Size(1080, 90);
             panelTopHeader.TabIndex = 1;
@@ -228,7 +227,7 @@
             labelHeaderSub.ForeColor = Color.FromArgb(240, 240, 240);
             labelHeaderSub.Location = new Point(35, 52);
             labelHeaderSub.Name = "labelHeaderSub";
-            labelHeaderSub.Size = new Size(211, 21);
+            labelHeaderSub.Size = new Size(222, 21);
             labelHeaderSub.TabIndex = 1;
             labelHeaderSub.Text = "Preencha os dados do produto";
             // 
@@ -239,15 +238,15 @@
             labelHeaderTitle.ForeColor = Color.White;
             labelHeaderTitle.Location = new Point(30, 15);
             labelHeaderTitle.Name = "labelHeaderTitle";
-            labelHeaderTitle.Size = new Size(279, 37);
+            labelHeaderTitle.Size = new Size(284, 37);
             labelHeaderTitle.TabIndex = 0;
             labelHeaderTitle.Text = "Cadastro de Produto";
             // 
             // panelHeaderDivider
             // 
-            panelHeaderDivider.BackColor = Color.FromArgb(170, 20, 32); // Vermelho levemente mais escuro para criar a divisória
+            panelHeaderDivider.BackColor = Color.FromArgb(170, 20, 32);
             panelHeaderDivider.Dock = DockStyle.Top;
-            panelHeaderDivider.Location = new Point(0, 136);
+            panelHeaderDivider.Location = new Point(0, 143);
             panelHeaderDivider.Name = "panelHeaderDivider";
             panelHeaderDivider.Size = new Size(1080, 2);
             panelHeaderDivider.TabIndex = 3;
@@ -257,15 +256,14 @@
             panelMainContainer.BackColor = Color.FromArgb(245, 246, 248);
             panelMainContainer.Controls.Add(panelCardForm);
             panelMainContainer.Dock = DockStyle.Fill;
-            panelMainContainer.Location = new Point(0, 138);
+            panelMainContainer.Location = new Point(0, 145);
             panelMainContainer.Name = "panelMainContainer";
-            panelMainContainer.Size = new Size(1080, 542);
+            panelMainContainer.Size = new Size(1080, 535);
             panelMainContainer.TabIndex = 2;
             // 
             // panelCardForm
             // 
             panelCardForm.BackColor = Color.White;
-            panelCardForm.BorderStyle = BorderStyle.None; // Borda dura removida
             panelCardForm.Controls.Add(label1);
             panelCardForm.Controls.Add(label2);
             panelCardForm.Controls.Add(textBox1);
@@ -300,7 +298,7 @@
             label2.ForeColor = Color.FromArgb(60, 60, 60);
             label2.Location = new Point(35, 75);
             label2.Name = "label2";
-            label2.Size = new Size(150, 21);
+            label2.Size = new Size(158, 21);
             label2.TabIndex = 1;
             label2.Text = "Nome do Produto *";
             // 
@@ -319,7 +317,7 @@
             label5.ForeColor = Color.FromArgb(60, 60, 60);
             label5.Location = new Point(35, 155);
             label5.Name = "label5";
-            label5.Size = new Size(85, 21);
+            label5.Size = new Size(84, 21);
             label5.TabIndex = 3;
             label5.Text = "Descrição";
             // 
@@ -339,7 +337,7 @@
             label3.ForeColor = Color.FromArgb(60, 60, 60);
             label3.Location = new Point(35, 325);
             label3.Name = "label3";
-            label3.Size = new Size(95, 21);
+            label3.Size = new Size(96, 21);
             label3.TabIndex = 5;
             label3.Text = "Valor (R$) *";
             // 
@@ -358,7 +356,7 @@
             label4.ForeColor = Color.FromArgb(60, 60, 60);
             label4.Location = new Point(525, 325);
             label4.Name = "label4";
-            label4.Size = new Size(110, 21);
+            label4.Size = new Size(111, 21);
             label4.TabIndex = 7;
             label4.Text = "Quantidade *";
             // 
@@ -373,11 +371,11 @@
             // button2
             // 
             button2.BackColor = Color.White;
+            button2.FlatAppearance.BorderColor = Color.FromArgb(199, 29, 44);
+            button2.FlatAppearance.BorderSize = 2;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             button2.ForeColor = Color.FromArgb(199, 29, 44);
-            button2.FlatAppearance.BorderColor = Color.FromArgb(199, 29, 44);
-            button2.FlatAppearance.BorderSize = 2;
             button2.Location = new Point(665, 425);
             button2.Name = "button2";
             button2.Size = new Size(135, 42);
@@ -388,10 +386,10 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(199, 29, 44);
+            button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             button1.ForeColor = Color.White;
-            button1.FlatAppearance.BorderSize = 0;
             button1.Location = new Point(820, 425);
             button1.Name = "button1";
             button1.Size = new Size(150, 42);

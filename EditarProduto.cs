@@ -15,10 +15,6 @@ namespace Software_Farmacia
         public EditarProduto()
         {
             InitializeComponent();
-
-            panel2.BackColor = Color.Red;
-            label1.BackColor = Color.White;
-            label1.Font = new Font("Arial", 18, FontStyle.Bold);
         }
 
         private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -58,7 +54,7 @@ namespace Software_Farmacia
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string id = textBox5.Text;
+            //string id = textBox4.Text;
             string nome = textBox1.Text;
             string quantidade = textBox2.Text;
             string preco = textBox3.Text;
@@ -79,7 +75,7 @@ namespace Software_Farmacia
 
             SqlCommand cmd = new SqlCommand(sql, conn);
 
-            cmd.Parameters.AddWithValue("@id", id);
+            //cmd.Parameters.AddWithValue("@id", id);
             cmd.Parameters.AddWithValue("@nome", nome);
             cmd.Parameters.AddWithValue("@quantidade", quantidade);
             cmd.Parameters.AddWithValue("@preco", preco);
@@ -91,7 +87,7 @@ namespace Software_Farmacia
 
             MessageBox.Show(
                 "Produto alterado com sucesso!\n\n" +
-                "ID: " + id + "\n" +
+                //"ID: " + id + "\n" +
                 "Nome: " + nome
                     );
         }

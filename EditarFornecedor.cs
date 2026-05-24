@@ -49,7 +49,7 @@ namespace Software_Farmacia
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string id = textBox5.Text;
+            //string id = textBox5.Text;
             string nomeFornecedor = textBox1.Text;
             string cpfFornecedor = textBox2.Text;
             string senha = textBox3.Text;
@@ -70,7 +70,7 @@ namespace Software_Farmacia
 
             SqlCommand cmd = new SqlCommand(sql, conn);
 
-            cmd.Parameters.AddWithValue("@id", id);
+            //cmd.Parameters.AddWithValue("@id", id);
             cmd.Parameters.AddWithValue("@nome", nomeFornecedor);
             cmd.Parameters.AddWithValue("@cpf", cpfFornecedor);
             cmd.Parameters.AddWithValue("@senha", senha);
@@ -82,7 +82,7 @@ namespace Software_Farmacia
 
             MessageBox.Show(
                 "DADOS DO FORNECEDOR ALTERADOS!\n\n" +
-                "ID: " + id + "\n" +
+                //"ID: " + id + "\n" +
                 "Nome: " + nomeFornecedor + "\n" +
                 "CPF: " + cpfFornecedor
                     );

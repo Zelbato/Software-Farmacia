@@ -49,7 +49,7 @@ namespace Software_Farmacia
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string id = textBox7.Text;
+            //string id = textBox7.Text;
             string nomeFuncionario = textBox1.Text;
             string cpf = textBox2.Text;
             string senha = textBox3.Text;
@@ -74,7 +74,7 @@ namespace Software_Farmacia
 
             SqlCommand cmd = new SqlCommand(sql, conn);
 
-            cmd.Parameters.AddWithValue("@id", id);
+            //cmd.Parameters.AddWithValue("@id", id);
             cmd.Parameters.AddWithValue("@nome", nomeFuncionario);
             cmd.Parameters.AddWithValue("@cpf", cpf);
             cmd.Parameters.AddWithValue("@senha", senha);
@@ -88,7 +88,7 @@ namespace Software_Farmacia
 
             MessageBox.Show(
                 "FUNCIONÁRIO EDITADO COM SUCESSO!\n\n" +
-                "ID: " + id + "\n" +
+                //"ID: " + id + "\n" +
                 "Nome: " + nomeFuncionario
                     );
         }
