@@ -14,51 +14,62 @@ namespace Software_Farmacia
         public CadastroProduto()
         {
             InitializeComponent();
+            ExibirProximoID();
+            CarregarFornecedores();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void ExibirProximoID()
         {
-
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Conexao.conexao))
+                {
+                    conn.Open();
+                    string sql = "SELECT IDENT_CURRENT('Produto') + IDENT_INCR('Produto')";
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
+                    {
+                        object resultado = cmd.ExecuteScalar();
+                        if (resultado != DBNull.Value && resultado != null)
+                        {
+                            int proximoId = Convert.ToInt32(resultado);
+                            label6.Text = $"ID: {proximoId:D2}";
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                label6.Text = "ID: --";
+            }
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void CarregarFornecedores()
         {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Conexao.conexao))
+                {
+                    conn.Open();
+                    string sql = "SELECT ID_Fornecedor, Nome_fornecedor FROM Fornecedor ORDER BY Nome_fornecedor";
 
-        }
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
+                    {
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            adapter.Fill(dt);
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
+                            comboBox1.DataSource = dt;
+                            comboBox1.DisplayMember = "Nome_fornecedor";
+                            comboBox1.ValueMember = "ID_Fornecedor";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao carregar fornecedores: {ex.Message}");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -68,29 +79,40 @@ namespace Software_Farmacia
             string preco = textBox3.Text;
             string descricao = textBox4.Text;
 
-            SqlConnection conn =
-            new SqlConnection(Conexao.conexao);
+            if (comboBox1.SelectedValue == null)
+            {
+                MessageBox.Show("Por favor, selecione um fornecedor antes de salvar.");
+                return;
+            }
+            string idFornecedor = comboBox1.SelectedValue.ToString();
 
-            conn.Open();
+            using (SqlConnection conn = new SqlConnection(Conexao.conexao))
+            {
+                conn.Open();
 
-            string sql =
-            "INSERT INTO Produto " +
-            "(Nome_produto, Quantidade_produto, Preco_produto, Descricao_produto) " +
-            "VALUES " +
-            "(@nome, @quantidade, @preco, @descricao)";
+                string sql = "INSERT INTO Produto (Nome_produto, Quantidade_produto, Preco_produto, Descricao_produto, ID_Fornecedor) " +
+                             "VALUES (@nome, @quantidade, @preco, @descricao, @idFornecedor)";
 
-            SqlCommand cmd = new SqlCommand(sql, conn);
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@nome", nome);
+                    cmd.Parameters.AddWithValue("@quantidade", quantidade);
+                    cmd.Parameters.AddWithValue("@preco", preco);
+                    cmd.Parameters.AddWithValue("@descricao", descricao);
+                    cmd.Parameters.AddWithValue("@idFornecedor", idFornecedor);
 
-            cmd.Parameters.AddWithValue("@nome", nome);
-            cmd.Parameters.AddWithValue("@quantidade", quantidade);
-            cmd.Parameters.AddWithValue("@preco", preco);
-            cmd.Parameters.AddWithValue("@descricao", descricao);
-
-            cmd.ExecuteNonQuery();
-
-            conn.Close();
+                    cmd.ExecuteNonQuery();
+                }
+            }
 
             MessageBox.Show("Produto cadastrado!");
+            ExibirProximoID();
+
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            if (comboBox1.Items.Count > 0) comboBox1.SelectedIndex = 0;
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
@@ -133,6 +155,11 @@ namespace Software_Farmacia
         {
             EditarColaborador EditarC = new EditarColaborador();
             EditarC.Show();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

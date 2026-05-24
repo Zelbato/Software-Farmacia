@@ -39,6 +39,9 @@
             panelHeaderDivider = new Panel();
             panelMainContainer = new Panel();
             panelCardForm = new Panel();
+            comboBox1 = new ComboBox();
+            label7 = new Label();
+            label6 = new Label();
             label1 = new Label();
             label2 = new Label();
             textBox1 = new TextBox();
@@ -260,6 +263,9 @@
             // panelCardForm
             // 
             panelCardForm.BackColor = Color.White;
+            panelCardForm.Controls.Add(comboBox1);
+            panelCardForm.Controls.Add(label7);
+            panelCardForm.Controls.Add(label6);
             panelCardForm.Controls.Add(label1);
             panelCardForm.Controls.Add(label2);
             panelCardForm.Controls.Add(textBox1);
@@ -275,6 +281,34 @@
             panelCardForm.Name = "panelCardForm";
             panelCardForm.Size = new Size(1010, 490);
             panelCardForm.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(794, 102);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(176, 28);
+            comboBox1.TabIndex = 12;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(865, 45);
+            label7.Name = "label7";
+            label7.Size = new Size(25, 20);
+            label7.TabIndex = 11;
+            label7.Text = "00";
+            label7.Click += label7_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(841, 45);
+            label6.Name = "label6";
+            label6.Size = new Size(27, 20);
+            label6.TabIndex = 4;
+            label6.Text = "ID:";
             // 
             // label1
             // 
@@ -303,7 +337,7 @@
             textBox1.Font = new Font("Segoe UI", 11F);
             textBox1.Location = new Point(35, 102);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(935, 32);
+            textBox1.Size = new Size(703, 32);
             textBox1.TabIndex = 2;
             // 
             // label5
@@ -460,5 +494,8 @@
         private TextBox textBox2;
         private Button button2;
         private Button button1;
+        private Label label7;
+        private Label label6;
+        private ComboBox comboBox1;
     }
 }

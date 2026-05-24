@@ -50,6 +50,9 @@
             panelHeaderDivider = new Panel();
             panelMainContainer = new Panel();
             panelCardForm = new Panel();
+            labelFornecedor = new Label();
+            comboBox1 = new ComboBox();
+            label6 = new Label();
             label1 = new Label();
             label2 = new Label();
             textBox1 = new TextBox();
@@ -135,7 +138,7 @@
             fornecedorToolStripMenuItem.Name = "fornecedorToolStripMenuItem";
             fornecedorToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
             fornecedorToolStripMenuItem.Size = new Size(160, 37);
-            fornecedorToolStripMenuItem.Text = "\U0001f91d Fornecedor";
+            fornecedorToolStripMenuItem.Text = "🤝 Fornecedor";
             // 
             // cadastrarFornecedorToolStripMenuItem
             // 
@@ -271,6 +274,9 @@
             // panelCardForm
             // 
             panelCardForm.BackColor = Color.White;
+            panelCardForm.Controls.Add(labelFornecedor);
+            panelCardForm.Controls.Add(comboBox1);
+            panelCardForm.Controls.Add(label6);
             panelCardForm.Controls.Add(label1);
             panelCardForm.Controls.Add(label2);
             panelCardForm.Controls.Add(textBox1);
@@ -286,6 +292,40 @@
             panelCardForm.Name = "panelCardForm";
             panelCardForm.Size = new Size(1010, 490);
             panelCardForm.TabIndex = 0;
+            // 
+            // labelFornecedor
+            // 
+            labelFornecedor.AutoSize = true;
+            labelFornecedor.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            labelFornecedor.ForeColor = Color.FromArgb(60, 60, 60);
+            labelFornecedor.Location = new Point(700, 75);
+            labelFornecedor.Name = "labelFornecedor";
+            labelFornecedor.Size = new Size(109, 21);
+            labelFornecedor.TabIndex = 13;
+            labelFornecedor.Text = "Fornecedor *";
+            // 
+            // comboBox1
+            // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.Font = new Font("Segoe UI", 11F);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(700, 102);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(270, 33);
+            comboBox1.TabIndex = 12;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // label6
+            // 
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label6.ForeColor = Color.FromArgb(60, 60, 60);
+            label6.Location = new Point(820, 25);
+            label6.Name = "label6";
+            label6.Size = new Size(150, 30);
+            label6.TabIndex = 11;
+            label6.Text = "ID: 00";
+            label6.TextAlign = ContentAlignment.MiddleRight;
             // 
             // label1
             // 
@@ -314,7 +354,7 @@
             textBox1.Font = new Font("Segoe UI", 11F);
             textBox1.Location = new Point(35, 102);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(935, 32);
+            textBox1.Size = new Size(640, 32);
             textBox1.TabIndex = 2;
             // 
             // label5
@@ -332,8 +372,8 @@
             // 
             textBox4.Font = new Font("Segoe UI", 11F);
             textBox4.Location = new Point(35, 182);
-            textBox4.Multiline = true;
             textBox4.Name = "textBox4";
+            textBox4.Multiline = true;
             textBox4.Size = new Size(935, 120);
             textBox4.TabIndex = 4;
             // 
@@ -465,5 +505,8 @@
         private TextBox textBox2;
         private Button button2;
         private Button button1;
+        private Label label6;
+        private ComboBox comboBox1;
+        private Label labelFornecedor;
     }
 }
