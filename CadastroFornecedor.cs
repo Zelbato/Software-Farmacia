@@ -117,5 +117,40 @@ namespace Software_Farmacia
             EditarColaborador EditarC = new EditarColaborador();
             EditarC.Show();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            string nomeFornecedor = textBox1.Text;
+            string cpfFornecedor = textBox2.Text;
+            string senha = textBox3.Text;
+            string email = textBox4.Text;
+
+            SqlConnection conn =
+            new SqlConnection(Conexao.conexao);
+
+            conn.Open();
+
+            string sql =
+            "INSERT INTO Fornecedor " +
+            "(Nome_fornecedor, CPF_fornecedor, Senha_fornecedor, Email_fornecedor) " +
+            "VALUES " +
+            "(@nome, @cpf, @senha, @email)";
+
+            SqlCommand cmd = new SqlCommand(sql, conn);
+
+            cmd.Parameters.AddWithValue("@nome", nomeFornecedor);
+            cmd.Parameters.AddWithValue("@cpf", cpfFornecedor);
+            cmd.Parameters.AddWithValue("@senha", senha);
+            cmd.Parameters.AddWithValue("@email", email);
+
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+
+            MessageBox.Show(
+                "FORNECEDOR CADASTRADO COM SUCESSO!\n\n" 
+               
+                    );
+        }
     }
 }

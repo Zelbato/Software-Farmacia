@@ -89,14 +89,18 @@ namespace Software_Farmacia
                 MessageBox.Show("Por favor, selecione um fornecedor antes de salvar.");
                 return;
             }
+
             string idFornecedor = comboBox1.SelectedValue.ToString();
 
             using (SqlConnection conn = new SqlConnection(Conexao.conexao))
             {
                 conn.Open();
 
-                string sql = "INSERT INTO Produto (Nome_produto, Quantidade_produto, Preco_produto, Descricao_produto, ID_Fornecedor) " +
-                             "VALUES (@nome, @quantidade, @preco, @descricao, @idFornecedor)";
+                string sql =
+                "INSERT INTO Produto " +
+                "(Nome_produto, Quantidade_produto, Preco_produto, Descricao_produto, Id_fornecedorFK) " +
+                "VALUES " +
+                "(@nome, @quantidade, @preco, @descricao, @idFornecedor)";
 
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
@@ -111,13 +115,16 @@ namespace Software_Farmacia
             }
 
             MessageBox.Show("Produto cadastrado!");
+
             ExibirProximoID();
 
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
             textBox4.Clear();
-            if (comboBox1.Items.Count > 0) comboBox1.SelectedIndex = 0;
+
+            if (comboBox1.Items.Count > 0)
+                comboBox1.SelectedIndex = 0;
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
