@@ -91,5 +91,10 @@ namespace Software_Farmacia
             EditarColaborador EditarC = new EditarColaborador();
             EditarC.Show();
         }
+
+        private void panelCardForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

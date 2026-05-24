@@ -54,5 +54,15 @@ namespace Software_Farmacia
         {
             EditarColaborador EditarC = new EditarColaborador(); EditarC.Show();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

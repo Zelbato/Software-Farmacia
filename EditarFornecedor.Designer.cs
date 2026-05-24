@@ -272,6 +272,7 @@
             panelCardForm.Name = "panelCardForm";
             panelCardForm.Size = new Size(1010, 420);
             panelCardForm.TabIndex = 0;
+            panelCardForm.Paint += panelCardForm_Paint;
             // 
             // label7
             // 

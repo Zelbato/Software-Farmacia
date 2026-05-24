@@ -138,7 +138,7 @@
             fornecedorToolStripMenuItem.Name = "fornecedorToolStripMenuItem";
             fornecedorToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
             fornecedorToolStripMenuItem.Size = new Size(160, 37);
-            fornecedorToolStripMenuItem.Text = "🤝 Fornecedor";
+            fornecedorToolStripMenuItem.Text = "\U0001f91d Fornecedor";
             // 
             // cadastrarFornecedorToolStripMenuItem
             // 
@@ -292,6 +292,7 @@
             panelCardForm.Name = "panelCardForm";
             panelCardForm.Size = new Size(1010, 490);
             panelCardForm.TabIndex = 0;
+            panelCardForm.Paint += panelCardForm_Paint;
             // 
             // labelFornecedor
             // 
@@ -300,7 +301,7 @@
             labelFornecedor.ForeColor = Color.FromArgb(60, 60, 60);
             labelFornecedor.Location = new Point(700, 75);
             labelFornecedor.Name = "labelFornecedor";
-            labelFornecedor.Size = new Size(109, 21);
+            labelFornecedor.Size = new Size(107, 21);
             labelFornecedor.TabIndex = 13;
             labelFornecedor.Text = "Fornecedor *";
             // 
@@ -372,10 +373,11 @@
             // 
             textBox4.Font = new Font("Segoe UI", 11F);
             textBox4.Location = new Point(35, 182);
-            textBox4.Name = "textBox4";
             textBox4.Multiline = true;
+            textBox4.Name = "textBox4";
             textBox4.Size = new Size(935, 120);
             textBox4.TabIndex = 4;
+            textBox4.TextChanged += textBox4_TextChanged;
             // 
             // label3
             // 
