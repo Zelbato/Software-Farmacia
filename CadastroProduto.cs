@@ -79,5 +79,10 @@ namespace Software_Farmacia
                 "Descrição: " + descricao
             );
         }
+
+        private void editarProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

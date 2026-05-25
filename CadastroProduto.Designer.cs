@@ -91,19 +91,20 @@
             // cadastroToolStripMenuItem
             // 
             cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            cadastroToolStripMenuItem.Size = new Size(212, 26);
+            cadastroToolStripMenuItem.Size = new Size(224, 26);
             cadastroToolStripMenuItem.Text = "Cadastrar Produto";
             // 
             // editarProdutoToolStripMenuItem
             // 
             editarProdutoToolStripMenuItem.Name = "editarProdutoToolStripMenuItem";
-            editarProdutoToolStripMenuItem.Size = new Size(212, 26);
+            editarProdutoToolStripMenuItem.Size = new Size(224, 26);
             editarProdutoToolStripMenuItem.Text = "Editar Produto";
+            editarProdutoToolStripMenuItem.Click += editarProdutoToolStripMenuItem_Click;
             // 
             // visualizarProdutoToolStripMenuItem
             // 
             visualizarProdutoToolStripMenuItem.Name = "visualizarProdutoToolStripMenuItem";
-            visualizarProdutoToolStripMenuItem.Size = new Size(212, 26);
+            visualizarProdutoToolStripMenuItem.Size = new Size(224, 26);
             visualizarProdutoToolStripMenuItem.Text = "Visualizar Produto";
             // 
             // fornecedorToolStripMenuItem
