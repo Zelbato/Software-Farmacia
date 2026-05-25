@@ -73,12 +73,14 @@ namespace Software_Farmacia
         {
             CadastroProduto CadastroP = new CadastroProduto();
             CadastroP.Show();
+            this.Hide();
         }
 
         private void editarProdutoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EditarProduto EditarP = new EditarProduto();
             EditarP.Show();
+            this.Hide();
         }
 
         private void visualizarProdutoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -90,24 +92,28 @@ namespace Software_Farmacia
         {
             CadastroFornecedor CadastroF = new CadastroFornecedor();
             CadastroF.Show();
+            this.Hide();
         }
 
         private void editarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EditarFornecedor EditarF = new EditarFornecedor();
             EditarF.Show();
+            this.Hide();
         }
 
         private void cadastrarColaboradorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CadastrarColaborador CadastrarC = new CadastrarColaborador();
             CadastrarC.Show();
+            this.Hide();
         }
 
         private void editarColaboradorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EditarColaborador EditarC = new EditarColaborador();
             EditarC.Show();
+            this.Hide();
         }
 
         private void gridProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
@@ -124,6 +130,17 @@ namespace Software_Farmacia
         {
             VisualizarEstoque VisualizarE = new VisualizarEstoque();
             VisualizarE.Show();
+            this.Hide();
+        }
+
+        private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

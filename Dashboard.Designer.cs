@@ -17,9 +17,9 @@
 
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             menuStrip1 = new MenuStrip();
             dashboardToolStripMenuItem = new ToolStripMenuItem();
             produtoToolStripMenuItem = new ToolStripMenuItem();
@@ -86,6 +86,7 @@
             dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
             dashboardToolStripMenuItem.Size = new Size(140, 27);
             dashboardToolStripMenuItem.Text = "🏠 Dashboard";
+            dashboardToolStripMenuItem.Click += dashboardToolStripMenuItem_Click;
             // 
             // produtoToolStripMenuItem
             // 
@@ -95,6 +96,7 @@
             produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
             produtoToolStripMenuItem.Size = new Size(118, 27);
             produtoToolStripMenuItem.Text = "📦 Produto";
+            produtoToolStripMenuItem.Click += produtoToolStripMenuItem_Click;
             // 
             // cadastroToolStripMenuItem
             // 
@@ -383,27 +385,27 @@
             // 
             gridProdutos.AllowUserToAddRows = false;
             gridProdutos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = Color.White;
-            gridProdutos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            gridProdutos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             gridProdutos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             gridProdutos.BackgroundColor = Color.White;
             gridProdutos.BorderStyle = BorderStyle.None;
             gridProdutos.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             gridProdutos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(254, 242, 242);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = Color.FromArgb(199, 29, 44);
-            gridProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(254, 242, 242);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(199, 29, 44);
+            gridProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             gridProdutos.ColumnHeadersHeight = 45;
             gridProdutos.Columns.AddRange(new DataGridViewColumn[] { colId, colNome, colQtd, colStatus });
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.Window;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = Color.FromArgb(40, 40, 40);
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(199, 29, 44);
-            dataGridViewCellStyle6.SelectionForeColor = Color.White;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            gridProdutos.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(40, 40, 40);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(199, 29, 44);
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            gridProdutos.DefaultCellStyle = dataGridViewCellStyle3;
             gridProdutos.EnableHeadersVisualStyles = false;
             gridProdutos.GridColor = Color.FromArgb(254, 242, 242);
             gridProdutos.Location = new Point(590, 180);
