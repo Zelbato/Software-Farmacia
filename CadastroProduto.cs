@@ -183,10 +183,5 @@ namespace Software_Farmacia
         {
 
         }
-
-        private void editarProdutoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

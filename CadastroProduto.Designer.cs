@@ -120,7 +120,6 @@
             editarProdutoToolStripMenuItem.Name = "editarProdutoToolStripMenuItem";
             editarProdutoToolStripMenuItem.Size = new Size(224, 26);
             editarProdutoToolStripMenuItem.Text = "Editar Produto";
-            editarProdutoToolStripMenuItem.Click += editarProdutoToolStripMenuItem_Click;
             // 
             // visualizarProdutoToolStripMenuItem
             // 
