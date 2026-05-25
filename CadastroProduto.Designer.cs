@@ -109,7 +109,7 @@
             cadastroToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             cadastroToolStripMenuItem.ForeColor = Color.White;
             cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            cadastroToolStripMenuItem.Size = new Size(254, 30);
+            cadastroToolStripMenuItem.Size = new Size(224, 26);
             cadastroToolStripMenuItem.Text = "Cadastrar Produto";
             cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click;
             // 
@@ -118,16 +118,15 @@
             editarProdutoToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             editarProdutoToolStripMenuItem.ForeColor = Color.White;
             editarProdutoToolStripMenuItem.Name = "editarProdutoToolStripMenuItem";
-            editarProdutoToolStripMenuItem.Size = new Size(254, 30);
+            editarProdutoToolStripMenuItem.Size = new Size(224, 26);
             editarProdutoToolStripMenuItem.Text = "Editar Produto";
-            editarProdutoToolStripMenuItem.Click += editarProdutoToolStripMenuItem_Click;
             // 
             // visualizarProdutoToolStripMenuItem
             // 
             visualizarProdutoToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             visualizarProdutoToolStripMenuItem.ForeColor = Color.White;
             visualizarProdutoToolStripMenuItem.Name = "visualizarProdutoToolStripMenuItem";
-            visualizarProdutoToolStripMenuItem.Size = new Size(254, 30);
+            visualizarProdutoToolStripMenuItem.Size = new Size(224, 26);
             visualizarProdutoToolStripMenuItem.Text = "Visualizar Produto";
             // 
             // fornecedorToolStripMenuItem

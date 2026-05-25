@@ -12,7 +12,7 @@ namespace Software_Farmacia
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            Application.Exit(); // Fecha a aplicação com segurança
+            Application.Exit();
         }
     }
 }

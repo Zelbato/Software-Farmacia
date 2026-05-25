@@ -104,7 +104,7 @@
             cadastroToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
             cadastroToolStripMenuItem.ForeColor = Color.White;
             cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            cadastroToolStripMenuItem.Size = new Size(227, 26);
+            cadastroToolStripMenuItem.Size = new Size(224, 26);
             cadastroToolStripMenuItem.Text = "Cadastrar Produto";
             cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click;
             // 
@@ -114,7 +114,7 @@
             editarProdutoToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
             editarProdutoToolStripMenuItem.ForeColor = Color.White;
             editarProdutoToolStripMenuItem.Name = "editarProdutoToolStripMenuItem";
-            editarProdutoToolStripMenuItem.Size = new Size(227, 26);
+            editarProdutoToolStripMenuItem.Size = new Size(224, 26);
             editarProdutoToolStripMenuItem.Text = "Editar Produto";
             editarProdutoToolStripMenuItem.Click += editarProdutoToolStripMenuItem_Click;
             // 
@@ -124,7 +124,7 @@
             visualizarProdutoToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
             visualizarProdutoToolStripMenuItem.ForeColor = Color.White;
             visualizarProdutoToolStripMenuItem.Name = "visualizarProdutoToolStripMenuItem";
-            visualizarProdutoToolStripMenuItem.Size = new Size(227, 26);
+            visualizarProdutoToolStripMenuItem.Size = new Size(224, 26);
             visualizarProdutoToolStripMenuItem.Text = "Visualizar Produto";
             visualizarProdutoToolStripMenuItem.Click += visualizarProdutoToolStripMenuItem_Click;
             // 
