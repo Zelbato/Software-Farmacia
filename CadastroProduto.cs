@@ -25,7 +25,8 @@ namespace Software_Farmacia
                 using (SqlConnection conn = new SqlConnection(Conexao.conexao))
                 {
                     conn.Open();
-                    string sql = "SELECT IDENT_CURRENT('Produto') + IDENT_INCR('Produto')";
+                    
+                    string sql = "SELECT ISNULL(MAX(Id_produto), 0) + 1 FROM Produto";
                     using (SqlCommand cmd = new SqlCommand(sql, conn))
                     {
                         object resultado = cmd.ExecuteScalar();
@@ -33,6 +34,10 @@ namespace Software_Farmacia
                         {
                             int proximoId = Convert.ToInt32(resultado);
                             label6.Text = $"ID: {proximoId:D2}";
+                        }
+                        else
+                        {
+                            label6.Text = "ID: --";
                         }
                     }
                 }
@@ -180,6 +185,11 @@ namespace Software_Farmacia
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }

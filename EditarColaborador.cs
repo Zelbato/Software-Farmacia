@@ -96,5 +96,10 @@ namespace Software_Farmacia
             EditarColaborador EditarC = new EditarColaborador();
             EditarC.Show();
         }
+
+        private void fornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

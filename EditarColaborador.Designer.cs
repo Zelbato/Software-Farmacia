@@ -131,6 +131,7 @@
             fornecedorToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
             fornecedorToolStripMenuItem.Size = new Size(160, 37);
             fornecedorToolStripMenuItem.Text = "\U0001f91d Fornecedor";
+            fornecedorToolStripMenuItem.Click += fornecedorToolStripMenuItem_Click;
             // 
             // cadastrarFornecedorToolStripMenuItem
             // 
