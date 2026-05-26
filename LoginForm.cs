@@ -14,5 +14,12 @@ namespace Software_Farmacia
         {
             Application.Exit();
         }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Dashboard Dash = new Dashboard();
+            Dash.Show();
+        }
     }
 }

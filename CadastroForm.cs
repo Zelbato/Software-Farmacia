@@ -19,11 +19,11 @@ namespace Software_Farmacia
         // Link para voltar para a tela de Login
         private void lblJaTemConta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            // Aqui você esconde essa tela e mostra o Login
-            // Exemplo:
-            // this.Hide();
-            // LoginForm login = new LoginForm();
-            // login.Show();
+            this.Hide();
+             LoginForm login = new LoginForm();
+             login.Show();
+            
+
             MessageBox.Show("Voltando para a tela de Login...");
         }
     }
