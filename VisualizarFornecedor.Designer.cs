@@ -1,6 +1,6 @@
 ﻿namespace Software_Farmacia
 {
-    partial class VisualizarEstoque
+    partial class VisualizarFornecedor
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -23,14 +23,17 @@
             dashboardToolStripMenuItem = new ToolStripMenuItem();
             produtoToolStripMenuItem = new ToolStripMenuItem();
             cadastroToolStripMenuItem = new ToolStripMenuItem();
+            editarProdutoToolStripMenuItem = new ToolStripMenuItem();
             visualizarProdutoToolStripMenuItem = new ToolStripMenuItem();
             fornecedorToolStripMenuItem = new ToolStripMenuItem();
             cadastrarFornecedorToolStripMenuItem = new ToolStripMenuItem();
+            editarFornecedorToolStripMenuItem = new ToolStripMenuItem();
             visualizarFornecedorToolStripMenuItem = new ToolStripMenuItem();
             estoqueToolStripMenuItem = new ToolStripMenuItem();
             visualizarEstoqueToolStripMenuItem = new ToolStripMenuItem();
             colaboradorToolStripMenuItem = new ToolStripMenuItem();
             cadastrarColaboradorToolStripMenuItem = new ToolStripMenuItem();
+            editarColaboradorToolStripMenuItem = new ToolStripMenuItem();
             visualizarColaboradorToolStripMenuItem = new ToolStripMenuItem();
             panelTopHeader = new Panel();
             labelHeaderSub = new Label();
@@ -43,10 +46,10 @@
             button1 = new Button();
             dataGridView1 = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
-            Fornecedor = new DataGridViewTextBoxColumn();
             Nome = new DataGridViewTextBoxColumn();
-            Valor = new DataGridViewTextBoxColumn();
-            Quantidade = new DataGridViewTextBoxColumn();
+            CPF = new DataGridViewTextBoxColumn();
+            Telefone = new DataGridViewTextBoxColumn();
+            Email = new DataGridViewTextBoxColumn();
             btnVisualizar = new DataGridViewButtonColumn();
             btnEditar = new DataGridViewButtonColumn();
             btnDeletar = new DataGridViewButtonColumn();
@@ -82,7 +85,7 @@
             // 
             // produtoToolStripMenuItem
             // 
-            produtoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, visualizarProdutoToolStripMenuItem });
+            produtoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, editarProdutoToolStripMenuItem, visualizarProdutoToolStripMenuItem });
             produtoToolStripMenuItem.ForeColor = Color.White;
             produtoToolStripMenuItem.Margin = new Padding(0, 0, 15, 0);
             produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
@@ -99,6 +102,15 @@
             cadastroToolStripMenuItem.Text = "Cadastrar Produto";
             cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click;
             // 
+            // editarProdutoToolStripMenuItem
+            // 
+            editarProdutoToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
+            editarProdutoToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
+            editarProdutoToolStripMenuItem.ForeColor = Color.White;
+            editarProdutoToolStripMenuItem.Name = "editarProdutoToolStripMenuItem";
+            editarProdutoToolStripMenuItem.Size = new Size(227, 26);
+            editarProdutoToolStripMenuItem.Text = "Editar Produto";
+            // 
             // visualizarProdutoToolStripMenuItem
             // 
             visualizarProdutoToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
@@ -107,16 +119,15 @@
             visualizarProdutoToolStripMenuItem.Name = "visualizarProdutoToolStripMenuItem";
             visualizarProdutoToolStripMenuItem.Size = new Size(227, 26);
             visualizarProdutoToolStripMenuItem.Text = "Visualizar Produto";
-            visualizarProdutoToolStripMenuItem.Click += visualizarProdutoToolStripMenuItem_Click;
             // 
             // fornecedorToolStripMenuItem
             // 
-            fornecedorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastrarFornecedorToolStripMenuItem, visualizarFornecedorToolStripMenuItem });
+            fornecedorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastrarFornecedorToolStripMenuItem, editarFornecedorToolStripMenuItem, visualizarFornecedorToolStripMenuItem });
             fornecedorToolStripMenuItem.ForeColor = Color.White;
             fornecedorToolStripMenuItem.Margin = new Padding(0, 0, 15, 0);
             fornecedorToolStripMenuItem.Name = "fornecedorToolStripMenuItem";
             fornecedorToolStripMenuItem.Size = new Size(143, 27);
-            fornecedorToolStripMenuItem.Text = "\U0001f91d Fornecedor";
+            fornecedorToolStripMenuItem.Text = "🤝 Fornecedor";
             // 
             // cadastrarFornecedorToolStripMenuItem
             // 
@@ -126,7 +137,16 @@
             cadastrarFornecedorToolStripMenuItem.Name = "cadastrarFornecedorToolStripMenuItem";
             cadastrarFornecedorToolStripMenuItem.Size = new Size(252, 26);
             cadastrarFornecedorToolStripMenuItem.Text = "Cadastrar Fornecedor";
-            cadastrarFornecedorToolStripMenuItem.Click += cadastrarFornecedorToolStripMenuItem_Click;
+            
+            // 
+            // editarFornecedorToolStripMenuItem
+            // 
+            editarFornecedorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
+            editarFornecedorToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
+            editarFornecedorToolStripMenuItem.ForeColor = Color.White;
+            editarFornecedorToolStripMenuItem.Name = "editarFornecedorToolStripMenuItem";
+            editarFornecedorToolStripMenuItem.Size = new Size(252, 26);
+            editarFornecedorToolStripMenuItem.Text = "Editar Fornecedor";
             // 
             // visualizarFornecedorToolStripMenuItem
             // 
@@ -157,7 +177,7 @@
             // 
             // colaboradorToolStripMenuItem
             // 
-            colaboradorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastrarColaboradorToolStripMenuItem, visualizarColaboradorToolStripMenuItem });
+            colaboradorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastrarColaboradorToolStripMenuItem, editarColaboradorToolStripMenuItem, visualizarColaboradorToolStripMenuItem });
             colaboradorToolStripMenuItem.ForeColor = Color.White;
             colaboradorToolStripMenuItem.Margin = new Padding(0, 0, 15, 0);
             colaboradorToolStripMenuItem.Name = "colaboradorToolStripMenuItem";
@@ -173,6 +193,16 @@
             cadastrarColaboradorToolStripMenuItem.Size = new Size(259, 26);
             cadastrarColaboradorToolStripMenuItem.Text = "Cadastrar Colaborador";
             cadastrarColaboradorToolStripMenuItem.Click += cadastrarColaboradorToolStripMenuItem_Click;
+            // 
+            // editarColaboradorToolStripMenuItem
+            // 
+            editarColaboradorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
+            editarColaboradorToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
+            editarColaboradorToolStripMenuItem.ForeColor = Color.White;
+            editarColaboradorToolStripMenuItem.Name = "editarColaboradorTool dreamItem";
+            editarColaboradorToolStripMenuItem.Size = new Size(259, 26);
+            editarColaboradorToolStripMenuItem.Text = "Editar Colaborador";
+            editarColaboradorToolStripMenuItem.Click += editarColaboradorToolStripMenuItem_Click;
             // 
             // visualizarColaboradorToolStripMenuItem
             // 
@@ -193,7 +223,6 @@
             panelTopHeader.Name = "panelTopHeader";
             panelTopHeader.Size = new Size(1080, 90);
             panelTopHeader.TabIndex = 1;
-            panelTopHeader.Paint += panelTopHeader_Paint;
             // 
             // labelHeaderSub
             // 
@@ -202,9 +231,9 @@
             labelHeaderSub.ForeColor = Color.FromArgb(240, 240, 240);
             labelHeaderSub.Location = new Point(35, 52);
             labelHeaderSub.Name = "labelHeaderSub";
-            labelHeaderSub.Size = new Size(313, 21);
+            labelHeaderSub.Size = new Size(335, 21);
             labelHeaderSub.TabIndex = 1;
-            labelHeaderSub.Text = "Gerencie, edite ou remova itens do catálogo";
+            labelHeaderSub.Text = "Gerencie, edite ou remova parceiros de fornecimento";
             // 
             // labelHeaderTitle
             // 
@@ -213,9 +242,9 @@
             labelHeaderTitle.ForeColor = Color.White;
             labelHeaderTitle.Location = new Point(30, 15);
             labelHeaderTitle.Name = "labelHeaderTitle";
-            labelHeaderTitle.Size = new Size(266, 37);
+            labelHeaderTitle.Size = new Size(311, 37);
             labelHeaderTitle.TabIndex = 0;
-            labelHeaderTitle.Text = "Visualizar Produtos";
+            labelHeaderTitle.Text = "Visualizar Fornecedores";
             // 
             // panelHeaderDivider
             // 
@@ -247,7 +276,6 @@
             panelCardForm.Name = "panelCardForm";
             panelCardForm.Size = new Size(1010, 480);
             panelCardForm.TabIndex = 0;
-            panelCardForm.Paint += panelCardForm_Paint;
             // 
             // label1
             // 
@@ -304,7 +332,7 @@
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeight = 40;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, Fornecedor, Nome, Valor, Quantidade, btnVisualizar, btnEditar, btnDeletar });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, Nome, CPF, Telefone, Email, btnVisualizar, btnEditar, btnDeletar });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.White;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 10F);
@@ -335,14 +363,6 @@
             ID.ReadOnly = true;
             ID.Width = 90;
             // 
-            // Fornecedor
-            // 
-            Fornecedor.HeaderText = "Fornecedor";
-            Fornecedor.MinimumWidth = 6;
-            Fornecedor.Name = "Fornecedor";
-            Fornecedor.ReadOnly = true;
-            Fornecedor.Width = 140;
-            // 
             // Nome
             // 
             Nome.HeaderText = "Nome";
@@ -351,21 +371,29 @@
             Nome.ReadOnly = true;
             Nome.Width = 200;
             // 
-            // Valor
+            // CPF
             // 
-            Valor.HeaderText = "Valor";
-            Valor.MinimumWidth = 6;
-            Valor.Name = "Valor";
-            Valor.ReadOnly = true;
-            Valor.Width = 90;
+            CPF.HeaderText = "CPF";
+            CPF.MinimumWidth = 6;
+            CPF.Name = "CPF";
+            CPF.ReadOnly = true;
+            CPF.Width = 140;
             // 
-            // Quantidade
+            // Telefone
             // 
-            Quantidade.HeaderText = "Quantidade";
-            Quantidade.MinimumWidth = 6;
-            Quantidade.Name = "Quantidade";
-            Quantidade.ReadOnly = true;
-            Quantidade.Width = 125;
+            Telefone.HeaderText = "Telefone";
+            Telefone.MinimumWidth = 6;
+            Telefone.Name = "Telefone";
+            Telefone.ReadOnly = true;
+            Telefone.Width = 125;
+            // 
+            // Email
+            // 
+            Email.HeaderText = "Email";
+            Email.MinimumWidth = 6;
+            Email.Name = "Email";
+            Email.ReadOnly = true;
+            Email.Width = 150;
             // 
             // btnVisualizar
             // 
@@ -400,7 +428,7 @@
             btnDeletar.UseColumnTextForButtonValue = true;
             btnDeletar.Width = 60;
             // 
-            // VisualizarEstoque
+            // VisualizarFornecedor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -412,9 +440,9 @@
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
-            Name = "VisualizarEstoque";
+            Name = "VisualizarFornecedor";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Software Farmácia - Catálogo de Produtos";
+            Text = "Software Farmácia - Catálogo de Fornecedores";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             panelTopHeader.ResumeLayout(false);
@@ -433,14 +461,17 @@
         private ToolStripMenuItem dashboardToolStripMenuItem;
         private ToolStripMenuItem produtoToolStripMenuItem;
         private ToolStripMenuItem cadastroToolStripMenuItem;
+        private ToolStripMenuItem editarProdutoToolStripMenuItem;
         private ToolStripMenuItem visualizarProdutoToolStripMenuItem;
         private ToolStripMenuItem fornecedorToolStripMenuItem;
         private ToolStripMenuItem cadastrarFornecedorToolStripMenuItem;
+        private ToolStripMenuItem editarFornecedorToolStripMenuItem;
         private ToolStripMenuItem visualizarFornecedorToolStripMenuItem;
         private ToolStripMenuItem estoqueToolStripMenuItem;
         private ToolStripMenuItem visualizarEstoqueToolStripMenuItem;
         private ToolStripMenuItem colaboradorToolStripMenuItem;
         private ToolStripMenuItem cadastrarColaboradorToolStripMenuItem;
+        private ToolStripMenuItem editarColaboradorToolStripMenuItem;
         private ToolStripMenuItem visualizarColaboradorToolStripMenuItem;
         private Panel panelTopHeader;
         private Label labelHeaderTitle;
@@ -453,10 +484,10 @@
         private Button button1;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn ID;
-        private DataGridViewTextBoxColumn Fornecedor;
         private DataGridViewTextBoxColumn Nome;
-        private DataGridViewTextBoxColumn Valor;
-        private DataGridViewTextBoxColumn Quantidade;
+        private DataGridViewTextBoxColumn CPF;
+        private DataGridViewTextBoxColumn Telefone;
+        private DataGridViewTextBoxColumn Email;
         private DataGridViewButtonColumn btnVisualizar;
         private DataGridViewButtonColumn btnEditar;
         private DataGridViewButtonColumn btnDeletar;

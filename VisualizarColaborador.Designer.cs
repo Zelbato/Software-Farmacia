@@ -1,6 +1,6 @@
 ﻿namespace Software_Farmacia
 {
-    partial class VisualizarEstoque
+    partial class VisualizarColaborador
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -17,8 +17,8 @@
 
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             menuStrip1 = new MenuStrip();
             dashboardToolStripMenuItem = new ToolStripMenuItem();
             produtoToolStripMenuItem = new ToolStripMenuItem();
@@ -43,10 +43,11 @@
             button1 = new Button();
             dataGridView1 = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
-            Fornecedor = new DataGridViewTextBoxColumn();
             Nome = new DataGridViewTextBoxColumn();
-            Valor = new DataGridViewTextBoxColumn();
-            Quantidade = new DataGridViewTextBoxColumn();
+            CPF = new DataGridViewTextBoxColumn();
+            Cargo = new DataGridViewTextBoxColumn();
+            Salario = new DataGridViewTextBoxColumn();
+            Email = new DataGridViewTextBoxColumn();
             btnVisualizar = new DataGridViewButtonColumn();
             btnEditar = new DataGridViewButtonColumn();
             btnDeletar = new DataGridViewButtonColumn();
@@ -107,7 +108,6 @@
             visualizarProdutoToolStripMenuItem.Name = "visualizarProdutoToolStripMenuItem";
             visualizarProdutoToolStripMenuItem.Size = new Size(227, 26);
             visualizarProdutoToolStripMenuItem.Text = "Visualizar Produto";
-            visualizarProdutoToolStripMenuItem.Click += visualizarProdutoToolStripMenuItem_Click;
             // 
             // fornecedorToolStripMenuItem
             // 
@@ -154,6 +154,7 @@
             visualizarEstoqueToolStripMenuItem.Name = "visualizarEstoqueToolStripMenuItem";
             visualizarEstoqueToolStripMenuItem.Size = new Size(224, 26);
             visualizarEstoqueToolStripMenuItem.Text = "Visualizar Estoque";
+            visualizarEstoqueToolStripMenuItem.Click += visualizarEstoqueToolStripMenuItem_Click;
             // 
             // colaboradorToolStripMenuItem
             // 
@@ -182,6 +183,7 @@
             visualizarColaboradorToolStripMenuItem.Name = "visualizarColaboradorToolStripMenuItem";
             visualizarColaboradorToolStripMenuItem.Size = new Size(259, 26);
             visualizarColaboradorToolStripMenuItem.Text = "Visualizar Colaborador";
+            visualizarColaboradorToolStripMenuItem.Click += visualizarColaboradorToolStripMenuItem_Click;
             // 
             // panelTopHeader
             // 
@@ -193,7 +195,6 @@
             panelTopHeader.Name = "panelTopHeader";
             panelTopHeader.Size = new Size(1080, 90);
             panelTopHeader.TabIndex = 1;
-            panelTopHeader.Paint += panelTopHeader_Paint;
             // 
             // labelHeaderSub
             // 
@@ -202,9 +203,9 @@
             labelHeaderSub.ForeColor = Color.FromArgb(240, 240, 240);
             labelHeaderSub.Location = new Point(35, 52);
             labelHeaderSub.Name = "labelHeaderSub";
-            labelHeaderSub.Size = new Size(313, 21);
+            labelHeaderSub.Size = new Size(294, 21);
             labelHeaderSub.TabIndex = 1;
-            labelHeaderSub.Text = "Gerencie, edite ou remova itens do catálogo";
+            labelHeaderSub.Text = "Gerencie, edite ou remova colaboradores";
             // 
             // labelHeaderTitle
             // 
@@ -213,9 +214,9 @@
             labelHeaderTitle.ForeColor = Color.White;
             labelHeaderTitle.Location = new Point(30, 15);
             labelHeaderTitle.Name = "labelHeaderTitle";
-            labelHeaderTitle.Size = new Size(266, 37);
+            labelHeaderTitle.Size = new Size(337, 37);
             labelHeaderTitle.TabIndex = 0;
-            labelHeaderTitle.Text = "Visualizar Produtos";
+            labelHeaderTitle.Text = "Visualizar Colaboradores";
             // 
             // panelHeaderDivider
             // 
@@ -247,7 +248,6 @@
             panelCardForm.Name = "panelCardForm";
             panelCardForm.Size = new Size(1010, 480);
             panelCardForm.TabIndex = 0;
-            panelCardForm.Paint += panelCardForm_Paint;
             // 
             // label1
             // 
@@ -294,25 +294,25 @@
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(199, 29, 44);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(199, 29, 44);
-            dataGridViewCellStyle1.SelectionForeColor = Color.White;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(199, 29, 44);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(199, 29, 44);
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.ColumnHeadersHeight = 40;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, Fornecedor, Nome, Valor, Quantidade, btnVisualizar, btnEditar, btnDeletar });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.White;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(50, 50, 50);
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(245, 246, 248);
-            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(199, 29, 44);
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, Nome, CPF, Cargo, Salario, Email, btnVisualizar, btnEditar, btnDeletar });
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(50, 50, 50);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(245, 246, 248);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(199, 29, 44);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.GridColor = Color.FromArgb(230, 230, 230);
             dataGridView1.Location = new Point(95, 117);
@@ -335,14 +335,6 @@
             ID.ReadOnly = true;
             ID.Width = 90;
             // 
-            // Fornecedor
-            // 
-            Fornecedor.HeaderText = "Fornecedor";
-            Fornecedor.MinimumWidth = 6;
-            Fornecedor.Name = "Fornecedor";
-            Fornecedor.ReadOnly = true;
-            Fornecedor.Width = 140;
-            // 
             // Nome
             // 
             Nome.HeaderText = "Nome";
@@ -351,21 +343,37 @@
             Nome.ReadOnly = true;
             Nome.Width = 200;
             // 
-            // Valor
+            // CPF
             // 
-            Valor.HeaderText = "Valor";
-            Valor.MinimumWidth = 6;
-            Valor.Name = "Valor";
-            Valor.ReadOnly = true;
-            Valor.Width = 90;
+            CPF.HeaderText = "CPF";
+            CPF.MinimumWidth = 6;
+            CPF.Name = "CPF";
+            CPF.ReadOnly = true;
+            CPF.Width = 140;
             // 
-            // Quantidade
+            // Cargo
             // 
-            Quantidade.HeaderText = "Quantidade";
-            Quantidade.MinimumWidth = 6;
-            Quantidade.Name = "Quantidade";
-            Quantidade.ReadOnly = true;
-            Quantidade.Width = 125;
+            Cargo.HeaderText = "Cargo";
+            Cargo.MinimumWidth = 6;
+            Cargo.Name = "Cargo";
+            Cargo.ReadOnly = true;
+            Cargo.Width = 140;
+            // 
+            // Salario
+            // 
+            Salario.HeaderText = "Salário";
+            Salario.MinimumWidth = 6;
+            Salario.Name = "Salario";
+            Salario.ReadOnly = true;
+            Salario.Width = 90;
+            // 
+            // Email
+            // 
+            Email.HeaderText = "Email";
+            Email.MinimumWidth = 6;
+            Email.Name = "Email";
+            Email.ReadOnly = true;
+            Email.Width = 160;
             // 
             // btnVisualizar
             // 
@@ -400,7 +408,7 @@
             btnDeletar.UseColumnTextForButtonValue = true;
             btnDeletar.Width = 60;
             // 
-            // VisualizarEstoque
+            // VisualizarColaborador
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -412,9 +420,9 @@
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
-            Name = "VisualizarEstoque";
+            Name = "VisualizarColaborador";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Software Farmácia - Catálogo de Produtos";
+            Text = "Software Farmácia - Colaboradores";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             panelTopHeader.ResumeLayout(false);
@@ -443,8 +451,8 @@
         private ToolStripMenuItem cadastrarColaboradorToolStripMenuItem;
         private ToolStripMenuItem visualizarColaboradorToolStripMenuItem;
         private Panel panelTopHeader;
-        private Label labelHeaderTitle;
         private Label labelHeaderSub;
+        private Label labelHeaderTitle;
         private Panel panelHeaderDivider;
         private Panel panelMainContainer;
         private Panel panelCardForm;
@@ -453,10 +461,11 @@
         private Button button1;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn ID;
-        private DataGridViewTextBoxColumn Fornecedor;
         private DataGridViewTextBoxColumn Nome;
-        private DataGridViewTextBoxColumn Valor;
-        private DataGridViewTextBoxColumn Quantidade;
+        private DataGridViewTextBoxColumn CPF;
+        private DataGridViewTextBoxColumn Cargo;
+        private DataGridViewTextBoxColumn Salario;
+        private DataGridViewTextBoxColumn Email;
         private DataGridViewButtonColumn btnVisualizar;
         private DataGridViewButtonColumn btnEditar;
         private DataGridViewButtonColumn btnDeletar;

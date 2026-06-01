@@ -142,5 +142,15 @@ namespace Software_Farmacia
         {
 
         }
+
+        private void visualizarColaboradorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VisualizarColaborador VisualizarC = new VisualizarColaborador(); VisualizarC.Show();
+        }
+
+        private void visualizarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VisualizarFornecedor VisualizarF = new VisualizarFornecedor(); VisualizarF.Show();
+        }
     }
 }

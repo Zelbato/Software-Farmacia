@@ -24,17 +24,14 @@
             dashboardToolStripMenuItem = new ToolStripMenuItem();
             produtoToolStripMenuItem = new ToolStripMenuItem();
             cadastroToolStripMenuItem = new ToolStripMenuItem();
-            editarProdutoToolStripMenuItem = new ToolStripMenuItem();
             visualizarProdutoToolStripMenuItem = new ToolStripMenuItem();
             fornecedorToolStripMenuItem = new ToolStripMenuItem();
             cadastrarFornecedorToolStripMenuItem = new ToolStripMenuItem();
-            editarFornecedorToolStripMenuItem = new ToolStripMenuItem();
             visualizarFornecedorToolStripMenuItem = new ToolStripMenuItem();
             estoqueToolStripMenuItem = new ToolStripMenuItem();
             visualizarEstoqueToolStripMenuItem = new ToolStripMenuItem();
             colaboradorToolStripMenuItem = new ToolStripMenuItem();
             cadastrarColaboradorToolStripMenuItem = new ToolStripMenuItem();
-            editarColaboradorToolStripMenuItem = new ToolStripMenuItem();
             visualizarColaboradorToolStripMenuItem = new ToolStripMenuItem();
             panelMainContainer = new Panel();
             cardProdutos = new Panel();
@@ -90,7 +87,7 @@
             // 
             // produtoToolStripMenuItem
             // 
-            produtoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, editarProdutoToolStripMenuItem, visualizarProdutoToolStripMenuItem });
+            produtoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, visualizarProdutoToolStripMenuItem });
             produtoToolStripMenuItem.ForeColor = Color.White;
             produtoToolStripMenuItem.Margin = new Padding(0, 0, 15, 0);
             produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
@@ -104,19 +101,9 @@
             cadastroToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
             cadastroToolStripMenuItem.ForeColor = Color.White;
             cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            cadastroToolStripMenuItem.Size = new Size(224, 26);
+            cadastroToolStripMenuItem.Size = new Size(227, 26);
             cadastroToolStripMenuItem.Text = "Cadastrar Produto";
             cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click;
-            // 
-            // editarProdutoToolStripMenuItem
-            // 
-            editarProdutoToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
-            editarProdutoToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
-            editarProdutoToolStripMenuItem.ForeColor = Color.White;
-            editarProdutoToolStripMenuItem.Name = "editarProdutoToolStripMenuItem";
-            editarProdutoToolStripMenuItem.Size = new Size(224, 26);
-            editarProdutoToolStripMenuItem.Text = "Editar Produto";
-            editarProdutoToolStripMenuItem.Click += editarProdutoToolStripMenuItem_Click;
             // 
             // visualizarProdutoToolStripMenuItem
             // 
@@ -124,13 +111,13 @@
             visualizarProdutoToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
             visualizarProdutoToolStripMenuItem.ForeColor = Color.White;
             visualizarProdutoToolStripMenuItem.Name = "visualizarProdutoToolStripMenuItem";
-            visualizarProdutoToolStripMenuItem.Size = new Size(224, 26);
+            visualizarProdutoToolStripMenuItem.Size = new Size(227, 26);
             visualizarProdutoToolStripMenuItem.Text = "Visualizar Produto";
             visualizarProdutoToolStripMenuItem.Click += visualizarProdutoToolStripMenuItem_Click;
             // 
             // fornecedorToolStripMenuItem
             // 
-            fornecedorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastrarFornecedorToolStripMenuItem, editarFornecedorToolStripMenuItem, visualizarFornecedorToolStripMenuItem });
+            fornecedorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastrarFornecedorToolStripMenuItem, visualizarFornecedorToolStripMenuItem });
             fornecedorToolStripMenuItem.ForeColor = Color.White;
             fornecedorToolStripMenuItem.Margin = new Padding(0, 0, 15, 0);
             fornecedorToolStripMenuItem.Name = "fornecedorToolStripMenuItem";
@@ -147,16 +134,6 @@
             cadastrarFornecedorToolStripMenuItem.Text = "Cadastrar Fornecedor";
             cadastrarFornecedorToolStripMenuItem.Click += cadastrarFornecedorToolStripMenuItem_Click;
             // 
-            // editarFornecedorToolStripMenuItem
-            // 
-            editarFornecedorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
-            editarFornecedorToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
-            editarFornecedorToolStripMenuItem.ForeColor = Color.White;
-            editarFornecedorToolStripMenuItem.Name = "editarFornecedorToolStripMenuItem";
-            editarFornecedorToolStripMenuItem.Size = new Size(252, 26);
-            editarFornecedorToolStripMenuItem.Text = "Editar Fornecedor";
-            editarFornecedorToolStripMenuItem.Click += editarFornecedorToolStripMenuItem_Click;
-            // 
             // visualizarFornecedorToolStripMenuItem
             // 
             visualizarFornecedorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
@@ -165,6 +142,7 @@
             visualizarFornecedorToolStripMenuItem.Name = "visualizarFornecedorToolStripMenuItem";
             visualizarFornecedorToolStripMenuItem.Size = new Size(252, 26);
             visualizarFornecedorToolStripMenuItem.Text = "Visualizar Fornecedor";
+            visualizarFornecedorToolStripMenuItem.Click += visualizarFornecedorToolStripMenuItem_Click;
             // 
             // estoqueToolStripMenuItem
             // 
@@ -188,7 +166,7 @@
             // 
             // colaboradorToolStripMenuItem
             // 
-            colaboradorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastrarColaboradorToolStripMenuItem, editarColaboradorToolStripMenuItem, visualizarColaboradorToolStripMenuItem });
+            colaboradorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastrarColaboradorToolStripMenuItem, visualizarColaboradorToolStripMenuItem });
             colaboradorToolStripMenuItem.ForeColor = Color.White;
             colaboradorToolStripMenuItem.Margin = new Padding(0, 0, 15, 0);
             colaboradorToolStripMenuItem.Name = "colaboradorToolStripMenuItem";
@@ -205,16 +183,6 @@
             cadastrarColaboradorToolStripMenuItem.Text = "Cadastrar Colaborador";
             cadastrarColaboradorToolStripMenuItem.Click += cadastrarColaboradorToolStripMenuItem_Click;
             // 
-            // editarColaboradorToolStripMenuItem
-            // 
-            editarColaboradorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
-            editarColaboradorToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
-            editarColaboradorToolStripMenuItem.ForeColor = Color.White;
-            editarColaboradorToolStripMenuItem.Name = "editarColaboradorToolStripMenuItem";
-            editarColaboradorToolStripMenuItem.Size = new Size(259, 26);
-            editarColaboradorToolStripMenuItem.Text = "Editar Colaborador";
-            editarColaboradorToolStripMenuItem.Click += editarColaboradorToolStripMenuItem_Click;
-            // 
             // visualizarColaboradorToolStripMenuItem
             // 
             visualizarColaboradorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
@@ -223,6 +191,7 @@
             visualizarColaboradorToolStripMenuItem.Name = "visualizarColaboradorToolStripMenuItem";
             visualizarColaboradorToolStripMenuItem.Size = new Size(259, 26);
             visualizarColaboradorToolStripMenuItem.Text = "Visualizar Colaborador";
+            visualizarColaboradorToolStripMenuItem.Click += visualizarColaboradorToolStripMenuItem_Click;
             // 
             // panelMainContainer
             // 
@@ -483,17 +452,14 @@
         private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem produtoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarProdutoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visualizarProdutoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fornecedorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrarFornecedorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarFornecedorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visualizarFornecedorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estoqueToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visualizarEstoqueToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem colaboradorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrarColaboradorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarColaboradorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visualizarColaboradorToolStripMenuItem;
 
         private System.Windows.Forms.Panel panelMainContainer;
