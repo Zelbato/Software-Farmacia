@@ -1,0 +1,3 @@
+﻿DBCC CHECKIDENT ('Fornecedor', RESEED, 0);
+DBCC CHECKIDENT ('Colaborador', RESEED, 0);
+DBCC CHECKIDENT ('Produto', RESEED, 0);
