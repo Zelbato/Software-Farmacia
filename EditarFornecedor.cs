@@ -10,14 +10,14 @@ namespace Software_Farmacia
         public EditarFornecedor()
         {
             InitializeComponent();
-            // associar botão Cancelar para fechar o formulário
+
             button2.Click += button2_Click;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Nota: Lembre-se de mapear de onde virá o ID do fornecedor ao carregar a busca
-            // string id = textBox5.Text; 
+
+
             string nomeFornecedor = textBox1.Text;
             string cpfFornecedor = textBox2.Text;
             string senha = textBox3.Text;
@@ -36,7 +36,7 @@ namespace Software_Farmacia
 
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
-                    // cmd.Parameters.AddWithValue("@id", id);
+
                     cmd.Parameters.AddWithValue("@nome", nomeFornecedor);
                     cmd.Parameters.AddWithValue("@cpf", cpfFornecedor);
                     cmd.Parameters.AddWithValue("@senha", senha);
@@ -47,7 +47,7 @@ namespace Software_Farmacia
             }
 
             MessageBox.Show("DADOS DO FORNECEDOR ALTERADOS!\n\n" +
-                            //"ID: " + id + "\n" +
+
                             "Nome: " + nomeFornecedor + "\n" +
                             "CPF: " + cpfFornecedor);
         }
@@ -62,45 +62,57 @@ namespace Software_Farmacia
         {
             Dashboard dashboard = new Dashboard();
             dashboard.Show();
+            this.Hide();
         }
 
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CadastroProduto CadastroP = new CadastroProduto();
             CadastroP.Show();
+            this.Hide();
         }
 
         private void editarProdutoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EditarProduto EditarP = new EditarProduto();
             EditarP.Show();
+            this.Hide();
         }
 
         private void cadastrarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CadastroFornecedor CadastroF = new CadastroFornecedor();
             CadastroF.Show();
+            this.Hide();
         }
 
         private void editarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EditarFornecedor EditarF = new EditarFornecedor();
             EditarF.Show();
+            this.Hide();
         }
 
         private void cadastrarColaboradorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CadastrarColaborador CadastrarC = new CadastrarColaborador();
             CadastrarC.Show();
+            this.Hide();
         }
 
         private void editarColaboradorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EditarColaborador EditarC = new EditarColaborador();
             EditarC.Show();
+            this.Hide();
         }
 
         private void panelCardForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

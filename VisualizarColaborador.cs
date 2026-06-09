@@ -98,7 +98,7 @@ namespace Software_Farmacia
 
             string nomeColuna = dataGridView1.Columns[e.ColumnIndex].Name;
 
-            // Captura os dados da linha selecionada
+            
             string id = dataGridView1.Rows[e.RowIndex].Cells[0].Value?.ToString();
             string nome = dataGridView1.Rows[e.RowIndex].Cells[1].Value?.ToString();
             string cpf = dataGridView1.Rows[e.RowIndex].Cells[2].Value?.ToString();
@@ -141,7 +141,7 @@ namespace Software_Farmacia
                     ((TextBox)visualizar.Controls.Find("textBox6", true)[0]).Text = salario ?? "";
                     ((TextBox)visualizar.Controls.Find("textBox4", true)[0]).Text = email ?? "";
 
-                    // Somente leitura
+                    
                     ((TextBox)visualizar.Controls.Find("textBox1", true)[0]).ReadOnly = true;
                     ((TextBox)visualizar.Controls.Find("textBox2", true)[0]).ReadOnly = true;
                     ((TextBox)visualizar.Controls.Find("textBox5", true)[0]).ReadOnly = true;
@@ -207,47 +207,70 @@ namespace Software_Farmacia
         {
             CadastrarColaborador tela = new CadastrarColaborador();
             tela.Show();
+            this.Hide();
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Dashboard dashboard = new Dashboard(); dashboard.Show();
+            this.Hide();
         }
 
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CadastroProduto CadastroP = new CadastroProduto(); CadastroP.Show();
+            this.Hide();
+        }
+
+        private void visualizarProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VisualizarProduto vis = new VisualizarProduto();
+            vis.Show();
+            this.Hide();
+        }
+
+        private void visualizarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VisualizarFornecedor vis = new VisualizarFornecedor();
+            vis.Show();
+            this.Hide();
         }
 
         private void visualizarEstoqueToolStripMenuItem_Click(object sender, EventArgs e)
         {
             VisualizarEstoque visualizar = new VisualizarEstoque();
             visualizar.Show();
+            this.Hide();
         }
 
         private void cadastrarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CadastroFornecedor CadastroF = new CadastroFornecedor(); CadastroF.Show();
+            this.Hide();
         }
 
         private void editarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EditarFornecedor EditarF = new EditarFornecedor(); EditarF.Show();
+            this.Hide();
         }
 
         private void cadastrarColaboradorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CadastrarColaborador CadastrarC = new CadastrarColaborador(); CadastrarC.Show();
+            this.Hide();
         }
 
         private void editarColaboradorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EditarColaborador EditarC = new EditarColaborador(); EditarC.Show();
+            this.Hide();
         }
 
         private void visualizarColaboradorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             VisualizarColaborador VisualizarC = new VisualizarColaborador(); VisualizarC.Show();
+            this.Hide();
         }
     }
 
@@ -266,3 +289,4 @@ namespace Software_Farmacia
         }
     }
 }
+

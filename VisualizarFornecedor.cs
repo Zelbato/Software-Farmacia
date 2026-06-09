@@ -36,11 +36,11 @@ namespace Software_Farmacia
 
                         foreach (DataRow row in dt.Rows)
                         {
-                            // Ordem: Id, Nome, CPF, Email (telefone removido do esquema)
+
                             todosFornecedores.Add(new FornecedorDados(
                                 row.Table.Columns.Contains("Id_fornecedor") ? row["Id_fornecedor"].ToString() : string.Empty,
                                 row.Table.Columns.Contains("Nome_fornecedor") ? row["Nome_fornecedor"].ToString() : string.Empty,
-                                // aceitar variações de nome de coluna para CPF
+
                                 row.Table.Columns.Contains("CPF_fornecedor") ? row["CPF_fornecedor"].ToString() : (row.Table.Columns.Contains("Cpf_fornecedor") ? row["Cpf_fornecedor"].ToString() : string.Empty),
                                 row.Table.Columns.Contains("Email_fornecedor") ? row["Email_fornecedor"].ToString() : string.Empty
                             ));
@@ -57,7 +57,7 @@ namespace Software_Farmacia
 
             foreach (var f in lista)
             {
-                // Colunas agora: ID, Nome, CPF, Email
+
                 dataGridView1.Rows.Add(f.Id, f.Nome, f.CPF, f.Email);
             }
         }
@@ -124,7 +124,7 @@ namespace Software_Farmacia
 
                     var btnSalvar = editar.Controls.Find("button1", true);
                     if (btnSalvar.Length > 0) ((Button)btnSalvar[0]).Enabled = false;
-                    // desabilitar também campos de edição caso existam
+
                     foreach (Control c in editar.Controls)
                     {
                         if (c is TextBox) c.Enabled = false;
@@ -164,26 +164,78 @@ namespace Software_Farmacia
         private void button1_Click(object sender, EventArgs e)
         {
             CadastroFornecedor cadastro = new CadastroFornecedor(); cadastro.Show();
+            this.Hide();
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Dashboard dashboard = new Dashboard(); dashboard.Show();
+            this.Hide();
         }
 
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CadastroProduto CadastroP = new CadastroProduto(); CadastroP.Show();
+            this.Hide();
+        }
+
+        private void editarProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditarProduto editar = new EditarProduto();
+            editar.Show();
+            this.Hide();
+        }
+
+        private void visualizarProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VisualizarProduto visualizar = new VisualizarProduto();
+            visualizar.Show();
+            this.Hide();
+        }
+
+        private void cadastrarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastroFornecedor cadastro = new CadastroFornecedor();
+            cadastro.Show();
+            this.Hide();
+        }
+
+        private void editarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditarFornecedor editar = new EditarFornecedor();
+            editar.Show();
+            this.Hide();
+        }
+
+        private void visualizarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VisualizarFornecedor vis = new VisualizarFornecedor();
+            vis.Show();
+            this.Hide();
+        }
+
+        private void visualizarEstoqueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VisualizarEstoque vis = new VisualizarEstoque();
+            vis.Show();
+            this.Hide();
         }
 
         private void cadastrarColaboradorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CadastrarColaborador CadastrarC = new CadastrarColaborador(); CadastrarC.Show();
+            this.Hide();
         }
 
         private void editarColaboradorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EditarColaborador EditarC = new EditarColaborador(); EditarC.Show();
+            this.Hide();
+        }
+
+        private void panelCardForm_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 
@@ -200,3 +252,4 @@ namespace Software_Farmacia
         }
     }
 }
+

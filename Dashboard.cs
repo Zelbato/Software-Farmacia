@@ -25,7 +25,7 @@ namespace Software_Farmacia
                 {
                     conn.Open();
 
-                    // 1. Quantidade Total de Produtos
+
                     string sqlProdutos = "SELECT COUNT(*) FROM Produto";
                     using (SqlCommand cmd = new SqlCommand(sqlProdutos, conn))
                     {
@@ -34,8 +34,8 @@ namespace Software_Farmacia
                         lblCardProdutosValor.Text = totalProdutos.ToString("N0");
                     }
 
-                    // 2. Quantidade Total de Colaboradores (Funcionários)
-                    // Contar colaboradores (tabela 'Colaborador')
+
+
                     string sqlFuncionarios = "SELECT COUNT(*) FROM Colaborador";
                     using (SqlCommand cmd = new SqlCommand(sqlFuncionarios, conn))
                     {
@@ -44,15 +44,15 @@ namespace Software_Farmacia
                         lblCardColaboradoresValor.Text = totalFuncionarios.ToString();
                     }
 
-                    // 3. Opcional: Alertas de Estoque Baixo (Se você tiver o label correspondente na tela)
-                    // string sqlEstoqueBaixo = "SELECT COUNT(*) FROM Produto WHERE Quantidade_produto < 10";
-                    // using (SqlCommand cmd = new SqlCommand(sqlEstoqueBaixo, conn))
-                    // {
-                    //     int estoqueBaixo = (int)cmd.ExecuteScalar();
-                    //     lblCardAlertasValor.Text = estoqueBaixo + " Baixos";
-                    // }
 
-                    // 4. Alimentar a Tabela (gridProdutos) do lado direito
+
+
+
+
+
+
+
+
                     string sqlTabela = "SELECT Id_produto AS [ID], Nome_produto AS [Produto], Quantidade_produto AS [Estoque], " +
                                        "CASE WHEN Quantidade_produto < 10 THEN 'Baixo' ELSE 'OK' END AS [Status] " +
                                        "FROM Produto";
@@ -71,7 +71,7 @@ namespace Software_Farmacia
             }
         }
 
-        // --- Navegação do MenuStrip ---
+
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CadastroProduto CadastroP = new CadastroProduto();
@@ -154,6 +154,11 @@ namespace Software_Farmacia
         private void visualizarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             VisualizarFornecedor VisualizarF = new VisualizarFornecedor(); VisualizarF.Show();
+        }
+
+        private void panelMainContainer_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

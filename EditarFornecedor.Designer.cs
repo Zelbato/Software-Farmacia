@@ -19,10 +19,6 @@
         {
             menuStrip1 = new MenuStrip();
             dashboardToolStripMenuItem = new ToolStripMenuItem();
-            produtoToolStripMenuItem = new ToolStripMenuItem();
-            cadastroToolStripMenuItem = new ToolStripMenuItem();
-            editarProdutoToolStripMenuItem = new ToolStripMenuItem();
-            visualizarProdutoToolStripMenuItem = new ToolStripMenuItem();
             fornecedorToolStripMenuItem = new ToolStripMenuItem();
             cadastrarFornecedorToolStripMenuItem = new ToolStripMenuItem();
             editarFornecedorToolStripMenuItem = new ToolStripMenuItem();
@@ -63,7 +59,7 @@
             menuStrip1.BackColor = Color.FromArgb(199, 29, 44);
             menuStrip1.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { dashboardToolStripMenuItem, produtoToolStripMenuItem, fornecedorToolStripMenuItem, estoqueToolStripMenuItem, colaboradorToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { dashboardToolStripMenuItem, fornecedorToolStripMenuItem, estoqueToolStripMenuItem, colaboradorToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(15, 8, 15, 8);
@@ -80,40 +76,6 @@
             dashboardToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
             dashboardToolStripMenuItem.Size = new Size(156, 37);
             dashboardToolStripMenuItem.Text = "🏠 Dashboard";
-            // 
-            // produtoToolStripMenuItem
-            // 
-            produtoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, editarProdutoToolStripMenuItem, visualizarProdutoToolStripMenuItem });
-            produtoToolStripMenuItem.ForeColor = Color.White;
-            produtoToolStripMenuItem.Margin = new Padding(0, 0, 12, 0);
-            produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
-            produtoToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
-            produtoToolStripMenuItem.Size = new Size(132, 37);
-            produtoToolStripMenuItem.Text = "📦 Produto";
-            // 
-            // cadastroToolStripMenuItem
-            // 
-            cadastroToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
-            cadastroToolStripMenuItem.ForeColor = Color.White;
-            cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            cadastroToolStripMenuItem.Size = new Size(254, 30);
-            cadastroToolStripMenuItem.Text = "Cadastrar Produto";
-            // 
-            // editarProdutoToolStripMenuItem
-            // 
-            editarProdutoToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
-            editarProdutoToolStripMenuItem.ForeColor = Color.White;
-            editarProdutoToolStripMenuItem.Name = "editarProdutoToolStripMenuItem";
-            editarProdutoToolStripMenuItem.Size = new Size(254, 30);
-            editarProdutoToolStripMenuItem.Text = "Editar Produto";
-            // 
-            // visualizarProdutoToolStripMenuItem
-            // 
-            visualizarProdutoToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
-            visualizarProdutoToolStripMenuItem.ForeColor = Color.White;
-            visualizarProdutoToolStripMenuItem.Name = "visualizarProdutoToolStripMenuItem";
-            visualizarProdutoToolStripMenuItem.Size = new Size(254, 30);
-            visualizarProdutoToolStripMenuItem.Text = "Visualizar Produto";
             // 
             // fornecedorToolStripMenuItem
             // 
@@ -332,6 +294,7 @@
             label4.Size = new Size(139, 21);
             label4.TabIndex = 3;
             label4.Text = "CPF Fornecedor *";
+            label4.Click += label4_Click;
             // 
             // textBox2
             // 
@@ -440,10 +403,6 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem dashboardToolStripMenuItem;
-        private ToolStripMenuItem produtoToolStripMenuItem;
-        private ToolStripMenuItem cadastroToolStripMenuItem;
-        private ToolStripMenuItem editarProdutoToolStripMenuItem;
-        private ToolStripMenuItem visualizarProdutoToolStripMenuItem;
         private ToolStripMenuItem fornecedorToolStripMenuItem;
         private ToolStripMenuItem cadastrarFornecedorToolStripMenuItem;
         private ToolStripMenuItem editarFornecedorToolStripMenuItem;

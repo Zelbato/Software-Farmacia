@@ -26,7 +26,7 @@ namespace Software_Farmacia
 
         private void GerarDadosIniciais()
         {
-            // Trazer também o nome do fornecedor (se existir) usando LEFT JOIN
+            
             string sql = @"SELECT p.Id_produto, p.Nome_produto, p.Preco_produto, p.Quantidade_produto,
                                     p.Id_fornecedorFK, f.Nome_fornecedor
                              FROM Produto p
@@ -59,13 +59,13 @@ namespace Software_Farmacia
 
         private void AtualizarTabela(List<ProdutoDados> listaParaExibir)
         {
-            // Se o DataGridView estiver vinculado a uma fonte de dados, Rows.Clear() lança ArgumentException.
-            // Liberar a fonte de dados antes de manipular as linhas manualmente.
+            
+            
             dataGridView1.DataSource = null;
             dataGridView1.Rows.Clear();
             foreach (var prod in listaParaExibir)
             {
-                // As colunas no Designer estão na ordem: ID, Fornecedor, Nome, Valor, Quantidade, Ações.
+                
                 dataGridView1.Rows.Add(prod.IdFornecedor, prod.FornecedorNome, prod.Nome, prod.Valor, prod.Quantidade);
             }
         }
@@ -103,7 +103,7 @@ namespace Software_Farmacia
 
             string nomeColuna = dataGridView1.Columns[e.ColumnIndex].Name;
 
-            // Captura de forma segura os dados da linha selecionada baseado na ordem das colunas adicionadas no Rows.Add
+            
             string idFornecedor = dataGridView1.Rows[e.RowIndex].Cells[0].Value?.ToString();
             string nomeProduto = dataGridView1.Rows[e.RowIndex].Cells[2].Value?.ToString();
             string valor = dataGridView1.Rows[e.RowIndex].Cells[3].Value?.ToString();
@@ -116,17 +116,17 @@ namespace Software_Farmacia
 
                 var row = grid.Rows[e.RowIndex];
 
-                // Ajuste: obter o Id do produto a partir da primeira célula (conforme AtualizarTabela)
+                
                 int id = 0;
                 int.TryParse(row.Cells[0]?.Value?.ToString(), out id);
 
                 string nome = row.Cells[2]?.Value?.ToString() ?? string.Empty;
 
-                // Buscar a descrição diretamente no banco pelo Id do produto
+                
                 string descricao = GetDescricaoProduto(id);
 
                 decimal preco = 0m;
-                // usar cultura pt-BR para reconhecer vírgula como separador decimal
+                
                 decimal.TryParse(row.Cells[3]?.Value?.ToString(), System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.GetCultureInfo("pt-BR"), out preco);
 
                 int quantidadeInt = 0;
@@ -137,7 +137,7 @@ namespace Software_Farmacia
                     var result = telaEditar.ShowDialog();
                     if (result == DialogResult.OK)
                     {
-                        // Recarrega o grid após edição
+                        
                         GerarDadosIniciais();
                         AtualizarTabela(todosProdutos);
                     }
@@ -145,7 +145,7 @@ namespace Software_Farmacia
             }
             else if (nomeColuna == "btnVisualizar")
             {
-                // Captura o Id do produto a partir da primeira célula
+                
                 int idVis = 0;
                 int.TryParse(dataGridView1.Rows[e.RowIndex].Cells[0]?.Value?.ToString(), out idVis);
 
@@ -157,19 +157,19 @@ namespace Software_Farmacia
                 int quantidadeVis = 0;
                 int.TryParse(dataGridView1.Rows[e.RowIndex].Cells[4]?.Value?.ToString(), out quantidadeVis);
 
-                // Busca descrição pelo Id caso não esteja no grid
+                
                 string descricaoVis = GetDescricaoProduto(idVis);
 
-                // Abre o formulário de edição em modo apenas leitura (reusar EditarProduto, mas desabilitar ações)
+                
                 using (var tela = new EditarProduto(idVis, nomeVis, descricaoVis, precoVis, quantidadeVis))
                 {
-                    // tentar desabilitar botões padrão (Salvar/Cancelar) se existirem
+                    
                     var btnSalvar = tela.Controls.Find("button1", true);
                     if (btnSalvar.Length > 0) btnSalvar[0].Visible = false;
                     var btnCancelar = tela.Controls.Find("button2", true);
                     if (btnCancelar.Length > 0) btnCancelar[0].Visible = false;
 
-                    // desabilitar campos de entrada
+                    
                     foreach (Control c in tela.Controls)
                     {
                         if (c is TextBox tb) tb.ReadOnly = true;
@@ -177,7 +177,7 @@ namespace Software_Farmacia
                         if (c is Button) c.Enabled = false;
                     }
 
-                    // também verificar controles dentro de panelCardForm
+                    
                     var panels = tela.Controls.Find("panelCardForm", true);
                     if (panels.Length > 0)
                     {
@@ -252,7 +252,7 @@ namespace Software_Farmacia
 
         }
 
-        // Busca a descrição do produto no banco pelo Id_produto
+        
         private string GetDescricaoProduto(int produtoId)
         {
             if (produtoId <= 0) return string.Empty;
@@ -273,7 +273,7 @@ namespace Software_Farmacia
             }
             catch (Exception ex)
             {
-                // opcional: log
+                
                 return string.Empty;
             }
         }

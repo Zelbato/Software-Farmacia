@@ -39,9 +39,9 @@
             panelLeft.SuspendLayout();
             panelRight.SuspendLayout();
             SuspendLayout();
-            // 
-            // panelLeft
-            // 
+            
+            
+            
             panelLeft.BackColor = Color.FromArgb(218, 41, 28);
             panelLeft.Controls.Add(lblTitulo);
             panelLeft.Controls.Add(lblSub);
@@ -50,9 +50,9 @@
             panelLeft.Name = "panelLeft";
             panelLeft.Size = new Size(352, 600);
             panelLeft.TabIndex = 1;
-            // 
-            // lblTitulo
-            // 
+            
+            
+            
             lblTitulo.Font = new Font("Segoe UI Black", 32F, FontStyle.Bold);
             lblTitulo.ForeColor = Color.White;
             lblTitulo.Location = new Point(4, 225);
@@ -61,9 +61,9 @@
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "FARMÁCIA";
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // lblSub
-            // 
+            
+            
+            
             lblSub.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblSub.ForeColor = Color.FromArgb(255, 210, 210);
             lblSub.Location = new Point(12, 285);
@@ -72,9 +72,9 @@
             lblSub.TabIndex = 1;
             lblSub.Text = "Crie sua conta em segundos";
             lblSub.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // panelRight
-            // 
+            
+            
+            
             panelRight.BackColor = Color.White;
             panelRight.Controls.Add(btnFechar);
             panelRight.Controls.Add(lblCadastro);
@@ -93,9 +93,9 @@
             panelRight.Name = "panelRight";
             panelRight.Size = new Size(498, 600);
             panelRight.TabIndex = 0;
-            // 
-            // btnFechar
-            // 
+            
+            
+            
             btnFechar.Cursor = Cursors.Hand;
             btnFechar.FlatAppearance.BorderSize = 0;
             btnFechar.FlatStyle = FlatStyle.Flat;
@@ -107,9 +107,9 @@
             btnFechar.TabIndex = 0;
             btnFechar.Text = "✕";
             btnFechar.Click += btnFechar_Click;
-            // 
-            // lblCadastro
-            // 
+            
+            
+            
             lblCadastro.AutoSize = true;
             lblCadastro.Font = new Font("Segoe UI Semibold", 22F, FontStyle.Bold);
             lblCadastro.ForeColor = Color.FromArgb(64, 64, 64);
@@ -118,9 +118,9 @@
             lblCadastro.Size = new Size(205, 50);
             lblCadastro.TabIndex = 1;
             lblCadastro.Text = "Criar conta";
-            // 
-            // lblNomeHint
-            // 
+            
+            
+            
             lblNomeHint.AutoSize = true;
             lblNomeHint.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             lblNomeHint.ForeColor = Color.Gray;
@@ -129,17 +129,17 @@
             lblNomeHint.Size = new Size(121, 20);
             lblNomeHint.TabIndex = 2;
             lblNomeHint.Text = "Nome Completo";
-            // 
-            // txtNome
-            // 
+            
+            
+            
             txtNome.Font = new Font("Segoe UI", 12F);
             txtNome.Location = new Point(63, 130);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(380, 34);
             txtNome.TabIndex = 3;
-            // 
-            // lblCPFHint
-            // 
+            
+            
+            
             lblCPFHint.AutoSize = true;
             lblCPFHint.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             lblCPFHint.ForeColor = Color.Gray;
@@ -148,17 +148,17 @@
             lblCPFHint.Size = new Size(35, 20);
             lblCPFHint.TabIndex = 4;
             lblCPFHint.Text = "CPF";
-            // 
-            // txtCPF
-            // 
+            
+            
+            
             txtCPF.Font = new Font("Segoe UI", 12F);
             txtCPF.Location = new Point(63, 195);
             txtCPF.Name = "txtCPF";
             txtCPF.Size = new Size(380, 34);
             txtCPF.TabIndex = 5;
-            // 
-            // lblEmailHint
-            // 
+            
+            
+            
             lblEmailHint.AutoSize = true;
             lblEmailHint.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             lblEmailHint.ForeColor = Color.Gray;
@@ -167,17 +167,17 @@
             lblEmailHint.Size = new Size(52, 20);
             lblEmailHint.TabIndex = 6;
             lblEmailHint.Text = "E-mail";
-            // 
-            // txtEmail
-            // 
+            
+            
+            
             txtEmail.Font = new Font("Segoe UI", 12F);
             txtEmail.Location = new Point(63, 260);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(380, 34);
             txtEmail.TabIndex = 7;
-            // 
-            // lblSenhaHint
-            // 
+            
+            
+            
             lblSenhaHint.AutoSize = true;
             lblSenhaHint.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             lblSenhaHint.ForeColor = Color.Gray;
@@ -186,18 +186,18 @@
             lblSenhaHint.Size = new Size(132, 20);
             lblSenhaHint.TabIndex = 8;
             lblSenhaHint.Text = "Defina uma senha";
-            // 
-            // txtSenha
-            // 
+            
+            
+            
             txtSenha.Font = new Font("Segoe UI", 12F);
             txtSenha.Location = new Point(63, 325);
             txtSenha.Name = "txtSenha";
             txtSenha.PasswordChar = '•';
             txtSenha.Size = new Size(380, 34);
             txtSenha.TabIndex = 9;
-            // 
-            // btnCadastrar
-            // 
+            
+            
+            
             btnCadastrar.BackColor = Color.FromArgb(218, 41, 28);
             btnCadastrar.Cursor = Cursors.Hand;
             btnCadastrar.FlatAppearance.BorderSize = 0;
@@ -210,9 +210,9 @@
             btnCadastrar.TabIndex = 10;
             btnCadastrar.Text = "Cadastrar Agora";
             btnCadastrar.UseVisualStyleBackColor = false;
-            // 
-            // lblJaTemConta
-            // 
+            
+            
+            
             lblJaTemConta.ActiveLinkColor = Color.FromArgb(218, 41, 28);
             lblJaTemConta.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             lblJaTemConta.LinkBehavior = LinkBehavior.NeverUnderline;
@@ -225,9 +225,9 @@
             lblJaTemConta.Text = "Já possui uma conta? Faça login";
             lblJaTemConta.TextAlign = ContentAlignment.MiddleCenter;
             lblJaTemConta.LinkClicked += lblJaTemConta_LinkClicked;
-            // 
-            // CadastroForm
-            // 
+            
+            
+            
             ClientSize = new Size(850, 600);
             Controls.Add(panelRight);
             Controls.Add(panelLeft);

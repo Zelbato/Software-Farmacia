@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panelMainContainer = new Panel();
             panelCardForm = new Panel();
             label1 = new Label();
@@ -50,10 +50,6 @@
             labelHeaderTitle = new Label();
             menuStrip1 = new MenuStrip();
             dashboardToolStripMenuItem = new ToolStripMenuItem();
-            produtoToolStripMenuItem = new ToolStripMenuItem();
-            cadastroToolStripMenuItem = new ToolStripMenuItem();
-            editarProdutoToolStripMenuItem = new ToolStripMenuItem();
-            visualizarProdutoToolStripMenuItem = new ToolStripMenuItem();
             fornecedorToolStripMenuItem = new ToolStripMenuItem();
             cadastrarFornecedorToolStripMenuItem = new ToolStripMenuItem();
             editarFornecedorToolStripMenuItem = new ToolStripMenuItem();
@@ -92,6 +88,7 @@
             panelCardForm.Name = "panelCardForm";
             panelCardForm.Size = new Size(1010, 480);
             panelCardForm.TabIndex = 0;
+            panelCardForm.Paint += panelCardForm_Paint;
             // 
             // label1
             // 
@@ -138,25 +135,25 @@
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(199, 29, 44);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(199, 29, 44);
-            dataGridViewCellStyle3.SelectionForeColor = Color.White;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(199, 29, 44);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(199, 29, 44);
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeight = 40;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, Fornecedor, Nome, Valor, Quantidade, btnVisualizar, btnEditar, btnDeletar });
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.White;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle4.ForeColor = Color.FromArgb(50, 50, 50);
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(245, 246, 248);
-            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(199, 29, 44);
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(50, 50, 50);
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(245, 246, 248);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(199, 29, 44);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.GridColor = Color.FromArgb(230, 230, 230);
             dataGridView1.Location = new Point(95, 117);
@@ -291,7 +288,7 @@
             menuStrip1.BackColor = Color.FromArgb(199, 29, 44);
             menuStrip1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { dashboardToolStripMenuItem, produtoToolStripMenuItem, fornecedorToolStripMenuItem, estoqueToolStripMenuItem, colaboradorToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { dashboardToolStripMenuItem, fornecedorToolStripMenuItem, estoqueToolStripMenuItem, colaboradorToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(15, 10, 0, 10);
@@ -309,42 +306,6 @@
             dashboardToolStripMenuItem.Size = new Size(150, 35);
             dashboardToolStripMenuItem.Text = "🏠 Dashboard";
             dashboardToolStripMenuItem.Click += dashboardToolStripMenuItem_Click;
-            // 
-            // produtoToolStripMenuItem
-            // 
-            produtoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, editarProdutoToolStripMenuItem, visualizarProdutoToolStripMenuItem });
-            produtoToolStripMenuItem.ForeColor = Color.White;
-            produtoToolStripMenuItem.Margin = new Padding(0, 0, 12, 0);
-            produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
-            produtoToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
-            produtoToolStripMenuItem.Size = new Size(128, 35);
-            produtoToolStripMenuItem.Text = "📦 Produto";
-            // 
-            // cadastroToolStripMenuItem
-            // 
-            cadastroToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
-            cadastroToolStripMenuItem.ForeColor = Color.White;
-            cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            cadastroToolStripMenuItem.Size = new Size(241, 28);
-            cadastroToolStripMenuItem.Text = "Cadastrar Produto";
-            cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click;
-            // 
-            // editarProdutoToolStripMenuItem
-            // 
-            editarProdutoToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
-            editarProdutoToolStripMenuItem.ForeColor = Color.White;
-            editarProdutoToolStripMenuItem.Name = "editarProdutoToolStripMenuItem";
-            editarProdutoToolStripMenuItem.Size = new Size(241, 28);
-            editarProdutoToolStripMenuItem.Text = "Editar Produto";
-            editarProdutoToolStripMenuItem.Click += editarProdutoToolStripMenuItem_Click;
-            // 
-            // visualizarProdutoToolStripMenuItem
-            // 
-            visualizarProdutoToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
-            visualizarProdutoToolStripMenuItem.ForeColor = Color.White;
-            visualizarProdutoToolStripMenuItem.Name = "visualizarProdutoToolStripMenuItem";
-            visualizarProdutoToolStripMenuItem.Size = new Size(241, 28);
-            visualizarProdutoToolStripMenuItem.Text = "Visualizar Produto";
             // 
             // fornecedorToolStripMenuItem
             // 
@@ -481,10 +442,6 @@
         private Label labelHeaderTitle;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem dashboardToolStripMenuItem;
-        private ToolStripMenuItem produtoToolStripMenuItem;
-        private ToolStripMenuItem cadastroToolStripMenuItem;
-        private ToolStripMenuItem editarProdutoToolStripMenuItem;
-        private ToolStripMenuItem visualizarProdutoToolStripMenuItem;
         private ToolStripMenuItem fornecedorToolStripMenuItem;
         private ToolStripMenuItem cadastrarFornecedorToolStripMenuItem;
         private ToolStripMenuItem editarFornecedorToolStripMenuItem;

@@ -102,6 +102,7 @@ namespace Software_Farmacia
             panelRight.Name = "panelRight";
             panelRight.Size = new Size(582, 733);
             panelRight.TabIndex = 0;
+            panelRight.Paint += panelRight_Paint;
             // 
             // textBox1
             // 

@@ -22,6 +22,9 @@ namespace Software_Farmacia
             Dash.Show();
         }
 
-   
+        private void panelRight_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

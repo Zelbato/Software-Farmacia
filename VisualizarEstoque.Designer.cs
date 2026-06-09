@@ -21,9 +21,6 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             menuStrip1 = new MenuStrip();
             dashboardToolStripMenuItem = new ToolStripMenuItem();
-            produtoToolStripMenuItem = new ToolStripMenuItem();
-            cadastroToolStripMenuItem = new ToolStripMenuItem();
-            visualizarProdutoToolStripMenuItem = new ToolStripMenuItem();
             fornecedorToolStripMenuItem = new ToolStripMenuItem();
             cadastrarFornecedorToolStripMenuItem = new ToolStripMenuItem();
             visualizarFornecedorToolStripMenuItem = new ToolStripMenuItem();
@@ -56,13 +53,13 @@
             panelCardForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // menuStrip1
-            // 
+            
+            
+            
             menuStrip1.BackColor = Color.FromArgb(199, 29, 44);
             menuStrip1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { dashboardToolStripMenuItem, produtoToolStripMenuItem, fornecedorToolStripMenuItem, estoqueToolStripMenuItem, colaboradorToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { dashboardToolStripMenuItem, fornecedorToolStripMenuItem, estoqueToolStripMenuItem, colaboradorToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(15, 10, 0, 10);
@@ -70,56 +67,27 @@
             menuStrip1.Size = new Size(1080, 47);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
-            // 
-            // dashboardToolStripMenuItem
-            // 
+            
+            
+            
             dashboardToolStripMenuItem.ForeColor = Color.White;
             dashboardToolStripMenuItem.Margin = new Padding(0, 0, 15, 0);
             dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
             dashboardToolStripMenuItem.Size = new Size(140, 27);
             dashboardToolStripMenuItem.Text = "🏠 Dashboard";
             dashboardToolStripMenuItem.Click += dashboardToolStripMenuItem_Click;
-            // 
-            // produtoToolStripMenuItem
-            // 
-            produtoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, visualizarProdutoToolStripMenuItem });
-            produtoToolStripMenuItem.ForeColor = Color.White;
-            produtoToolStripMenuItem.Margin = new Padding(0, 0, 15, 0);
-            produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
-            produtoToolStripMenuItem.Size = new Size(118, 27);
-            produtoToolStripMenuItem.Text = "📦 Produto";
-            // 
-            // cadastroToolStripMenuItem
-            // 
-            cadastroToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
-            cadastroToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
-            cadastroToolStripMenuItem.ForeColor = Color.White;
-            cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            cadastroToolStripMenuItem.Size = new Size(227, 26);
-            cadastroToolStripMenuItem.Text = "Cadastrar Produto";
-            cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click;
-            // 
-            // visualizarProdutoToolStripMenuItem
-            // 
-            visualizarProdutoToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
-            visualizarProdutoToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
-            visualizarProdutoToolStripMenuItem.ForeColor = Color.White;
-            visualizarProdutoToolStripMenuItem.Name = "visualizarProdutoToolStripMenuItem";
-            visualizarProdutoToolStripMenuItem.Size = new Size(227, 26);
-            visualizarProdutoToolStripMenuItem.Text = "Visualizar Produto";
-            visualizarProdutoToolStripMenuItem.Click += visualizarProdutoToolStripMenuItem_Click;
-            // 
-            // fornecedorToolStripMenuItem
-            // 
+            
+            
+            
             fornecedorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastrarFornecedorToolStripMenuItem, visualizarFornecedorToolStripMenuItem });
             fornecedorToolStripMenuItem.ForeColor = Color.White;
             fornecedorToolStripMenuItem.Margin = new Padding(0, 0, 15, 0);
             fornecedorToolStripMenuItem.Name = "fornecedorToolStripMenuItem";
             fornecedorToolStripMenuItem.Size = new Size(143, 27);
             fornecedorToolStripMenuItem.Text = "\U0001f91d Fornecedor";
-            // 
-            // cadastrarFornecedorToolStripMenuItem
-            // 
+            
+            
+            
             cadastrarFornecedorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             cadastrarFornecedorToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
             cadastrarFornecedorToolStripMenuItem.ForeColor = Color.White;
@@ -127,45 +95,45 @@
             cadastrarFornecedorToolStripMenuItem.Size = new Size(252, 26);
             cadastrarFornecedorToolStripMenuItem.Text = "Cadastrar Fornecedor";
             cadastrarFornecedorToolStripMenuItem.Click += cadastrarFornecedorToolStripMenuItem_Click;
-            // 
-            // visualizarFornecedorToolStripMenuItem
-            // 
+            
+            
+            
             visualizarFornecedorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             visualizarFornecedorToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
             visualizarFornecedorToolStripMenuItem.ForeColor = Color.White;
             visualizarFornecedorToolStripMenuItem.Name = "visualizarFornecedorToolStripMenuItem";
             visualizarFornecedorToolStripMenuItem.Size = new Size(252, 26);
             visualizarFornecedorToolStripMenuItem.Text = "Visualizar Fornecedor";
-            // 
-            // estoqueToolStripMenuItem
-            // 
+            
+            
+            
             estoqueToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { visualizarEstoqueToolStripMenuItem });
             estoqueToolStripMenuItem.ForeColor = Color.White;
             estoqueToolStripMenuItem.Margin = new Padding(0, 0, 15, 0);
             estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
             estoqueToolStripMenuItem.Size = new Size(116, 27);
             estoqueToolStripMenuItem.Text = "📊 Estoque";
-            // 
-            // visualizarEstoqueToolStripMenuItem
-            // 
+            
+            
+            
             visualizarEstoqueToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             visualizarEstoqueToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
             visualizarEstoqueToolStripMenuItem.ForeColor = Color.White;
             visualizarEstoqueToolStripMenuItem.Name = "visualizarEstoqueToolStripMenuItem";
             visualizarEstoqueToolStripMenuItem.Size = new Size(224, 26);
             visualizarEstoqueToolStripMenuItem.Text = "Visualizar Estoque";
-            // 
-            // colaboradorToolStripMenuItem
-            // 
+            
+            
+            
             colaboradorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastrarColaboradorToolStripMenuItem, visualizarColaboradorToolStripMenuItem });
             colaboradorToolStripMenuItem.ForeColor = Color.White;
             colaboradorToolStripMenuItem.Margin = new Padding(0, 0, 15, 0);
             colaboradorToolStripMenuItem.Name = "colaboradorToolStripMenuItem";
             colaboradorToolStripMenuItem.Size = new Size(153, 27);
             colaboradorToolStripMenuItem.Text = "👥 Colaborador";
-            // 
-            // cadastrarColaboradorToolStripMenuItem
-            // 
+            
+            
+            
             cadastrarColaboradorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             cadastrarColaboradorToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
             cadastrarColaboradorToolStripMenuItem.ForeColor = Color.White;
@@ -173,18 +141,18 @@
             cadastrarColaboradorToolStripMenuItem.Size = new Size(259, 26);
             cadastrarColaboradorToolStripMenuItem.Text = "Cadastrar Colaborador";
             cadastrarColaboradorToolStripMenuItem.Click += cadastrarColaboradorToolStripMenuItem_Click;
-            // 
-            // visualizarColaboradorToolStripMenuItem
-            // 
+            
+            
+            
             visualizarColaboradorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             visualizarColaboradorToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
             visualizarColaboradorToolStripMenuItem.ForeColor = Color.White;
             visualizarColaboradorToolStripMenuItem.Name = "visualizarColaboradorToolStripMenuItem";
             visualizarColaboradorToolStripMenuItem.Size = new Size(259, 26);
             visualizarColaboradorToolStripMenuItem.Text = "Visualizar Colaborador";
-            // 
-            // panelTopHeader
-            // 
+            
+            
+            
             panelTopHeader.BackColor = Color.FromArgb(199, 29, 44);
             panelTopHeader.Controls.Add(labelHeaderSub);
             panelTopHeader.Controls.Add(labelHeaderTitle);
@@ -194,9 +162,9 @@
             panelTopHeader.Size = new Size(1080, 90);
             panelTopHeader.TabIndex = 1;
             panelTopHeader.Paint += panelTopHeader_Paint;
-            // 
-            // labelHeaderSub
-            // 
+            
+            
+            
             labelHeaderSub.AutoSize = true;
             labelHeaderSub.Font = new Font("Segoe UI", 9.5F);
             labelHeaderSub.ForeColor = Color.FromArgb(240, 240, 240);
@@ -205,9 +173,9 @@
             labelHeaderSub.Size = new Size(313, 21);
             labelHeaderSub.TabIndex = 1;
             labelHeaderSub.Text = "Gerencie, edite ou remova itens do catálogo";
-            // 
-            // labelHeaderTitle
-            // 
+            
+            
+            
             labelHeaderTitle.AutoSize = true;
             labelHeaderTitle.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
             labelHeaderTitle.ForeColor = Color.White;
@@ -216,18 +184,18 @@
             labelHeaderTitle.Size = new Size(266, 37);
             labelHeaderTitle.TabIndex = 0;
             labelHeaderTitle.Text = "Visualizar Produtos";
-            // 
-            // panelHeaderDivider
-            // 
+            
+            
+            
             panelHeaderDivider.BackColor = Color.FromArgb(170, 20, 32);
             panelHeaderDivider.Dock = DockStyle.Top;
             panelHeaderDivider.Location = new Point(0, 137);
             panelHeaderDivider.Name = "panelHeaderDivider";
             panelHeaderDivider.Size = new Size(1080, 2);
             panelHeaderDivider.TabIndex = 2;
-            // 
-            // panelMainContainer
-            // 
+            
+            
+            
             panelMainContainer.BackColor = Color.FromArgb(245, 246, 248);
             panelMainContainer.Controls.Add(panelCardForm);
             panelMainContainer.Dock = DockStyle.Fill;
@@ -235,9 +203,9 @@
             panelMainContainer.Name = "panelMainContainer";
             panelMainContainer.Size = new Size(1080, 541);
             panelMainContainer.TabIndex = 3;
-            // 
-            // panelCardForm
-            // 
+            
+            
+            
             panelCardForm.BackColor = Color.White;
             panelCardForm.Controls.Add(label1);
             panelCardForm.Controls.Add(textBox1);
@@ -248,9 +216,9 @@
             panelCardForm.Size = new Size(1010, 480);
             panelCardForm.TabIndex = 0;
             panelCardForm.Paint += panelCardForm_Paint;
-            // 
-            // label1
-            // 
+            
+            
+            
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
             label1.ForeColor = Color.FromArgb(60, 60, 60);
@@ -259,18 +227,18 @@
             label1.Size = new Size(144, 21);
             label1.TabIndex = 0;
             label1.Text = "Barra de Pesquisa";
-            // 
-            // textBox1
-            // 
+            
+            
+            
             textBox1.Font = new Font("Segoe UI", 11F);
             textBox1.Location = new Point(30, 48);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(300, 32);
             textBox1.TabIndex = 1;
             textBox1.TextChanged += textBox1_TextChanged;
-            // 
-            // button1
-            // 
+            
+            
+            
             button1.BackColor = Color.White;
             button1.FlatAppearance.BorderColor = Color.FromArgb(199, 29, 44);
             button1.FlatAppearance.BorderSize = 2;
@@ -284,9 +252,9 @@
             button1.Text = "+ Cadastrar Novo";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
-            // 
-            // dataGridView1
-            // 
+            
+            
+            
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AllowUserToOrderColumns = true;
@@ -326,49 +294,49 @@
             dataGridView1.Size = new Size(822, 340);
             dataGridView1.TabIndex = 3;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // ID
-            // 
+            
+            
+            
             ID.HeaderText = "ID";
             ID.MinimumWidth = 6;
             ID.Name = "ID";
             ID.ReadOnly = true;
             ID.Width = 90;
-            // 
-            // Fornecedor
-            // 
+            
+            
+            
             Fornecedor.HeaderText = "Fornecedor";
             Fornecedor.MinimumWidth = 6;
             Fornecedor.Name = "Fornecedor";
             Fornecedor.ReadOnly = true;
             Fornecedor.Width = 140;
-            // 
-            // Nome
-            // 
+            
+            
+            
             Nome.HeaderText = "Nome";
             Nome.MinimumWidth = 6;
             Nome.Name = "Nome";
             Nome.ReadOnly = true;
             Nome.Width = 200;
-            // 
-            // Valor
-            // 
+            
+            
+            
             Valor.HeaderText = "Valor";
             Valor.MinimumWidth = 6;
             Valor.Name = "Valor";
             Valor.ReadOnly = true;
             Valor.Width = 90;
-            // 
-            // Quantidade
-            // 
+            
+            
+            
             Quantidade.HeaderText = "Quantidade";
             Quantidade.MinimumWidth = 6;
             Quantidade.Name = "Quantidade";
             Quantidade.ReadOnly = true;
             Quantidade.Width = 125;
-            // 
-            // btnVisualizar
-            // 
+            
+            
+            
             btnVisualizar.FlatStyle = FlatStyle.Flat;
             btnVisualizar.HeaderText = "Ações";
             btnVisualizar.MinimumWidth = 6;
@@ -377,9 +345,9 @@
             btnVisualizar.Text = "👁️";
             btnVisualizar.UseColumnTextForButtonValue = true;
             btnVisualizar.Width = 60;
-            // 
-            // btnEditar
-            // 
+            
+            
+            
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.HeaderText = "";
             btnEditar.MinimumWidth = 6;
@@ -388,9 +356,9 @@
             btnEditar.Text = "✏️";
             btnEditar.UseColumnTextForButtonValue = true;
             btnEditar.Width = 60;
-            // 
-            // btnDeletar
-            // 
+            
+            
+            
             btnDeletar.FlatStyle = FlatStyle.Flat;
             btnDeletar.HeaderText = "";
             btnDeletar.MinimumWidth = 6;
@@ -399,9 +367,9 @@
             btnDeletar.Text = "❌";
             btnDeletar.UseColumnTextForButtonValue = true;
             btnDeletar.Width = 60;
-            // 
-            // VisualizarEstoque
-            // 
+            
+            
+            
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(245, 246, 248);
@@ -431,9 +399,6 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem dashboardToolStripMenuItem;
-        private ToolStripMenuItem produtoToolStripMenuItem;
-        private ToolStripMenuItem cadastroToolStripMenuItem;
-        private ToolStripMenuItem visualizarProdutoToolStripMenuItem;
         private ToolStripMenuItem fornecedorToolStripMenuItem;
         private ToolStripMenuItem cadastrarFornecedorToolStripMenuItem;
         private ToolStripMenuItem visualizarFornecedorToolStripMenuItem;

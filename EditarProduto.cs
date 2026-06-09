@@ -6,14 +6,14 @@ namespace Software_Farmacia
 {
     public partial class EditarProduto : Form
     {
-        // Armazena o Id do produto a ser editado
+
         private int produtoId;
 
         public EditarProduto()
         {
             InitializeComponent();
             CarregarFornecedores();
-            // associar botão Cancelar para fechar o formulário
+
             button2.Click += button2_Click;
         }
 
@@ -21,17 +21,17 @@ namespace Software_Farmacia
         {
             InitializeComponent();
             CarregarFornecedores();
-            // Guarda o id para uso ao atualizar o registro
+
             this.produtoId = id;
 
-            // Preenche os campos com os valores recebidos
+
             label7.Text = id.ToString();
             textBox1.Text = nome;
             textBox4.Text = descricao;
             textBox3.Text = preco.ToString(CultureInfo.InvariantCulture);
             textBox2.Text = quantidade.ToString();
 
-            // associar botão Cancelar para fechar o formulário
+
             button2.Click += button2_Click;
         }
 
@@ -182,6 +182,11 @@ namespace Software_Farmacia
         }
 
         private void panelCardForm_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelTopHeader_Paint(object sender, PaintEventArgs e)
         {
 
         }

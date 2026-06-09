@@ -22,9 +22,6 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             menuStrip1 = new MenuStrip();
             dashboardToolStripMenuItem = new ToolStripMenuItem();
-            produtoToolStripMenuItem = new ToolStripMenuItem();
-            cadastroToolStripMenuItem = new ToolStripMenuItem();
-            visualizarProdutoToolStripMenuItem = new ToolStripMenuItem();
             fornecedorToolStripMenuItem = new ToolStripMenuItem();
             cadastrarFornecedorToolStripMenuItem = new ToolStripMenuItem();
             visualizarFornecedorToolStripMenuItem = new ToolStripMenuItem();
@@ -67,7 +64,7 @@
             menuStrip1.BackColor = Color.FromArgb(199, 29, 44);
             menuStrip1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { dashboardToolStripMenuItem, produtoToolStripMenuItem, fornecedorToolStripMenuItem, estoqueToolStripMenuItem, colaboradorToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { dashboardToolStripMenuItem, fornecedorToolStripMenuItem, estoqueToolStripMenuItem, colaboradorToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(15, 10, 0, 10);
@@ -84,36 +81,6 @@
             dashboardToolStripMenuItem.Size = new Size(140, 27);
             dashboardToolStripMenuItem.Text = "🏠 Dashboard";
             dashboardToolStripMenuItem.Click += dashboardToolStripMenuItem_Click;
-            // 
-            // produtoToolStripMenuItem
-            // 
-            produtoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, visualizarProdutoToolStripMenuItem });
-            produtoToolStripMenuItem.ForeColor = Color.White;
-            produtoToolStripMenuItem.Margin = new Padding(0, 0, 15, 0);
-            produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
-            produtoToolStripMenuItem.Size = new Size(118, 27);
-            produtoToolStripMenuItem.Text = "📦 Produto";
-            produtoToolStripMenuItem.Click += produtoToolStripMenuItem_Click;
-            // 
-            // cadastroToolStripMenuItem
-            // 
-            cadastroToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
-            cadastroToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
-            cadastroToolStripMenuItem.ForeColor = Color.White;
-            cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            cadastroToolStripMenuItem.Size = new Size(227, 26);
-            cadastroToolStripMenuItem.Text = "Cadastrar Produto";
-            cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click;
-            // 
-            // visualizarProdutoToolStripMenuItem
-            // 
-            visualizarProdutoToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
-            visualizarProdutoToolStripMenuItem.Font = new Font("Segoe UI Semibold", 9.5F, FontStyle.Bold);
-            visualizarProdutoToolStripMenuItem.ForeColor = Color.White;
-            visualizarProdutoToolStripMenuItem.Name = "visualizarProdutoToolStripMenuItem";
-            visualizarProdutoToolStripMenuItem.Size = new Size(227, 26);
-            visualizarProdutoToolStripMenuItem.Text = "Visualizar Produto";
-            visualizarProdutoToolStripMenuItem.Click += visualizarProdutoToolStripMenuItem_Click;
             // 
             // fornecedorToolStripMenuItem
             // 
@@ -206,6 +173,7 @@
             panelMainContainer.Name = "panelMainContainer";
             panelMainContainer.Size = new Size(1150, 653);
             panelMainContainer.TabIndex = 2;
+            panelMainContainer.Paint += panelMainContainer_Paint;
             // 
             // cardProdutos
             // 
@@ -434,7 +402,7 @@
             Name = "Dashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Software Farmácia - Dashboard Administrativo";
-            this.Load += new EventHandler(this.Dashboard_Load);
+            Load += Dashboard_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             panelMainContainer.ResumeLayout(false);
@@ -451,9 +419,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem produtoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem visualizarProdutoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fornecedorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrarFornecedorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visualizarFornecedorToolStripMenuItem;

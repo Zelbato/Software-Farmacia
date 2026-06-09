@@ -10,13 +10,13 @@ namespace Software_Farmacia
             InitializeComponent();
         }
 
-        // Ação do Botão Fechar
+        
         private void btnFechar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        // Link para voltar para a tela de Login
+        
         private void lblJaTemConta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
