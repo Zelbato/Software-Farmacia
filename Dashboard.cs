@@ -29,15 +29,18 @@ namespace Software_Farmacia
                     string sqlProdutos = "SELECT COUNT(*) FROM Produto";
                     using (SqlCommand cmd = new SqlCommand(sqlProdutos, conn))
                     {
-                        int totalProdutos = (int)cmd.ExecuteScalar();
+                        object prodCount = cmd.ExecuteScalar();
+                        int totalProdutos = Convert.ToInt32(prodCount);
                         lblCardProdutosValor.Text = totalProdutos.ToString("N0");
                     }
 
                     // 2. Quantidade Total de Colaboradores (Funcionários)
-                    string sqlFuncionarios = "SELECT COUNT(*) FROM Funcionario";
+                    // Contar colaboradores (tabela 'Colaborador')
+                    string sqlFuncionarios = "SELECT COUNT(*) FROM Colaborador";
                     using (SqlCommand cmd = new SqlCommand(sqlFuncionarios, conn))
                     {
-                        int totalFuncionarios = (int)cmd.ExecuteScalar();
+                        object funcCount = cmd.ExecuteScalar();
+                        int totalFuncionarios = Convert.ToInt32(funcCount);
                         lblCardColaboradoresValor.Text = totalFuncionarios.ToString();
                     }
 
@@ -141,6 +144,16 @@ namespace Software_Farmacia
         private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void visualizarColaboradorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VisualizarColaborador VisualizarC = new VisualizarColaborador(); VisualizarC.Show();
+        }
+
+        private void visualizarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VisualizarFornecedor VisualizarF = new VisualizarFornecedor(); VisualizarF.Show();
         }
     }
 }

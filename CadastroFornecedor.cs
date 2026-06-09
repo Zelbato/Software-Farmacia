@@ -148,9 +148,14 @@ namespace Software_Farmacia
             conn.Close();
 
             MessageBox.Show(
-                "FORNECEDOR CADASTRADO COM SUCESSO!\n\n" 
-               
+                "FORNECEDOR CADASTRADO COM SUCESSO!\n\n"
+
                     );
+        }
+
+        private void panelCardForm_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

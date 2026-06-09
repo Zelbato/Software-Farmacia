@@ -160,11 +160,36 @@ namespace Software_Farmacia
                 // Busca descrição pelo Id caso não esteja no grid
                 string descricaoVis = GetDescricaoProduto(idVis);
 
-                // Abre a tela de visualização e preenche os campos via método público
-                using (var telaVisualizar = new VisualizarProduto())
+                // Abre o formulário de edição em modo apenas leitura (reusar EditarProduto, mas desabilitar ações)
+                using (var tela = new EditarProduto(idVis, nomeVis, descricaoVis, precoVis, quantidadeVis))
                 {
-                    telaVisualizar.SetProdutoData(idVis, nomeVis, descricaoVis, precoVis, quantidadeVis);
-                    telaVisualizar.ShowDialog();
+                    // tentar desabilitar botões padrão (Salvar/Cancelar) se existirem
+                    var btnSalvar = tela.Controls.Find("button1", true);
+                    if (btnSalvar.Length > 0) btnSalvar[0].Visible = false;
+                    var btnCancelar = tela.Controls.Find("button2", true);
+                    if (btnCancelar.Length > 0) btnCancelar[0].Visible = false;
+
+                    // desabilitar campos de entrada
+                    foreach (Control c in tela.Controls)
+                    {
+                        if (c is TextBox tb) tb.ReadOnly = true;
+                        if (c is ComboBox cb) cb.Enabled = false;
+                        if (c is Button) c.Enabled = false;
+                    }
+
+                    // também verificar controles dentro de panelCardForm
+                    var panels = tela.Controls.Find("panelCardForm", true);
+                    if (panels.Length > 0)
+                    {
+                        foreach (Control c in panels[0].Controls)
+                        {
+                            if (c is TextBox tb) tb.ReadOnly = true;
+                            if (c is ComboBox cb) cb.Enabled = false;
+                            if (c is Button) c.Enabled = false;
+                        }
+                    }
+
+                    tela.ShowDialog();
                 }
             }
             else if (nomeColuna == "btnDeletar")

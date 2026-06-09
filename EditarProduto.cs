@@ -13,6 +13,8 @@ namespace Software_Farmacia
         {
             InitializeComponent();
             CarregarFornecedores();
+            // associar botão Cancelar para fechar o formulário
+            button2.Click += button2_Click;
         }
 
         public EditarProduto(int id, string nome, string descricao, decimal preco, int quantidade)
@@ -28,6 +30,9 @@ namespace Software_Farmacia
             textBox4.Text = descricao;
             textBox3.Text = preco.ToString(CultureInfo.InvariantCulture);
             textBox2.Text = quantidade.ToString();
+
+            // associar botão Cancelar para fechar o formulário
+            button2.Click += button2_Click;
         }
 
         private void CarregarFornecedores()
@@ -61,6 +66,12 @@ namespace Software_Farmacia
             {
                 MessageBox.Show($"Erro ao carregar fornecedores: {ex.Message}");
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
 
         private void button1_Click_1(object sender, EventArgs e)

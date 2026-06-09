@@ -28,20 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             panelMainContainer = new Panel();
             panelCardForm = new Panel();
-            labelFornecedor = new Label();
-            comboBox1 = new ComboBox();
-            label6 = new Label();
             label1 = new Label();
-            label2 = new Label();
             textBox1 = new TextBox();
-            label5 = new Label();
-            textBox4 = new TextBox();
-            label3 = new Label();
-            textBox3 = new TextBox();
-            label4 = new Label();
-            textBox2 = new TextBox();
+            button1 = new Button();
+            dataGridView1 = new DataGridView();
+            ID = new DataGridViewTextBoxColumn();
+            Fornecedor = new DataGridViewTextBoxColumn();
+            Nome = new DataGridViewTextBoxColumn();
+            Valor = new DataGridViewTextBoxColumn();
+            Quantidade = new DataGridViewTextBoxColumn();
+            btnVisualizar = new DataGridViewButtonColumn();
+            btnEditar = new DataGridViewButtonColumn();
+            btnDeletar = new DataGridViewButtonColumn();
             panelHeaderDivider = new Panel();
             panelTopHeader = new Panel();
             labelHeaderSub = new Label();
@@ -64,6 +66,7 @@
             visualizarColaboradorToolStripMenuItem = new ToolStripMenuItem();
             panelMainContainer.SuspendLayout();
             panelCardForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panelTopHeader.SuspendLayout();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -73,162 +76,182 @@
             panelMainContainer.BackColor = Color.FromArgb(245, 246, 248);
             panelMainContainer.Controls.Add(panelCardForm);
             panelMainContainer.Dock = DockStyle.Fill;
-            panelMainContainer.Location = new Point(0, 145);
+            panelMainContainer.Location = new Point(0, 147);
             panelMainContainer.Name = "panelMainContainer";
-            panelMainContainer.Size = new Size(1106, 564);
-            panelMainContainer.TabIndex = 6;
+            panelMainContainer.Size = new Size(1106, 562);
+            panelMainContainer.TabIndex = 3;
             // 
             // panelCardForm
             // 
             panelCardForm.BackColor = Color.White;
-            panelCardForm.Controls.Add(labelFornecedor);
-            panelCardForm.Controls.Add(comboBox1);
-            panelCardForm.Controls.Add(label6);
             panelCardForm.Controls.Add(label1);
-            panelCardForm.Controls.Add(label2);
             panelCardForm.Controls.Add(textBox1);
-            panelCardForm.Controls.Add(label5);
-            panelCardForm.Controls.Add(textBox4);
-            panelCardForm.Controls.Add(label3);
-            panelCardForm.Controls.Add(textBox3);
-            panelCardForm.Controls.Add(label4);
-            panelCardForm.Controls.Add(textBox2);
+            panelCardForm.Controls.Add(button1);
+            panelCardForm.Controls.Add(dataGridView1);
             panelCardForm.Location = new Point(35, 25);
             panelCardForm.Name = "panelCardForm";
-            panelCardForm.Size = new Size(1010, 490);
+            panelCardForm.Size = new Size(1010, 480);
             panelCardForm.TabIndex = 0;
-            // 
-            // labelFornecedor
-            // 
-            labelFornecedor.AutoSize = true;
-            labelFornecedor.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
-            labelFornecedor.ForeColor = Color.FromArgb(60, 60, 60);
-            labelFornecedor.Location = new Point(700, 75);
-            labelFornecedor.Name = "labelFornecedor";
-            labelFornecedor.Size = new Size(107, 21);
-            labelFornecedor.TabIndex = 13;
-            labelFornecedor.Text = "Fornecedor *";
-            // 
-            // comboBox1
-            // 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.Font = new Font("Segoe UI", 11F);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(700, 102);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(270, 33);
-            comboBox1.TabIndex = 12;
-            // 
-            // label6
-            // 
-            label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label6.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            label6.ForeColor = Color.FromArgb(60, 60, 60);
-            label6.Location = new Point(1630, 25);
-            label6.Name = "label6";
-            label6.Size = new Size(150, 30);
-            label6.TabIndex = 11;
-            label6.Text = "ID: 00";
-            label6.TextAlign = ContentAlignment.MiddleRight;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
-            label1.ForeColor = Color.FromArgb(199, 29, 44);
-            label1.Location = new Point(35, 20);
+            label1.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+            label1.ForeColor = Color.FromArgb(60, 60, 60);
+            label1.Location = new Point(30, 22);
             label1.Name = "label1";
-            label1.Size = new Size(110, 35);
+            label1.Size = new Size(144, 21);
             label1.TabIndex = 0;
-            label1.Text = "Produto";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
-            label2.ForeColor = Color.FromArgb(60, 60, 60);
-            label2.Location = new Point(35, 75);
-            label2.Name = "label2";
-            label2.Size = new Size(158, 21);
-            label2.TabIndex = 1;
-            label2.Text = "Nome do Produto *";
+            label1.Text = "Barra de Pesquisa";
             // 
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 11F);
-            textBox1.Location = new Point(35, 102);
+            textBox1.Location = new Point(30, 48);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(640, 32);
-            textBox1.TabIndex = 2;
+            textBox1.Size = new Size(300, 32);
+            textBox1.TabIndex = 1;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
-            // label5
+            // button1
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
-            label5.ForeColor = Color.FromArgb(60, 60, 60);
-            label5.Location = new Point(35, 155);
-            label5.Name = "label5";
-            label5.Size = new Size(84, 21);
-            label5.TabIndex = 3;
-            label5.Text = "Descrição";
+            button1.BackColor = Color.White;
+            button1.FlatAppearance.BorderColor = Color.FromArgb(199, 29, 44);
+            button1.FlatAppearance.BorderSize = 2;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            button1.ForeColor = Color.FromArgb(199, 29, 44);
+            button1.Location = new Point(830, 43);
+            button1.Name = "button1";
+            button1.Size = new Size(150, 40);
+            button1.TabIndex = 2;
+            button1.Text = "+ Cadastrar Novo";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // textBox4
+            // dataGridView1
             // 
-            textBox4.Font = new Font("Segoe UI", 11F);
-            textBox4.Location = new Point(35, 182);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(935, 120);
-            textBox4.TabIndex = 4;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AllowUserToOrderColumns = true;
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(199, 29, 44);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(199, 29, 44);
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridView1.ColumnHeadersHeight = 40;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, Fornecedor, Nome, Valor, Quantidade, btnVisualizar, btnEditar, btnDeletar });
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(50, 50, 50);
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(245, 246, 248);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(199, 29, 44);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.GridColor = Color.FromArgb(230, 230, 230);
+            dataGridView1.Location = new Point(95, 117);
+            dataGridView1.MultiSelect = false;
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 38;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Size = new Size(822, 340);
+            dataGridView1.TabIndex = 3;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // label3
+            // ID
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
-            label3.ForeColor = Color.FromArgb(60, 60, 60);
-            label3.Location = new Point(35, 325);
-            label3.Name = "label3";
-            label3.Size = new Size(96, 21);
-            label3.TabIndex = 5;
-            label3.Text = "Valor (R$) *";
+            ID.HeaderText = "ID";
+            ID.MinimumWidth = 6;
+            ID.Name = "ID";
+            ID.ReadOnly = true;
+            ID.Width = 90;
             // 
-            // textBox3
+            // Fornecedor
             // 
-            textBox3.Font = new Font("Segoe UI", 11F);
-            textBox3.Location = new Point(35, 352);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(445, 32);
-            textBox3.TabIndex = 6;
-            textBox3.TextChanged += textBox3_TextChanged;
+            Fornecedor.HeaderText = "Fornecedor";
+            Fornecedor.MinimumWidth = 6;
+            Fornecedor.Name = "Fornecedor";
+            Fornecedor.ReadOnly = true;
+            Fornecedor.Width = 140;
             // 
-            // label4
+            // Nome
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
-            label4.ForeColor = Color.FromArgb(60, 60, 60);
-            label4.Location = new Point(525, 325);
-            label4.Name = "label4";
-            label4.Size = new Size(111, 21);
-            label4.TabIndex = 7;
-            label4.Text = "Quantidade *";
+            Nome.HeaderText = "Nome";
+            Nome.MinimumWidth = 6;
+            Nome.Name = "Nome";
+            Nome.ReadOnly = true;
+            Nome.Width = 200;
             // 
-            // textBox2
+            // Valor
             // 
-            textBox2.Font = new Font("Segoe UI", 11F);
-            textBox2.Location = new Point(525, 352);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(445, 32);
-            textBox2.TabIndex = 8;
+            Valor.HeaderText = "Valor";
+            Valor.MinimumWidth = 6;
+            Valor.Name = "Valor";
+            Valor.ReadOnly = true;
+            Valor.Width = 90;
+            // 
+            // Quantidade
+            // 
+            Quantidade.HeaderText = "Quantidade";
+            Quantidade.MinimumWidth = 6;
+            Quantidade.Name = "Quantidade";
+            Quantidade.ReadOnly = true;
+            Quantidade.Width = 125;
+            // 
+            // btnVisualizar
+            // 
+            btnVisualizar.FlatStyle = FlatStyle.Flat;
+            btnVisualizar.HeaderText = "Ações";
+            btnVisualizar.MinimumWidth = 6;
+            btnVisualizar.Name = "btnVisualizar";
+            btnVisualizar.ReadOnly = true;
+            btnVisualizar.Text = "👁️";
+            btnVisualizar.UseColumnTextForButtonValue = true;
+            btnVisualizar.Width = 60;
+            // 
+            // btnEditar
+            // 
+            btnEditar.FlatStyle = FlatStyle.Flat;
+            btnEditar.HeaderText = "";
+            btnEditar.MinimumWidth = 6;
+            btnEditar.Name = "btnEditar";
+            btnEditar.ReadOnly = true;
+            btnEditar.Text = "✏️";
+            btnEditar.UseColumnTextForButtonValue = true;
+            btnEditar.Width = 60;
+            // 
+            // btnDeletar
+            // 
+            btnDeletar.FlatStyle = FlatStyle.Flat;
+            btnDeletar.HeaderText = "";
+            btnDeletar.MinimumWidth = 6;
+            btnDeletar.Name = "btnDeletar";
+            btnDeletar.ReadOnly = true;
+            btnDeletar.Text = "❌";
+            btnDeletar.UseColumnTextForButtonValue = true;
+            btnDeletar.Width = 60;
             // 
             // panelHeaderDivider
             // 
             panelHeaderDivider.BackColor = Color.FromArgb(170, 20, 32);
             panelHeaderDivider.Dock = DockStyle.Top;
-            panelHeaderDivider.Location = new Point(0, 143);
+            panelHeaderDivider.Location = new Point(0, 145);
             panelHeaderDivider.Name = "panelHeaderDivider";
             panelHeaderDivider.Size = new Size(1106, 2);
-            panelHeaderDivider.TabIndex = 7;
+            panelHeaderDivider.TabIndex = 2;
             // 
             // panelTopHeader
             // 
@@ -236,10 +259,10 @@
             panelTopHeader.Controls.Add(labelHeaderSub);
             panelTopHeader.Controls.Add(labelHeaderTitle);
             panelTopHeader.Dock = DockStyle.Top;
-            panelTopHeader.Location = new Point(0, 53);
+            panelTopHeader.Location = new Point(0, 55);
             panelTopHeader.Name = "panelTopHeader";
             panelTopHeader.Size = new Size(1106, 90);
-            panelTopHeader.TabIndex = 5;
+            panelTopHeader.TabIndex = 1;
             // 
             // labelHeaderSub
             // 
@@ -248,9 +271,9 @@
             labelHeaderSub.ForeColor = Color.FromArgb(240, 240, 240);
             labelHeaderSub.Location = new Point(35, 52);
             labelHeaderSub.Name = "labelHeaderSub";
-            labelHeaderSub.Size = new Size(222, 21);
+            labelHeaderSub.Size = new Size(313, 21);
             labelHeaderSub.TabIndex = 1;
-            labelHeaderSub.Text = "Preencha os dados do produto";
+            labelHeaderSub.Text = "Gerencie, edite ou remova itens do catálogo";
             // 
             // labelHeaderTitle
             // 
@@ -259,22 +282,22 @@
             labelHeaderTitle.ForeColor = Color.White;
             labelHeaderTitle.Location = new Point(30, 15);
             labelHeaderTitle.Name = "labelHeaderTitle";
-            labelHeaderTitle.Size = new Size(293, 37);
+            labelHeaderTitle.Size = new Size(266, 37);
             labelHeaderTitle.TabIndex = 0;
-            labelHeaderTitle.Text = "Visualizar de Produto";
+            labelHeaderTitle.Text = "Visualizar Produtos";
             // 
             // menuStrip1
             // 
             menuStrip1.BackColor = Color.FromArgb(199, 29, 44);
-            menuStrip1.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            menuStrip1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Items.AddRange(new ToolStripItem[] { dashboardToolStripMenuItem, produtoToolStripMenuItem, fornecedorToolStripMenuItem, estoqueToolStripMenuItem, colaboradorToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(15, 8, 15, 8);
+            menuStrip1.Padding = new Padding(15, 10, 0, 10);
             menuStrip1.RenderMode = ToolStripRenderMode.Professional;
-            menuStrip1.Size = new Size(1106, 53);
-            menuStrip1.TabIndex = 4;
+            menuStrip1.Size = new Size(1106, 55);
+            menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // dashboardToolStripMenuItem
@@ -283,7 +306,7 @@
             dashboardToolStripMenuItem.Margin = new Padding(0, 0, 12, 0);
             dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
             dashboardToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
-            dashboardToolStripMenuItem.Size = new Size(156, 37);
+            dashboardToolStripMenuItem.Size = new Size(150, 35);
             dashboardToolStripMenuItem.Text = "🏠 Dashboard";
             dashboardToolStripMenuItem.Click += dashboardToolStripMenuItem_Click;
             // 
@@ -294,7 +317,7 @@
             produtoToolStripMenuItem.Margin = new Padding(0, 0, 12, 0);
             produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
             produtoToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
-            produtoToolStripMenuItem.Size = new Size(132, 37);
+            produtoToolStripMenuItem.Size = new Size(128, 35);
             produtoToolStripMenuItem.Text = "📦 Produto";
             // 
             // cadastroToolStripMenuItem
@@ -302,7 +325,7 @@
             cadastroToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             cadastroToolStripMenuItem.ForeColor = Color.White;
             cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            cadastroToolStripMenuItem.Size = new Size(254, 30);
+            cadastroToolStripMenuItem.Size = new Size(241, 28);
             cadastroToolStripMenuItem.Text = "Cadastrar Produto";
             cadastroToolStripMenuItem.Click += cadastroToolStripMenuItem_Click;
             // 
@@ -311,7 +334,7 @@
             editarProdutoToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             editarProdutoToolStripMenuItem.ForeColor = Color.White;
             editarProdutoToolStripMenuItem.Name = "editarProdutoToolStripMenuItem";
-            editarProdutoToolStripMenuItem.Size = new Size(254, 30);
+            editarProdutoToolStripMenuItem.Size = new Size(241, 28);
             editarProdutoToolStripMenuItem.Text = "Editar Produto";
             editarProdutoToolStripMenuItem.Click += editarProdutoToolStripMenuItem_Click;
             // 
@@ -320,7 +343,7 @@
             visualizarProdutoToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             visualizarProdutoToolStripMenuItem.ForeColor = Color.White;
             visualizarProdutoToolStripMenuItem.Name = "visualizarProdutoToolStripMenuItem";
-            visualizarProdutoToolStripMenuItem.Size = new Size(254, 30);
+            visualizarProdutoToolStripMenuItem.Size = new Size(241, 28);
             visualizarProdutoToolStripMenuItem.Text = "Visualizar Produto";
             // 
             // fornecedorToolStripMenuItem
@@ -330,7 +353,7 @@
             fornecedorToolStripMenuItem.Margin = new Padding(0, 0, 12, 0);
             fornecedorToolStripMenuItem.Name = "fornecedorToolStripMenuItem";
             fornecedorToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
-            fornecedorToolStripMenuItem.Size = new Size(160, 37);
+            fornecedorToolStripMenuItem.Size = new Size(153, 35);
             fornecedorToolStripMenuItem.Text = "\U0001f91d Fornecedor";
             // 
             // cadastrarFornecedorToolStripMenuItem
@@ -338,7 +361,7 @@
             cadastrarFornecedorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             cadastrarFornecedorToolStripMenuItem.ForeColor = Color.White;
             cadastrarFornecedorToolStripMenuItem.Name = "cadastrarFornecedorToolStripMenuItem";
-            cadastrarFornecedorToolStripMenuItem.Size = new Size(282, 30);
+            cadastrarFornecedorToolStripMenuItem.Size = new Size(266, 28);
             cadastrarFornecedorToolStripMenuItem.Text = "Cadastrar Fornecedor";
             cadastrarFornecedorToolStripMenuItem.Click += cadastrarFornecedorToolStripMenuItem_Click;
             // 
@@ -347,7 +370,7 @@
             editarFornecedorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             editarFornecedorToolStripMenuItem.ForeColor = Color.White;
             editarFornecedorToolStripMenuItem.Name = "editarFornecedorToolStripMenuItem";
-            editarFornecedorToolStripMenuItem.Size = new Size(282, 30);
+            editarFornecedorToolStripMenuItem.Size = new Size(266, 28);
             editarFornecedorToolStripMenuItem.Text = "Editar Fornecedor";
             editarFornecedorToolStripMenuItem.Click += editarFornecedorToolStripMenuItem_Click;
             // 
@@ -356,7 +379,7 @@
             visualizarFornecedorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             visualizarFornecedorToolStripMenuItem.ForeColor = Color.White;
             visualizarFornecedorToolStripMenuItem.Name = "visualizarFornecedorToolStripMenuItem";
-            visualizarFornecedorToolStripMenuItem.Size = new Size(282, 30);
+            visualizarFornecedorToolStripMenuItem.Size = new Size(266, 28);
             visualizarFornecedorToolStripMenuItem.Text = "Visualizar Fornecedor";
             // 
             // estoqueToolStripMenuItem
@@ -366,7 +389,7 @@
             estoqueToolStripMenuItem.Margin = new Padding(0, 0, 12, 0);
             estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
             estoqueToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
-            estoqueToolStripMenuItem.Size = new Size(131, 37);
+            estoqueToolStripMenuItem.Size = new Size(126, 35);
             estoqueToolStripMenuItem.Text = "📊 Estoque";
             // 
             // visualizarEstoqueToolStripMenuItem
@@ -374,7 +397,7 @@
             visualizarEstoqueToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             visualizarEstoqueToolStripMenuItem.ForeColor = Color.White;
             visualizarEstoqueToolStripMenuItem.Name = "visualizarEstoqueToolStripMenuItem";
-            visualizarEstoqueToolStripMenuItem.Size = new Size(253, 30);
+            visualizarEstoqueToolStripMenuItem.Size = new Size(238, 28);
             visualizarEstoqueToolStripMenuItem.Text = "Visualizar Estoque";
             visualizarEstoqueToolStripMenuItem.Click += visualizarEstoqueToolStripMenuItem_Click;
             // 
@@ -384,7 +407,7 @@
             colaboradorToolStripMenuItem.ForeColor = Color.White;
             colaboradorToolStripMenuItem.Name = "colaboradorToolStripMenuItem";
             colaboradorToolStripMenuItem.Padding = new Padding(10, 4, 10, 4);
-            colaboradorToolStripMenuItem.Size = new Size(169, 37);
+            colaboradorToolStripMenuItem.Size = new Size(163, 35);
             colaboradorToolStripMenuItem.Text = "👥 Colaborador";
             // 
             // cadastrarColaboradorToolStripMenuItem
@@ -392,7 +415,7 @@
             cadastrarColaboradorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             cadastrarColaboradorToolStripMenuItem.ForeColor = Color.White;
             cadastrarColaboradorToolStripMenuItem.Name = "cadastrarColaboradorToolStripMenuItem";
-            cadastrarColaboradorToolStripMenuItem.Size = new Size(291, 30);
+            cadastrarColaboradorToolStripMenuItem.Size = new Size(276, 28);
             cadastrarColaboradorToolStripMenuItem.Text = "Cadastrar Colaborador";
             cadastrarColaboradorToolStripMenuItem.Click += cadastrarColaboradorToolStripMenuItem_Click;
             // 
@@ -401,7 +424,7 @@
             editarColaboradorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             editarColaboradorToolStripMenuItem.ForeColor = Color.White;
             editarColaboradorToolStripMenuItem.Name = "editarColaboradorToolStripMenuItem";
-            editarColaboradorToolStripMenuItem.Size = new Size(291, 30);
+            editarColaboradorToolStripMenuItem.Size = new Size(276, 28);
             editarColaboradorToolStripMenuItem.Text = "Editar Colaborador";
             editarColaboradorToolStripMenuItem.Click += editarColaboradorToolStripMenuItem_Click;
             // 
@@ -410,7 +433,7 @@
             visualizarColaboradorToolStripMenuItem.BackColor = Color.FromArgb(199, 29, 44);
             visualizarColaboradorToolStripMenuItem.ForeColor = Color.White;
             visualizarColaboradorToolStripMenuItem.Name = "visualizarColaboradorToolStripMenuItem";
-            visualizarColaboradorToolStripMenuItem.Size = new Size(291, 30);
+            visualizarColaboradorToolStripMenuItem.Size = new Size(276, 28);
             visualizarColaboradorToolStripMenuItem.Text = "Visualizar Colaborador";
             // 
             // VisualizarProduto
@@ -427,6 +450,7 @@
             panelMainContainer.ResumeLayout(false);
             panelCardForm.ResumeLayout(false);
             panelCardForm.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panelTopHeader.ResumeLayout(false);
             panelTopHeader.PerformLayout();
             menuStrip1.ResumeLayout(false);
@@ -439,18 +463,18 @@
 
         private Panel panelMainContainer;
         private Panel panelCardForm;
-        private Label labelFornecedor;
-        private ComboBox comboBox1;
-        private Label label6;
         private Label label1;
-        private Label label2;
         private TextBox textBox1;
-        private Label label5;
-        private TextBox textBox4;
-        private Label label3;
-        private TextBox textBox3;
-        private Label label4;
-        private TextBox textBox2;
+        private Button button1;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn ID;
+        private DataGridViewTextBoxColumn Fornecedor;
+        private DataGridViewTextBoxColumn Nome;
+        private DataGridViewTextBoxColumn Valor;
+        private DataGridViewTextBoxColumn Quantidade;
+        private DataGridViewButtonColumn btnVisualizar;
+        private DataGridViewButtonColumn btnEditar;
+        private DataGridViewButtonColumn btnDeletar;
         private Panel panelHeaderDivider;
         private Panel panelTopHeader;
         private Label labelHeaderSub;

@@ -10,6 +10,8 @@ namespace Software_Farmacia
         public EditarFornecedor()
         {
             InitializeComponent();
+            // associar botão Cancelar para fechar o formulário
+            button2.Click += button2_Click;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,6 +50,12 @@ namespace Software_Farmacia
                             //"ID: " + id + "\n" +
                             "Nome: " + nomeFornecedor + "\n" +
                             "CPF: " + cpfFornecedor);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)

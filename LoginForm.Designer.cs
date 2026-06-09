@@ -18,7 +18,6 @@ namespace Software_Farmacia
         private Label lblSenhaHint;
         private TextBox txtSenha;
         private Button btnEntrar;
-        private Button btnCriarConta;
         private Label label1;
         private TextBox textBox1;
 
@@ -49,7 +48,6 @@ namespace Software_Farmacia
             lblSenhaHint = new Label();
             txtSenha = new TextBox();
             btnEntrar = new Button();
-            btnCriarConta = new Button();
             panelLeft.SuspendLayout();
             panelRight.SuspendLayout();
             SuspendLayout();
@@ -99,7 +97,6 @@ namespace Software_Farmacia
             panelRight.Controls.Add(lblSenhaHint);
             panelRight.Controls.Add(txtSenha);
             panelRight.Controls.Add(btnEntrar);
-            panelRight.Controls.Add(btnCriarConta);
             panelRight.Dock = DockStyle.Fill;
             panelRight.Location = new Point(389, 0);
             panelRight.Name = "panelRight";
@@ -205,21 +202,6 @@ namespace Software_Farmacia
             btnEntrar.Text = "ENTRAR";
             btnEntrar.UseVisualStyleBackColor = false;
             btnEntrar.Click += btnEntrar_Click;
-            // 
-            // btnCriarConta
-            // 
-            btnCriarConta.BackColor = Color.White;
-            btnCriarConta.Cursor = Cursors.Hand;
-            btnCriarConta.FlatAppearance.BorderColor = Color.Silver;
-            btnCriarConta.FlatStyle = FlatStyle.Flat;
-            btnCriarConta.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
-            btnCriarConta.ForeColor = Color.Gray;
-            btnCriarConta.Location = new Point(69, 511);
-            btnCriarConta.Name = "btnCriarConta";
-            btnCriarConta.Size = new Size(434, 56);
-            btnCriarConta.TabIndex = 9;
-            btnCriarConta.Text = "CRIAR UMA CONTA";
-            btnCriarConta.UseVisualStyleBackColor = false;
             // 
             // LoginForm
             // 

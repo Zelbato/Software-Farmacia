@@ -21,5 +21,7 @@ namespace Software_Farmacia
             Dashboard Dash = new Dashboard();
             Dash.Show();
         }
+
+   
     }
 }
