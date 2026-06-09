@@ -82,8 +82,9 @@ namespace Software_Farmacia
             lblSub.Name = "lblSub";
             lblSub.Size = new Size(360, 53);
             lblSub.TabIndex = 1;
-            lblSub.Text = "Sistema profissional moderno";
+            lblSub.Text = "Sistema Profissional Moderno";
             lblSub.TextAlign = ContentAlignment.MiddleCenter;
+            lblSub.Click += lblSub_Click;
             // 
             // panelRight
             // 

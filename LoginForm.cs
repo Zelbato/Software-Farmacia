@@ -26,5 +26,10 @@ namespace Software_Farmacia
         {
 
         }
+
+        private void lblSub_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

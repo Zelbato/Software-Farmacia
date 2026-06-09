@@ -11,7 +11,7 @@
             
             
             ApplicationConfiguration.Initialize();
-            Application.Run(new Dashboard());
+            Application.Run(new LoginForm());
         }
     }
 }
